@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Briefing Executivo | Quem é a Enel? — Leiaute Propaganda</title>
+<title>Briefing Executivo | Quem é a Enel?: Leiaute Propaganda</title>
 <meta name="description" content="Briefing executivo sobre a Enel Brasil: marca, reputação e experiência digital. Uma apresentação da Leiaute Propaganda.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600;1,8..60,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   LEIAUTE × ENEL BRASIL — Briefing Executivo (scrollytelling)
+   LEIAUTE × ENEL BRASIL: Briefing Executivo (scrollytelling)
    Cores primárias (brandbook Enel / bandeira):
    verde #00A859 · amarelo #FFCC29 · azul #002776
    ============================================================ */
@@ -147,7 +147,7 @@ h3{font-size:1.25rem;font-weight:700}
 .ph{position:relative;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(45deg,#e9edf4 0 14px,#f3f6fa 14px 28px);border:1px solid #dde3ee;display:flex;align-items:center;justify-content:center;min-height:220px}
 .ph.ratio-16x9{aspect-ratio:16/9;min-height:0}
 .ph.ratio-4x5{aspect-ratio:4/5;min-height:0}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
 .ph .lblbox{position:relative;z-index:1;text-align:center;color:#5a6a86;font-size:.8rem;font-weight:600;padding:1rem;max-width:34ch}
 .ph .lblbox b{display:block;color:var(--azul);font-size:.9rem;margin-bottom:.2rem}
 .figcap{font-size:.78rem;color:#7a879c;margin-top:.55rem}
@@ -261,14 +261,13 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 button{font-family:inherit}
 
 /* ---------- HERO scrolly-video: 27 frames (assets/seq/) avançam com o scroll ---------- */
-#hero{height:300vh;min-height:0;padding:0;background:#03102b;display:block;align-items:normal}
+#hero{height:460vh;min-height:0;padding:0;background:#03102b;display:block;align-items:normal}
 .hero-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
 #heroSeq{position:absolute;inset:0;width:100%;height:100%}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,10,30,.82) 0%,rgba(2,10,30,.55) 42%,rgba(2,10,30,.06) 78%),linear-gradient(0deg,rgba(2,10,30,.5),transparent 32%)}
-.hero-content{max-width:640px;transition:opacity .15s linear}
+.hero-content{max-width:760px;transition:opacity .15s linear}
 #hero .topbar,#hero .wrap,#hero .scroll-hint{z-index:5}
-#hero h1 .q{color:#fff}
-#hero h1 em{color:var(--amarelo)}
+#hero h1{color:var(--amarelo);font-size:clamp(2.3rem,6vw,4.6rem);white-space:nowrap}
 #hero .sub{color:rgba(255,255,255,.88)}
 #hero .sub em{color:var(--verde-claro)}
 #hero .tag-top{color:var(--amarelo)}
@@ -283,7 +282,7 @@ button{font-family:inherit}
 <div id="progress" role="presentation"></div>
 <nav id="dots" aria-label="Navegação por capítulos"></nav>
 
-<!-- ============ CAP. 0 — HERO (scrolly-video: 27 frames avançam com o scroll) ============ -->
+<!-- ============ CAP. 0: HERO (scrolly-video: 27 frames avançam com o scroll) ============ -->
 <header class="sec tall" id="hero" data-dot="Abertura">
   <div class="hero-sticky">
     <canvas id="heroSeq" aria-hidden="true"></canvas>
@@ -294,8 +293,8 @@ button{font-family:inherit}
     </div>
     <div class="wrap">
       <div class="hero-content" id="heroContent">
-        <h1 class="rv in"><span class="q">Quem é</span><br><em>a Enel?</em></h1>
-        <p class="sub rv in" style="transition-delay:.2s">Um diagnóstico de <em>marca, reputação e experiência digital</em> — a energia que sai do sistema, atravessa a cidade e é julgada dentro de casa.</p>
+        <h1 class="rv in">Quem é a Enel?</h1>
+        <p class="sub rv in" style="transition-delay:.2s">Um diagnóstico de <em>marca, reputação e experiência digital</em>: a energia que sai do sistema, atravessa a cidade e é julgada dentro de casa.</p>
         <div class="enel-mark rv in" style="transition-delay:.35s">
           <img src="assets/logo-enel-brasil.png" alt="Logotipo Enel Brasil com as cores da bandeira" onerror="this.outerHTML='&lt;strong style=&quot;font-size:1.6rem;color:#00A859&quot;&gt;enel &lt;span style=&quot;color:#FFCC29;letter-spacing:.35em;font-size:1rem&quot;&gt;BRASIL&lt;/span&gt;&lt;/strong&gt;'">
         </div>
@@ -305,7 +304,7 @@ button{font-family:inherit}
   </div>
 </header>
 
-<!-- ============ CAP. 1 — ENEL EM 1 MINUTO ============ -->
+<!-- ============ CAP. 1: ENEL EM 1 MINUTO ============ -->
 <section class="sec" id="minuto" data-dot="Enel em 1 minuto">
   <div class="chev right faint" aria-hidden="true"><div class="c1"></div><div class="c2"></div></div>
   <div class="wrap">
@@ -323,7 +322,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 2 — TIMELINE ============ -->
+<!-- ============ CAP. 2: TIMELINE ============ -->
 <section class="sec soft" id="timeline" data-dot="Trajetória">
   <div class="wrap">
     <span class="kicker rv">Timeline</span>
@@ -335,7 +334,7 @@ button{font-family:inherit}
       <div class="mk"><div class="yr">2005</div><p>Chegada da Endesa ao Brasil, controlada pela Enel.</p></div>
       <div class="mk"><div class="yr">2016</div><p>Distribuidoras Ampla (RJ) e Coelce (CE) passam a operar sob a marca Enel.</p></div>
       <div class="mk"><div class="yr">2018</div><p>Aquisição da Eletropaulo, ampliando a presença do grupo no país.</p></div>
-      <div class="mk"><div class="yr">2025–2027</div><p><strong>Mudança de marca</strong> e novo ciclo de investimentos, com prioridade para distribuição, modernização de redes e resiliência.</p></div>
+      <div class="mk"><div class="yr">2025 a 2027</div><p><strong>Mudança de marca</strong> e novo ciclo de investimentos, com prioridade para distribuição, modernização de redes e resiliência.</p></div>
     </div>
     <div class="cols c2 rv" style="margin-top:3rem;align-items:stretch">
       <figure><div class="ph ratio-16x9"><img src="assets/logo-enel-antigo.jpg" alt="Logotipo anterior da Enel, multicolorido" onerror="this.remove()"><div class="lblbox"><b>assets/logo-enel-antigo.jpg</b>logo anterior (multicolorido)</div></div><figcaption class="figcap">A marca anterior do grupo.</figcaption></figure>
@@ -344,7 +343,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 3 — CEOs ============ -->
+<!-- ============ CAP. 3: CEOs ============ -->
 <section class="sec dark" id="ceos" data-dot="Lideranças">
   <div class="chev left" aria-hidden="true"><div class="c1"></div><div class="c2" style="opacity:.5"></div></div>
   <div class="wrap">
@@ -365,7 +364,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 4 — PRESENÇA ============ -->
+<!-- ============ CAP. 4: PRESENÇA ============ -->
 <section class="sec" id="presenca" data-dot="Presença">
   <div class="wrap">
     <span class="kicker rv">Presença</span>
@@ -377,12 +376,12 @@ button{font-family:inherit}
       <div class="card edge"><h3>CEARÁ</h3><div class="big mid" style="color:var(--azul);margin:.5rem 0"><span class="cnt" data-v="4" data-pre="+"></span><small style="font-size:.45em"> mi</small></div><p>de clientes e presença <strong>em todo o estado</strong>.</p></div>
     </div>
     <div class="banner rv" style="margin-top:2rem;background:var(--grad3)">
-      <span style="position:relative;z-index:2">ALÉM DA DISTRIBUIÇÃO — geração renovável, comercialização, eficiência energética, eletrificação e soluções energéticas.</span>
+      <span style="position:relative;z-index:2">ALÉM DA DISTRIBUIÇÃO: geração renovável, comercialização, eficiência energética, eletrificação e soluções energéticas.</span>
     </div>
   </div>
 </section>
 
-<!-- ============ CAP. 5 — CONCESSÃO RJ ============ -->
+<!-- ============ CAP. 5: CONCESSÃO RJ ============ -->
 <section class="sec dark tall" id="concessao" data-dot="Concessão RJ">
   <div class="wrap">
     <div class="cols c2">
@@ -392,7 +391,7 @@ button{font-family:inherit}
         <h2 class="rv">Concessão no <em>centro da agenda</em></h2>
         <div class="rule rv"></div>
         <p class="lead rv">O atual contrato da <strong>Enel Distribuição Rio</strong> chega ao fim de seu ciclo em <strong>9 de dezembro de 2026</strong>.</p>
-        <p class="lead rv" style="margin-top:1rem">A ANEEL já recomendou sua continuidade por mais 30 anos, após avaliar critérios regulatórios de continuidade e sustentabilidade econômico-financeira — mas a decisão final ainda depende do Ministério de Minas e Energia.</p>
+        <p class="lead rv" style="margin-top:1rem">A ANEEL já recomendou sua continuidade por mais 30 anos, após avaliar critérios regulatórios de continuidade e sustentabilidade econômico-financeira: mas a decisão final ainda depende do Ministério de Minas e Energia.</p>
         <div class="card rv" style="margin-top:2rem;display:flex;gap:22px;align-items:center;flex-wrap:wrap">
           <div><div class="big" style="color:var(--amarelo)">R$ <span class="cnt" data-v="6.1" data-dec="1"></span> BI</div><p class="small" style="letter-spacing:.08em;font-weight:800">PREVISTOS PARA O RIO ENTRE 2025 E 2027</p></div>
           <p style="flex:1;min-width:200px">O valor representa crescimento de <strong style="color:var(--verde-claro)">+74%</strong> sobre o plano anterior.</p>
@@ -403,7 +402,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 6 — COMPLEXIDADE ============ -->
+<!-- ============ CAP. 6: COMPLEXIDADE ============ -->
 <section class="sec" id="complexidade" data-dot="Complexidade">
   <div class="wrap">
     <div class="cols c2">
@@ -414,15 +413,15 @@ button{font-family:inherit}
         <div class="rule rv"></div>
         <p class="lead rv"><strong>Resiliência:</strong> eventos climáticos, vegetação, grandes extensões territoriais e características geográficas aumentam a complexidade da rede.</p>
         <div class="stagger" style="margin-top:1.6rem">
-          <div class="rowline"><div class="ico r">⚡</div><div><strong>Perdas não técnicas*</strong><br>Duque de Caxias — <b style="color:var(--vermelho)">35,36%</b> · São Gonçalo — <b style="color:var(--vermelho)">34,61%</b></div></div>
-          <div class="rowline"><div class="ico o">🚧</div><div><strong>Áreas com Severas Restrições Operativas — ASRO</strong><br>≈<b>425 mil unidades consumidoras</b> (17% da base considerada) estão em áreas de severa restrição operacional. Esses territórios concentrariam <b>62%</b> das ocorrências de perdas não técnicas.</div></div>
+          <div class="rowline"><div class="ico r">⚡</div><div><strong>Perdas não técnicas*</strong><br>Duque de Caxias: <b style="color:var(--vermelho)">35,36%</b> · São Gonçalo: <b style="color:var(--vermelho)">34,61%</b></div></div>
+          <div class="rowline"><div class="ico o">🚧</div><div><strong>Áreas com Severas Restrições Operativas: ASRO</strong><br>≈<b>425 mil unidades consumidoras</b> (17% da base considerada) estão em áreas de severa restrição operacional. Esses territórios concentrariam <b>62%</b> das ocorrências de perdas não técnicas.</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CAP. 7 — ALERTA DE INTERPRETAÇÃO ============ -->
+<!-- ============ CAP. 7: ALERTA DE INTERPRETAÇÃO ============ -->
 <section class="sec soft" id="glossario" data-dot="Glossário">
   <div class="wrap center">
     <span class="kicker rv">Alerta de interpretação</span>
@@ -437,7 +436,7 @@ button{font-family:inherit}
       </div>
       <div class="flip" role="button" tabindex="0" aria-expanded="false">
         <div class="flip-inner">
-          <div class="face front"><span class="num">🚧 conceito</span><h3 style="font-family:var(--serif);font-size:1.7rem">Áreas com Severas<br>Restrições Operativas — ASRO</h3><span class="cta">Clique para ler →</span></div>
+          <div class="face front"><span class="num">🚧 conceito</span><h3 style="font-family:var(--serif);font-size:1.7rem">Áreas com Severas<br>Restrições Operativas: ASRO</h3><span class="cta">Clique para ler →</span></div>
           <div class="face back"><h3 style="color:var(--amarelo)">ASRO</h3><p><strong>Dificuldade ou impedimento para acessar uma área e executar serviços.</strong><br><br>Ex.: pode incluir restrições geográficas ou de segurança que dificultam a atuação das equipes.</p><span class="volta">← Voltar</span></div>
         </div>
       </div>
@@ -445,7 +444,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 8 — CONSUMIDOR ============ -->
+<!-- ============ CAP. 8: CONSUMIDOR ============ -->
 <section class="sec" id="consumidor" data-dot="Consumidor">
   <div class="wrap">
     <span class="kicker rv">Contexto</span>
@@ -469,7 +468,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 9 — RESPOSTA ============ -->
+<!-- ============ CAP. 9: RESPOSTA ============ -->
 <section class="sec soft" id="resposta" data-dot="Resposta Enel Rio">
   <div class="wrap">
     <div class="cols c2">
@@ -487,12 +486,12 @@ button{font-family:inherit}
           <div class="rowline"><div class="ico p">📍</div><div><strong>PROXIMIDADE:</strong> novas bases e ações presenciais em diferentes municípios.</div></div>
         </div>
       </div>
-      <figure class="rv"><div class="ph ratio-4x5" style="background:linear-gradient(160deg,#0a1c46,#01388f)"><img src="assets/rio-card-61bi.jpg" alt="Card com foto do Rio à noite e o destaque R$ 6,1 bi previstos para o Rio entre 2025 e 2027" onerror="this.remove()"><div class="lblbox" style="color:rgba(255,255,255,.65)"><b style="color:var(--amarelo)">assets/rio-card-61bi.jpg</b>card R$ 6,1 BI · Rio 2025–2027</div></div><figcaption class="figcap center"><strong style="color:var(--azul)">R$ 6,1 BI</strong> previstos para o Rio entre 2025 e 2027.</figcaption></figure>
+      <figure class="rv"><div class="ph ratio-4x5" style="background:linear-gradient(160deg,#0a1c46,#01388f)"><img src="assets/rio-card-61bi.jpg" alt="Card com foto do Rio à noite e o destaque R$ 6,1 bi previstos para o Rio entre 2025 e 2027" onerror="this.remove()"><div class="lblbox" style="color:rgba(255,255,255,.65)"><b style="color:var(--amarelo)">assets/rio-card-61bi.jpg</b>card R$ 6,1 BI · Rio 2025 a 2027</div></div><figcaption class="figcap center"><strong style="color:var(--azul)">R$ 6,1 BI</strong> previstos para o Rio entre 2025 e 2027.</figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- ============ CAP. 10 — SP / APAGÕES ============ -->
+<!-- ============ CAP. 10: SP / APAGÕES ============ -->
 <section class="sec dark tall" id="sp" data-dot="São Paulo">
   <div class="chev right" aria-hidden="true"><div class="c1"></div><div class="c2" style="opacity:.5"></div></div>
   <div class="wrap">
@@ -514,7 +513,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 11 — O QUE É SEGURO DIZER ============ -->
+<!-- ============ CAP. 11: O QUE É SEGURO DIZER ============ -->
 <section class="sec" id="seguro" data-dot="O que é seguro dizer">
   <div class="wrap">
     <div class="cols c2">
@@ -530,7 +529,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 12 — COMPARATIVO ============ -->
+<!-- ============ CAP. 12: COMPARATIVO ============ -->
 <section class="sec soft" id="comparativo" data-dot="Comparativo SP × RJ">
   <div class="wrap">
     <span class="kicker rv">Comparativo</span>
@@ -544,14 +543,14 @@ button{font-family:inherit}
         <tr><td>Continuidade do serviço</td><td>Qualidade do fornecimento e tempo de restabelecimento estão entre os principais pontos de acompanhamento regulatório.</td><td>Qualidade e continuidade do fornecimento também integram o acompanhamento regulatório.</td></tr>
         <tr><td>Segurança territorial</td><td>Não aparece como questão central no processo regulatório atual.</td><td>Presença de áreas com severa restrição operativa dificulta o acesso e a atuação das equipes.</td></tr>
         <tr><td>Perdas não técnicas</td><td>Não são o principal eixo do processo regulatório atual.</td><td>Representam um desafio relevante da concessão, associado inclusive às áreas de restrição operativa.</td></tr>
-        <tr><td>Investimentos previstos 2025–2027</td><td><span class="pill b">R$ 10,4 bilhões</span></td><td><span class="pill y">R$ 6,1 bilhões</span></td></tr>
+        <tr><td>Investimentos previstos 2025 a 2027</td><td><span class="pill b">R$ 10,4 bilhões</span></td><td><span class="pill y">R$ 6,1 bilhões</span></td></tr>
       </tbody>
     </table>
     </div>
   </div>
 </section>
 
-<!-- ============ CAP. 13 — DIAGNÓSTICO ============ -->
+<!-- ============ CAP. 13: DIAGNÓSTICO ============ -->
 <section class="sec" id="diagnostico" data-dot="Diagnóstico">
   <div class="wrap">
     <span class="kicker rv">Síntese</span>
@@ -569,7 +568,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 14 — IMPRENSA ============ -->
+<!-- ============ CAP. 14: IMPRENSA ============ -->
 <section class="sec soft" id="imprensa" data-dot="Imprensa">
   <div class="wrap">
     <span class="kicker rv">Imprensa</span>
@@ -577,11 +576,11 @@ button{font-family:inherit}
     <div class="rule rv"></div>
     <p class="lead rv">Cobertura desfavorável com contrapesos: a empresa comunica transformação; a imprensa continua cobrando serviço.</p>
     <div class="grid g3 stagger" style="margin-top:1.8rem">
-      <figure class="clickable" data-lb="imprensa" data-cap="Busca Google Notícias — “enel são paulo”: pauta dominada por caducidade, perícia negada e alegações finais." tabindex="0" role="button" aria-label="Ampliar print da imprensa de São Paulo">
+      <figure class="clickable" data-lb="imprensa" data-cap="Busca Google Notícias: “enel são paulo”: pauta dominada por caducidade, perícia negada e alegações finais." tabindex="0" role="button" aria-label="Ampliar print da imprensa de São Paulo">
         <div class="ph ratio-4x5"><img src="assets/print-imprensa-sp.jpg" alt="Print de resultados do Google Notícias para enel são paulo, com manchetes sobre caducidade" onerror="this.remove()"><div class="lblbox"><b>assets/print-imprensa-sp.jpg</b>Google Notícias · SP</div></div>
         <figcaption class="figcap"><strong>SP:</strong> concessão · caducidade · apagões · Aneel · defesa da companhia · capacidade de resposta</figcaption>
       </figure>
-      <figure class="clickable" data-lb="imprensa" data-cap="Busca Google Notícias — “enel rio de janeiro”: interrupções, furto de cabos e investimentos em infraestrutura." tabindex="0" role="button" aria-label="Ampliar print da imprensa do Rio de Janeiro">
+      <figure class="clickable" data-lb="imprensa" data-cap="Busca Google Notícias: “enel rio de janeiro”: interrupções, furto de cabos e investimentos em infraestrutura." tabindex="0" role="button" aria-label="Ampliar print da imprensa do Rio de Janeiro">
         <div class="ph ratio-4x5"><img src="assets/print-imprensa-rj.jpg" alt="Print de resultados do Google Notícias para enel rio de janeiro, com manchetes sobre furto de cabos e investimentos" onerror="this.remove()"><div class="lblbox"><b>assets/print-imprensa-rj.jpg</b>Google Notícias · RJ</div></div>
         <figcaption class="figcap"><strong>RJ:</strong> interrupções · reclamações · reajuste tarifário · furto e perdas · renovação · eventos climáticos</figcaption>
       </figure>
@@ -606,7 +605,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 15 — TALKWALKER ============ -->
+<!-- ============ CAP. 15: TALKWALKER ============ -->
 <section class="sec dark" id="numeros" data-dot="A conversa em números">
   <div class="wrap">
     <span class="kicker rv">Talkwalker</span>
@@ -614,16 +613,16 @@ button{font-family:inherit}
     <div class="rule rv"></div>
     <p class="lead rv">Panorama digital · 30 dias.</p>
     <div class="grid g2 stagger" style="margin-top:2rem">
-      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="9.3" data-dec="1"></span><small style="font-size:.42em"> mil</small></div><p class="lbl"><strong>resultados</strong> — menções encontradas.</p></div>
-      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="161.7" data-dec="1"></span><small style="font-size:.42em"> mil</small></div><p class="lbl"><strong>engajamentos</strong> — soma das interações geradas pelos conteúdos, como curtidas, comentários e compartilhamentos.</p></div>
-      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="3.5" data-dec="1"></span><small style="font-size:.42em"> bi</small></div><p class="lbl"><strong>alcance potencial</strong> — estimativa de exposição potencial; não corresponde a pessoas efetivamente alcançadas.</p></div>
-      <div class="stat"><div style="display:flex;gap:1.6rem;align-items:baseline;flex-wrap:wrap"><span class="big" style="color:var(--verde-claro);font-size:clamp(2rem,4vw,3rem)"><span class="cnt" data-v="4.2" data-dec="1"></span>%</span><span class="big" style="color:#fff;font-size:clamp(1.6rem,3vw,2.3rem)"><span class="cnt" data-v="60.1" data-dec="1"></span>%</span><span class="big" style="color:#ff7d70;font-size:clamp(2rem,4vw,3rem)"><span class="cnt" data-v="35.7" data-dec="1"></span>%</span></div><p class="lbl"><strong>sentimento</strong> — positivo · neutro · negativo.</p></div>
+      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="9.3" data-dec="1"></span><small style="font-size:.42em"> mil</small></div><p class="lbl"><strong>resultados</strong>: menções encontradas.</p></div>
+      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="161.7" data-dec="1"></span><small style="font-size:.42em"> mil</small></div><p class="lbl"><strong>engajamentos</strong>: soma das interações geradas pelos conteúdos, como curtidas, comentários e compartilhamentos.</p></div>
+      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="3.5" data-dec="1"></span><small style="font-size:.42em"> bi</small></div><p class="lbl"><strong>alcance potencial</strong>: estimativa de exposição potencial; não corresponde a pessoas efetivamente alcançadas.</p></div>
+      <div class="stat"><div style="display:flex;gap:1.6rem;align-items:baseline;flex-wrap:wrap"><span class="big" style="color:var(--verde-claro);font-size:clamp(2rem,4vw,3rem)"><span class="cnt" data-v="4.2" data-dec="1"></span>%</span><span class="big" style="color:#fff;font-size:clamp(1.6rem,3vw,2.3rem)"><span class="cnt" data-v="60.1" data-dec="1"></span>%</span><span class="big" style="color:#ff7d70;font-size:clamp(2rem,4vw,3rem)"><span class="cnt" data-v="35.7" data-dec="1"></span>%</span></div><p class="lbl"><strong>sentimento</strong>: positivo · neutro · negativo.</p></div>
     </div>
     <p class="note">Fonte: Talkwalker | Período analisado: 28/07 a 26/08/2026 | Brasil</p>
   </div>
 </section>
 
-<!-- ============ CAP. 16 — PICO 31 JUL ============ -->
+<!-- ============ CAP. 16: PICO 31 JUL ============ -->
 <section class="sec" id="pico" data-dot="Pico 31 JUL">
   <div class="wrap">
     <span class="kicker rv">31 JUL</span>
@@ -642,11 +641,11 @@ button{font-family:inherit}
           <line x1="150" y1="60" x2="150" y2="18" stroke="#FF0F64" stroke-dasharray="4 5" stroke-width="2"/>
           <circle class="pulse" cx="150" cy="60" r="7" fill="none" stroke="#FF0F64" stroke-width="2"/>
           <circle class="peak-dot" cx="150" cy="60" r="7"/>
-          <text class="anno" x="164" y="26">31 JUL — pico concentra a cobrança sobre a capacidade de resposta da Enel</text>
+          <text class="anno" x="164" y="26">31 JUL: pico concentra a cobrança sobre a capacidade de resposta da Enel</text>
         </svg>
       </div>
-      <div class="card edge rv"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="1.8" data-dec="1"></span> <small style="font-size:.45em">mil</small></div><p><strong>resultados no dia</strong> · <strong><span class="cnt" data-v="7.7" data-dec="1"></span> mil engajamentos</strong></p><p style="margin-top:.8rem" class="small muted">Cobertura representativa do pico | GloboNews — <em>Falta de energia após vendaval no Rio.</em></p></div>
-      <figure class="clickable rv" data-lb="pico" data-cap="Cobertura representativa do pico — GloboNews: falta de energia após vendaval no Rio." tabindex="0" role="button" aria-label="Ampliar print da cobertura do pico">
+      <div class="card edge rv"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="1.8" data-dec="1"></span> <small style="font-size:.45em">mil</small></div><p><strong>resultados no dia</strong> · <strong><span class="cnt" data-v="7.7" data-dec="1"></span> mil engajamentos</strong></p><p style="margin-top:.8rem" class="small muted">Cobertura representativa do pico | GloboNews: <em>Falta de energia após vendaval no Rio.</em></p></div>
+      <figure class="clickable rv" data-lb="pico" data-cap="Cobertura representativa do pico: GloboNews: falta de energia após vendaval no Rio." tabindex="0" role="button" aria-label="Ampliar print da cobertura do pico">
         <div class="ph ratio-16x9"><img src="assets/print-globonews-vendaval.jpg" alt="Print de vídeo da GloboNews sobre falta de luz após vendaval no Rio, com moradores na rua à noite" onerror="this.remove()"><div class="lblbox"><b>assets/print-globonews-vendaval.jpg</b>print GloboNews · vendaval</div></div>
       </figure>
     </div>
@@ -655,7 +654,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 17 — WORD CLOUD ============ -->
+<!-- ============ CAP. 17: WORD CLOUD ============ -->
 <section class="sec soft" id="conversa" data-dot="Do que era feita a conversa">
   <div class="wrap center">
     <span class="kicker rv">31 JUL</span>
@@ -670,11 +669,11 @@ button{font-family:inherit}
       <div class="card edge"><strong>RESPOSTA</strong><p class="small muted">restabelecimento · normalização · equipes · atendimento</p></div>
       <div class="card edge"><strong>TERRITÓRIO</strong><p class="small muted">moradores · bairros · municípios · áreas afetadas</p></div>
     </div>
-    <p class="note">Fonte: Talkwalker | 31/07/2026, 11h–12h | Intervalo de maior intensidade do pico. As cores são recursos visuais da ferramenta e não representam categorias ou sentimento.</p>
+    <p class="note">Fonte: Talkwalker | 31/07/2026, 11h às 12h | Intervalo de maior intensidade do pico. As cores são recursos visuais da ferramenta e não representam categorias ou sentimento.</p>
   </div>
 </section>
 
-<!-- ============ CAP. 18 — SENTIMENTO ============ -->
+<!-- ============ CAP. 18: SENTIMENTO ============ -->
 <section class="sec" id="sentimento" data-dot="Sentimento">
   <div class="wrap">
     <span class="kicker rv">Sentimento</span>
@@ -706,7 +705,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 19 — REDES ============ -->
+<!-- ============ CAP. 19: REDES ============ -->
 <section class="sec soft" id="redes" data-dot="Redes">
   <div class="wrap">
     <span class="kicker rv">Redes</span>
@@ -715,8 +714,8 @@ button{font-family:inherit}
     <p class="lead rv">Críticas espontâneas se concentram em interrupção, demora e capacidade de resposta.</p>
     <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start">
       <div class="grid g2 stagger">
-        <figure class="clickable" data-lb="redes" data-cap="Comentários espontâneos de consumidores em SP (identidades preservadas)." tabindex="0" role="button" aria-label="Ampliar prints de comentários de São Paulo"><div class="ph ratio-4x5"><img src="assets/print-comentarios-sp.jpg" alt="Prints de comentários críticos de consumidores de São Paulo em redes sociais, com nomes ocultados" onerror="this.remove()"><div class="lblbox"><b>assets/print-comentarios-sp.jpg</b>comentários · SP</div></div><figcaption class="figcap">SP — comentários espontâneos</figcaption></figure>
-        <figure class="clickable" data-lb="redes" data-cap="Comentários espontâneos de consumidores no RJ (identidades preservadas)." tabindex="0" role="button" aria-label="Ampliar prints de comentários do Rio de Janeiro"><div class="ph ratio-4x5"><img src="assets/print-comentarios-rj.jpg" alt="Prints de comentários críticos de consumidores do Rio de Janeiro em redes sociais, com nomes ocultados" onerror="this.remove()"><div class="lblbox"><b>assets/print-comentarios-rj.jpg</b>comentários · RJ</div></div><figcaption class="figcap">RJ — comentários espontâneos</figcaption></figure>
+        <figure class="clickable" data-lb="redes" data-cap="Comentários espontâneos de consumidores em SP (identidades preservadas)." tabindex="0" role="button" aria-label="Ampliar prints de comentários de São Paulo"><div class="ph ratio-4x5"><img src="assets/print-comentarios-sp.jpg" alt="Prints de comentários críticos de consumidores de São Paulo em redes sociais, com nomes ocultados" onerror="this.remove()"><div class="lblbox"><b>assets/print-comentarios-sp.jpg</b>comentários · SP</div></div><figcaption class="figcap">SP: comentários espontâneos</figcaption></figure>
+        <figure class="clickable" data-lb="redes" data-cap="Comentários espontâneos de consumidores no RJ (identidades preservadas)." tabindex="0" role="button" aria-label="Ampliar prints de comentários do Rio de Janeiro"><div class="ph ratio-4x5"><img src="assets/print-comentarios-rj.jpg" alt="Prints de comentários críticos de consumidores do Rio de Janeiro em redes sociais, com nomes ocultados" onerror="this.remove()"><div class="lblbox"><b>assets/print-comentarios-rj.jpg</b>comentários · RJ</div></div><figcaption class="figcap">RJ: comentários espontâneos</figcaption></figure>
       </div>
       <div class="card rv">
         <h3 style="color:var(--azul)">Temas recorrentes</h3>
@@ -730,7 +729,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 20 — CRÍTICA × POSITIVO ============ -->
+<!-- ============ CAP. 20: CRÍTICA × POSITIVO ============ -->
 <section class="sec" id="quali" data-dot="Leitura quali">
   <div class="wrap">
     <span class="kicker rv">Leitura quali</span>
@@ -751,7 +750,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 21 — FRENTES ============ -->
+<!-- ============ CAP. 21: FRENTES ============ -->
 <section class="sec soft" id="frentes" data-dot="Agenda positiva">
   <div class="wrap">
     <span class="kicker rv">Frentes</span>
@@ -770,7 +769,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 22 — CASES ============ -->
+<!-- ============ CAP. 22: CASES ============ -->
 <section class="sec" id="cases" data-dot="Cases">
   <div class="wrap">
     <span class="kicker rv">Case</span>
@@ -805,7 +804,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 23 — PORTFÓLIO ============ -->
+<!-- ============ CAP. 23: PORTFÓLIO ============ -->
 <section class="sec soft" id="portfolio" data-dot="Portfólio">
   <div class="wrap">
     <span class="kicker rv">Portfólio</span>
@@ -822,7 +821,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 24 — CAMPANHAS ============ -->
+<!-- ============ CAP. 24: CAMPANHAS ============ -->
 <section class="sec dark tall" id="campanhas" data-dot="Campanhas">
   <div class="wrap">
     <div class="cols c2">
@@ -835,9 +834,9 @@ button{font-family:inherit}
         <p class="rv" style="margin-top:1.2rem">Criada pela Leo, a comunicação coloca em primeiro plano investimentos, melhoria do serviço e aproximação com o consumidor.</p>
         <p class="rv" style="margin-top:1rem;font-weight:700;color:var(--verde-claro);letter-spacing:.04em">PROXIMIDADE · INVESTIMENTOS · ATENDIMENTO · MODERNIZAÇÃO · PRESENÇA TERRITORIAL</p>
         <div class="card rv" style="margin-top:1.6rem">A comunicação transforma investimentos e expansão operacional em uma promessa de maior proximidade com o consumidor.</div>
-        <p class="note">CAMPANHA INSTITUCIONAL | JUL — SET 2025 | SP, RJ e CE</p>
+        <p class="note">CAMPANHA INSTITUCIONAL | JUL A SET 2025 | SP, RJ e CE</p>
       </div>
-      <figure class="clickable rv" data-lb="campanha" data-cap="Peça da campanha institucional “Compromisso tem marca. Enel, mais perto de você.” (Leo, jul–set 2025)." tabindex="0" role="button" aria-label="Ampliar peça da campanha Compromisso tem marca"><div class="ph ratio-4x5" style="background:linear-gradient(160deg,#33465f,#0a1c46)"><img src="assets/peca-compromisso-tem-marca.jpg" alt="Peça publicitária da Enel com eletricista trabalhando em poste e o título Compromisso tem marca" onerror="this.remove()"><div class="lblbox" style="color:rgba(255,255,255,.65)"><b style="color:var(--amarelo)">assets/peca-compromisso-tem-marca.jpg</b>peça da campanha</div></div></figure>
+      <figure class="clickable rv" data-lb="campanha" data-cap="Peça da campanha institucional “Compromisso tem marca. Enel, mais perto de você.” (Leo, jul a set 2025)." tabindex="0" role="button" aria-label="Ampliar peça da campanha Compromisso tem marca"><div class="ph ratio-4x5" style="background:linear-gradient(160deg,#33465f,#0a1c46)"><img src="assets/peca-compromisso-tem-marca.jpg" alt="Peça publicitária da Enel com eletricista trabalhando em poste e o título Compromisso tem marca" onerror="this.remove()"><div class="lblbox" style="color:rgba(255,255,255,.65)"><b style="color:var(--amarelo)">assets/peca-compromisso-tem-marca.jpg</b>peça da campanha</div></div></figure>
     </div>
 
     <div class="cols c2" style="margin-top:5rem">
@@ -862,7 +861,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 25 — POSICIONAMENTO ≠ PERCEPÇÃO ============ -->
+<!-- ============ CAP. 25: POSICIONAMENTO ≠ PERCEPÇÃO ============ -->
 <section class="sec" id="percepcao" data-dot="Posicionamento ≠ Percepção">
   <div class="wrap">
     <span class="kicker rv">Leitura reputacional</span>
@@ -873,25 +872,25 @@ button{font-family:inherit}
       <div class="card rv" style="border:2px solid var(--verde)">
         <h3 style="background:var(--verde);color:#fff;display:inline-block;padding:.4em 1em;border-radius:8px;font-family:var(--sans);font-size:.95rem">O QUE A MARCA PROMETE</h3>
         <p class="tagline" style="color:var(--verde-escuro);font-size:1.6rem;margin:1rem 0"><em>“Mais perto de você”</em></p>
-        <div class="rowline"><div class="ico g">🤝</div><div><strong>PROXIMIDADE</strong> — relação com o cliente</div></div>
-        <div class="rowline"><div class="ico g">📈</div><div><strong>INVESTIMENTOS</strong> — expansão da rede</div></div>
-        <div class="rowline"><div class="ico g">🎧</div><div><strong>ATENDIMENTO</strong> — mais canais e equipes</div></div>
-        <div class="rowline" style="border:none"><div class="ico g">⚙️</div><div><strong>MODERNIZAÇÃO</strong> — infraestrutura e operação</div></div>
+        <div class="rowline"><div class="ico g">🤝</div><div><strong>PROXIMIDADE</strong>: relação com o cliente</div></div>
+        <div class="rowline"><div class="ico g">📈</div><div><strong>INVESTIMENTOS</strong>: expansão da rede</div></div>
+        <div class="rowline"><div class="ico g">🎧</div><div><strong>ATENDIMENTO</strong>: mais canais e equipes</div></div>
+        <div class="rowline" style="border:none"><div class="ico g">⚙️</div><div><strong>MODERNIZAÇÃO</strong>: infraestrutura e operação</div></div>
       </div>
       <div class="card rv" style="border:2px solid var(--azul-vivo)">
         <h3 style="background:var(--azul-vivo);color:#fff;display:inline-block;padding:.4em 1em;border-radius:8px;font-family:var(--sans);font-size:.95rem">O QUE O CLIENTE VIVENCIA</h3>
         <p class="tagline" style="color:var(--azul-vivo);font-size:1.6rem;margin:1rem 0"><em>A experiência concreta</em></p>
-        <div class="rowline"><div class="ico c">⚡</div><div><strong>RESTABELECIMENTO</strong> — rapidez e confiabilidade</div></div>
-        <div class="rowline"><div class="ico c">🎯</div><div><strong>RESOLUTIVIDADE</strong> — soluções na primeira interação</div></div>
-        <div class="rowline"><div class="ico c">📱</div><div><strong>CANAIS DIGITAIS</strong> — jornadas simples e integradas</div></div>
-        <div class="rowline" style="border:none"><div class="ico c">💬</div><div><strong>ATENDIMENTO</strong> — clareza, empatia e eficiência</div></div>
+        <div class="rowline"><div class="ico c">⚡</div><div><strong>RESTABELECIMENTO</strong>: rapidez e confiabilidade</div></div>
+        <div class="rowline"><div class="ico c">🎯</div><div><strong>RESOLUTIVIDADE</strong>: soluções na primeira interação</div></div>
+        <div class="rowline"><div class="ico c">📱</div><div><strong>CANAIS DIGITAIS</strong>: jornadas simples e integradas</div></div>
+        <div class="rowline" style="border:none"><div class="ico c">💬</div><div><strong>ATENDIMENTO</strong>: clareza, empatia e eficiência</div></div>
       </div>
     </div>
     <div class="banner paper rv" style="margin-top:1.6rem;text-align:center">Parte da exposição positiva aparece em publicidade, informes patrocinados e branded content. Esses conteúdos evidenciam o posicionamento que a marca busca consolidar, <strong>mas não devem ser lidos isoladamente como percepção espontânea.</strong></div>
   </div>
 </section>
 
-<!-- ============ CAP. 26 — GOOGLE TRENDS ============ -->
+<!-- ============ CAP. 26: GOOGLE TRENDS ============ -->
 <section class="sec soft" id="trends" data-dot="Google Trends">
   <div class="wrap">
     <span class="kicker rv">Google Trends</span>
@@ -908,18 +907,18 @@ button{font-family:inherit}
         <text class="axis" x="50" y="332">jan</text><text class="axis" x="172" y="332">fev</text><text class="axis" x="294" y="332">mar</text><text class="axis" x="416" y="332">abr</text><text class="axis" x="538" y="332">mai</text><text class="axis" x="660" y="332">jun</text><text class="axis" x="782" y="332">jul</text><text class="axis" x="890" y="332">ago</text>
         <path d="M50,190 L70,60 L95,120 L125,116 L160,122 L185,90 L205,110 L235,62 L260,130 L285,95 L305,190 L330,222 L355,215 L380,110 L400,75 L425,180 L450,140 L470,95 L495,60 L520,125 L545,110 L570,95 L590,100 L620,150 L650,185 L675,180 L700,160 L725,135 L750,95 L775,130 L800,145 L825,110 L850,95 L875,70 L900,130 L920,150" fill="none" stroke="#0555FA" stroke-width="3.5" stroke-linecap="round" class="trace" style="--len:1900"/>
         <circle class="peak-dot" cx="70" cy="60" r="7" fill="#FF5A0F"/><line x1="70" y1="60" x2="70" y2="20" stroke="#FF5A0F" stroke-dasharray="4 5" stroke-width="2"/>
-        <text class="anno" x="84" y="20" fill="#FF5A0F">SEMANA DE 4 JAN — reunião com concessionárias após falhas de luz e água em Búzios</text>
+        <text class="anno" x="84" y="20" fill="#FF5A0F">SEMANA DE 4 JAN: reunião com concessionárias após falhas de luz e água em Búzios</text>
         <circle class="peak-dot" cx="235" cy="62" r="7" fill="#FF5A0F"/><line x1="235" y1="62" x2="300" y2="44" stroke="#FF5A0F" stroke-dasharray="4 5" stroke-width="2"/>
-        <text class="anno" x="308" y="44" fill="#FF5A0F">SEMANA DE 22 FEV — Aneel adia para março a decisão sobre o contrato da Enel em SP</text>
-        <text class="axis" x="330" y="300" style="font-weight:700">Evolução do interesse de busca no Brasil | jan–ago/2026</text>
+        <text class="anno" x="308" y="44" fill="#FF5A0F">SEMANA DE 22 FEV: Aneel adia para março a decisão sobre o contrato da Enel em SP</text>
+        <text class="axis" x="330" y="300" style="font-weight:700">Evolução do interesse de busca no Brasil | jan a ago/2026</text>
       </svg>
     </div>
     <div class="banner paper rv" style="margin-top:1.4rem;text-align:center"><strong>A marca mantém atenção contínua também no ambiente de busca e os picos não são apenas institucionais: respondem a episódios de serviço e concessão.</strong></div>
-    <p class="note">Fonte: Google Trends | 01/01–25/08/2026</p>
+    <p class="note">Fonte: Google Trends | 01/01 a 25/08/2026</p>
   </div>
 </section>
 
-<!-- ============ CAP. 27 — O QUE O CONSUMIDOR PROCURA ============ -->
+<!-- ============ CAP. 27: O QUE O CONSUMIDOR PROCURA ============ -->
 <section class="sec" id="busca" data-dot="O que o consumidor procura">
   <div class="wrap">
     <span class="kicker rv">Busca</span>
@@ -937,7 +936,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 28 — ACESSIBILIDADE ============ -->
+<!-- ============ CAP. 28: ACESSIBILIDADE ============ -->
 <section class="sec soft" id="acessibilidade" data-dot="Acessibilidade">
   <div class="wrap">
     <span class="kicker rv">Acessibilidade</span>
@@ -945,7 +944,7 @@ button{font-family:inherit}
     <div class="rule rv"></div>
     <p class="lead rv">Há barreiras que merecem atenção especialmente para leitores de tela e usuários que precisam ampliar o conteúdo.</p>
     <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start">
-      <figure class="clickable rv" data-lb="acess" data-cap="Home do site da Enel Rio — objeto da avaliação de acessibilidade." tabindex="0" role="button" aria-label="Ampliar print da home do site da Enel Rio"><div class="ph ratio-16x9"><img src="assets/print-site-enel-rio.jpg" alt="Print da página inicial do site da Enel Rio com banner sobre ampliação de investimentos" onerror="this.remove()"><div class="lblbox"><b>assets/print-site-enel-rio.jpg</b>home enel.com.br · RJ</div></div><figcaption class="figcap click-tip">*Clique na imagem para ampliar.</figcaption></figure>
+      <figure class="clickable rv" data-lb="acess" data-cap="Home do site da Enel Rio: objeto da avaliação de acessibilidade." tabindex="0" role="button" aria-label="Ampliar print da home do site da Enel Rio"><div class="ph ratio-16x9"><img src="assets/print-site-enel-rio.jpg" alt="Print da página inicial do site da Enel Rio com banner sobre ampliação de investimentos" onerror="this.remove()"><div class="lblbox"><b>assets/print-site-enel-rio.jpg</b>home enel.com.br · RJ</div></div><figcaption class="figcap click-tip">*Clique na imagem para ampliar.</figcaption></figure>
       <div class="stagger">
         <div class="card" style="border-left:6px solid var(--azul-vivo)"><strong>IMAGENS</strong><p class="small muted">Mais da metade das imagens analisadas na home não apresentou descrição textual detectável para leitores de tela.</p></div>
         <div class="card" style="border-left:6px solid var(--verde);margin-top:14px"><strong>CONTROLES INTERATIVOS</strong><p class="small muted">Botões, ícones e links sem identificação textual detectável podem dificultar o uso por tecnologias assistivas.</p></div>
@@ -956,7 +955,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 29 — SITE ENEL RJ ============ -->
+<!-- ============ CAP. 29: SITE ENEL RJ ============ -->
 <section class="sec" id="site" data-dot="Site Enel RJ">
   <div class="wrap">
     <span class="kicker rv">Experiência digital</span>
@@ -985,7 +984,7 @@ button{font-family:inherit}
         <p class="small" style="font-weight:800;margin-top:.5rem">PONTOS POSITIVOS</p>
         <p class="small">★ diferencia tipos de ocorrência<br>★ orienta verificações de segurança<br>★ permite acompanhar estágios</p>
         <p class="small" style="font-weight:800;margin-top:.9rem">FRICÇÕES</p>
-        <p class="small">➔ <strong>CAPTCHA</strong> — etapa adicional de validação.<br>➔ <strong>DADOS ADICIONAIS</strong> — aumentam o número de etapas até o registro da ocorrência.</p>
+        <p class="small">➔ <strong>CAPTCHA</strong>: etapa adicional de validação.<br>➔ <strong>DADOS ADICIONAIS</strong>: aumentam o número de etapas até o registro da ocorrência.</p>
       </div>
     </div>
     <div class="banner rv" style="margin-top:1.6rem;text-align:center"><span style="position:relative;z-index:2">Em situação de apagão, etapas adicionais podem aumentar a fricção justamente quando há urgência ou conectividade limitada.</span></div>
@@ -993,7 +992,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 30 — DIAGNÓSTICO DIGITAL ============ -->
+<!-- ============ CAP. 30: DIAGNÓSTICO DIGITAL ============ -->
 <section class="sec soft" id="digital" data-dot="Diagnóstico digital">
   <div class="wrap">
     <span class="kicker rv">Síntese digital</span>
@@ -1022,7 +1021,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 31 — PONTOS DE ATENÇÃO ============ -->
+<!-- ============ CAP. 31: PONTOS DE ATENÇÃO ============ -->
 <section class="sec dark tall" id="conclusao" data-dot="Pontos de atenção">
   <div class="chev left faint" aria-hidden="true"><div class="c1"></div><div class="c2"></div></div>
   <div class="wrap">
@@ -1060,7 +1059,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 32 — FONTES ============ -->
+<!-- ============ CAP. 32: FONTES ============ -->
 <section class="sec" id="fontes" data-dot="Fontes">
   <div class="wrap">
     <span class="kicker rv">Fontes</span>
@@ -1074,12 +1073,12 @@ button{font-family:inherit}
   </div>
 </section>
 
-<!-- ============ CAP. 33 — ENCERRAMENTO ============ -->
+<!-- ============ CAP. 33: ENCERRAMENTO ============ -->
 <footer class="sec tall" id="fim" data-dot="Encerramento">
   <div class="chev right" aria-hidden="true"><div class="c1" style="background:rgba(255,255,255,.05)"></div><div class="c2"></div></div>
   <div class="wrap">
     <h2 class="rv">Obrigado<em style="color:var(--amarelo)">!</em></h2>
-    <p class="rv" style="color:rgba(255,255,255,.75);max-width:52ch;margin:1rem auto 0">Briefing Executivo — Quem é a Enel? Diagnóstico de marca, reputação e experiência digital.</p>
+    <p class="rv" style="color:rgba(255,255,255,.75);max-width:52ch;margin:1rem auto 0">Briefing Executivo: Quem é a Enel? Diagnóstico de marca, reputação e experiência digital.</p>
     <div class="sign rv">
       <span class="logo-leiaute"><img src="assets/leiaute-propaganda.png" alt="Leiaute Propaganda" onerror="this.outerHTML='&lt;span class=&quot;txt&quot;&gt;Leiaute&lt;/span&gt;'"></span>
       <span class="yr">LEIAUTE PROPAGANDA · 2026</span>
