@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Briefing Executivo | Quem é a Enel? · Leiaute Propaganda</title>
-<meta name="description" content="Briefing executivo sobre a Enel Brasil: marca, reputação e experiência digital. Uma apresentação da Leiaute Propaganda.">
+<title>Enel Brasil | Reputação, experiência e presença digital · Leiaute Propaganda</title>
+<meta name="description" content="Diagnóstico de reputação e presença digital da Enel Brasil: leitura estratégica de 1º de janeiro a 10 de setembro de 2026. Uma apresentação da Leiaute Propaganda.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -299,7 +299,7 @@ h3{font-size:1.16rem;font-weight:700}
 #hero .topbar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:26px clamp(20px,4vw,48px);z-index:6}
 #hero .topbar,#hero .wrap,#hero .scroll-hint{z-index:6}
 #hero .tag-top{font-size:.68rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--amarelo)}
-#hero h1{color:var(--amarelo);font-size:clamp(2.3rem,6vw,4.6rem);white-space:nowrap;font-weight:700}
+#hero h1{color:var(--amarelo);font-size:clamp(2.1rem,4.9vw,4rem);font-weight:700;max-width:15ch}
 #hero .sub{margin-top:1.3rem;font-size:clamp(.98rem,1.7vw,1.22rem);color:rgba(255,255,255,.86);max-width:52ch}
 #hero .sub em{font-family:var(--serif);font-style:italic;color:#7FD6A8}
 .enel-mark{margin-top:2.4rem}
@@ -309,6 +309,38 @@ h3{font-size:1.16rem;font-weight:700}
 .scroll-hint .line::after{content:"";position:absolute;left:0;top:-50%;width:100%;height:50%;background:var(--amarelo);animation:drop 1.7s ease-in-out infinite}
 @keyframes drop{0%{top:-50%}100%{top:110%}}
 @media (prefers-reduced-motion:reduce){#hero{height:100vh}}
+
+
+/* ---------- v4: barras horizontais ---------- */
+.hrow{display:flex;align-items:center;gap:12px;padding:.45rem 0}
+.hlab{width:190px;font-size:.85rem;font-weight:600;color:#33415F;flex:none}
+.htrack{flex:1;background:#EEF1F7;border-radius:7px;height:26px;overflow:hidden}
+.hfill{height:100%;width:var(--w,50%);background:var(--c,#123A8A);border-radius:7px;transform-origin:left;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.7,.25,1) .15s}
+.in .hfill{transform:scaleX(1)}
+.hval{width:118px;font-size:.8rem;font-weight:800;color:var(--ink);flex:none;font-variant-numeric:tabular-nums}
+@media(max-width:700px){.hlab{width:120px;font-size:.76rem}.hval{width:84px;font-size:.72rem}}
+.sec.dark .hlab{color:rgba(255,255,255,.78)}
+.sec.dark .htrack{background:rgba(255,255,255,.1)}
+.sec.dark .hval{color:#fff}
+/* grids extras */
+.grid.g4{grid-template-columns:repeat(4,1fr)}
+.grid.g5{grid-template-columns:repeat(5,1fr)}
+@media(max-width:1020px){.grid.g4,.grid.g5{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid.g4,.grid.g5{grid-template-columns:1fr}}
+/* número de etapa */
+.stepn{display:inline-grid;place-items:center;min-width:30px;height:30px;border-radius:50%;background:var(--gold-soft);color:var(--gold-ink);font-weight:800;font-size:.78rem}
+.sec.dark .stepn{background:rgba(255,204,41,.16);color:var(--amarelo)}
+/* ranking (veículos / perfis) */
+.rank{display:flex;align-items:center;gap:14px;padding:.8rem 0;border-bottom:1px solid var(--line-2)}
+.rank:last-child{border:none}
+.rank .pos{font-weight:800;color:#93A0B8;font-size:.8rem;width:18px}
+.rank .who{font-weight:700;font-size:.9rem}
+.rank .what{font-size:.78rem;color:var(--ink-2)}
+.rank .val{margin-left:auto;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* chips de consulta */
+.qchip{display:flex;justify-content:space-between;gap:10px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:.6rem .9rem;font-size:.84rem;background:#fff}
+.qchip+.qchip{margin-top:8px}
+.qchip .up{color:var(--pos);font-weight:800;white-space:nowrap}
 
 /* foco visível */
 a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;border-radius:4px}
@@ -364,12 +396,12 @@ button{font-family:inherit}
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="topbar">
       <span class="logo-leiaute"><img src="assets/leiaute-propaganda.png" alt="Leiaute Propaganda" onerror="this.outerHTML='&lt;span class=&quot;txt&quot;&gt;Leiaute&lt;/span&gt;'"></span>
-      <span class="tag-top">Briefing Executivo · 2026</span>
+      <span class="tag-top">Leitura Estratégica · 2026</span>
     </div>
     <div class="wrap">
       <div class="hero-content" id="heroContent">
-        <h1 class="rv in">Quem é a Enel?</h1>
-        <p class="sub rv in" style="transition-delay:.2s">Um diagnóstico de <em>marca, reputação e experiência digital</em>: a energia que sai do sistema, atravessa a cidade e é julgada dentro de casa.</p>
+        <h1 class="rv in">Reputação, experiência e presença digital</h1>
+        <p class="sub rv in" style="transition-delay:.2s">Leitura estratégica da conversa pública sobre a Enel Brasil: <em>62,9 mil menções analisadas</em> entre 1º de janeiro e 10 de setembro de 2026.</p>
         <div class="enel-mark rv in" style="transition-delay:.35s">
           <img src="assets/logo-enel-brasil.png" alt="Logotipo Enel Brasil com as cores da bandeira" onerror="this.outerHTML='&lt;strong style=&quot;font-size:1.5rem;color:#00A859&quot;&gt;enel &lt;span style=&quot;color:#FFCC29;letter-spacing:.3em;font-size:.9rem&quot;&gt;BRASIL&lt;/span&gt;&lt;/strong&gt;'">
         </div>
@@ -379,977 +411,681 @@ button{font-family:inherit}
   </div>
 </header>
 
-<!-- ============ CAP. 1 · ENEL EM 1 MINUTO ============ -->
-<section class="sec" id="minuto" data-dot="Enel em 1 minuto">
+<!-- ============ CAP. 1 · RESUMO EXECUTIVO ============ -->
+<section class="sec" id="resumo" data-dot="Resumo executivo">
   <div class="wrap">
-    <span class="kicker rv">Geral</span>
-    <h2 class="rv">Enel em <em>1 minuto</em></h2>
+    <span class="kicker rv">Resumo</span>
+    <h2 class="rv">Resumo <em>executivo</em></h2>
     <div class="rule rv"></div>
-    <p class="lead rv"><strong>Grande operação de energia, em ciclo recorde de investimentos, mas sob forte atenção operacional, regulatória e reputacional.</strong></p>
-    <div class="grid g3 stagger" style="margin-top:2.8rem">
-      <div class="stat"><div class="big" style="color:var(--azul)"><span class="cnt" data-v="15" data-pre="+"></span><small style="font-size:.4em;font-weight:700"> milhões</small></div><p class="lbl">de clientes nas distribuidoras.</p></div>
-      <div class="stat"><div class="big" style="color:var(--azul);letter-spacing:0">SP · RJ · CE</div><p class="lbl">principais mercados de distribuição.</p></div>
-      <div class="stat"><div class="big" style="color:var(--pos)"><span class="cnt" data-v="6.6" data-dec="1" data-pre="+"></span><small style="font-size:.4em;font-weight:700"> GW</small></div><p class="lbl">de capacidade instalada em geração renovável no Brasil.</p></div>
-      <div class="stat"><div class="big" style="color:var(--azul)">R$ <span class="cnt" data-v="25.3" data-dec="1"></span><small style="font-size:.4em;font-weight:700"> bi</small></div><p class="lbl">em investimentos previstos no país entre 2025 e 2027.</p></div>
-      <div class="stat"><div class="big" style="color:var(--azul)">R$ <span class="cnt" data-v="24"></span><small style="font-size:.4em;font-weight:700"> bi</small></div><p class="lbl">destinados à distribuição.</p></div>
+    <p class="lead rv">A análise combina a escala de presença da Enel com pontos de atenção em serviço, concessão e experiência digital, e revela oportunidades concretas para fortalecer a confiança.</p>
+    <div class="grid g5 stagger" style="margin-top:2rem;align-items:stretch">
+      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-chart"/></svg></span><p class="ovl" style="color:var(--azul)">Serviço e concessão concentram atenção</p><div class="big mid" style="color:var(--azul);margin:.6rem 0 .2rem"><span class="cnt" data-v="62.9" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="small muted">resultados no período, com <strong style="color:var(--neg)">40,3%</strong> de menções negativas. Operação e fornecimento (34,3%) e concessão e regulação (33,1%) tiveram as maiores incidências.</p></div>
+      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-pin"/></svg></span><p class="ovl" style="color:var(--azul)">O desafio muda por território</p><p class="small muted" style="margin-top:.6rem">Em <strong>São Paulo</strong>, serviço, regulação e tarifa concentram a atenção; no <strong>Rio de Janeiro</strong>, eventos climáticos ampliam a importância da capacidade de resposta; no <strong>Ceará</strong>, concessão, serviço e investimento estruturam a conversa.</p></div>
+      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-search"/></svg></span><p class="ovl" style="color:var(--azul)">Quem busca Enel quer resolver</p><p class="small muted" style="margin-top:.6rem">Segunda via, telefone, titularidade e falta de energia mostram um consumidor que chega ao Google com uma tarefa concreta e procura rapidamente um caminho para atendimento e solução.</p></div>
+      <div class="card"><span class="ic g" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-doc"/></svg></span><p class="ovl" style="color:var(--azul)">Entregas concretas aproximam a marca</p><p class="small muted" style="margin-top:.6rem">Na amostra de 22 publicações, conteúdos ligados a pessoas, resultados e orientação prática apresentaram melhor desempenho.</p></div>
+      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-phone"/></svg></span><p class="ovl" style="color:var(--azul)">A jornada digital tem espaço para evoluir</p><p class="small muted" style="margin-top:.6rem">Identificaram-se oportunidades de melhorias de desempenho, acessibilidade, navegação, SEO e mensuração para simplificar o caminho até os serviços.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ CAP. 2 · TIMELINE ============ -->
-<section class="sec soft" id="timeline" data-dot="Trajetória">
-  <div class="wrap">
-    <span class="kicker rv">Timeline</span>
-    <h2 class="rv">Como a Enel <em>chegou até aqui</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">Anos mais importantes da trajetória da Enel, em relação à sua operação atual no Brasil.</p>
-    <div class="tl stagger">
-      <div class="mk"><div class="yr">1962</div><p>Criação do Grupo Enel, na Itália.</p></div>
-      <div class="mk"><div class="yr">2005</div><p>Chegada da Endesa ao Brasil, controlada pela Enel.</p></div>
-      <div class="mk"><div class="yr">2016</div><p>Distribuidoras Ampla (RJ) e Coelce (CE) passam a operar sob a marca Enel.</p></div>
-      <div class="mk"><div class="yr">2018</div><p>Aquisição da Eletropaulo, ampliando a presença do grupo no país.</p></div>
-      <div class="mk"><div class="yr">2025 a 2027</div><p><strong style="color:var(--ink)">Mudança de marca</strong> e novo ciclo de investimentos, com prioridade para distribuição, modernização de redes e resiliência.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 3 · CEOs ============ -->
-<section class="sec dark" id="ceos" data-dot="Lideranças">
-  <div class="wrap">
-    <div class="cols c2">
-      <div>
-        <span class="kicker rv">CEOs</span>
-        <h2 class="rv">Quem <em>são?</em></h2>
-        <div class="rule rv"></div>
-        <p class="lead rv">Por se tratar de uma rede multinacional, a Enel conta com diversos postos de liderança em diferentes âmbitos.</p>
-        <div class="card edge rv" style="margin-top:1.8rem"><strong>Importante destacar:</strong><br>Grupo Enel <b style="color:var(--amarelo)">&ne;</b> Enel Brasil <b style="color:var(--amarelo)">&ne;</b> Enel Distribuição Rio.</div>
-      </div>
-      <div class="hexes stagger">
-        <div class="hex-card"><div class="hex"><img src="assets/ceo-cattaneo.jpg" alt="Retrato de Flavio Cattaneo" onerror="this.remove()"><span class="ini">FC</span></div><div class="nm">FLAVIO CATTANEO</div><div class="rl muted">CEO global do Grupo Enel</div></div>
-        <div class="hex-card"><div class="hex"><img src="assets/ceo-scala.jpg" alt="Retrato de Antonio Scala" onerror="this.remove()"><span class="ini">AS</span></div><div class="nm">ANTONIO SCALA</div><div class="rl muted">CEO da Enel Brasil</div></div>
-        <div class="hex-card"><div class="hex"><img src="assets/ceo-moliterni.jpg" alt="Retrato de Francesco Moliterni" onerror="this.remove()"><span class="ini">FM</span></div><div class="nm">FRANCESCO MOLITERNI</div><div class="rl muted">Presidente da Enel Distribuição Rio</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 4 · PRESENÇA ============ -->
-<section class="sec" id="presenca" data-dot="Presença">
-  <div class="wrap">
-    <span class="kicker rv">Presença</span>
-    <h2 class="rv">Onde está a <em>Enel no Brasil?</em></h2>
-    <div class="rule rv"></div>
-    <div class="grid g3 stagger" style="margin-top:1.6rem">
-      <div class="card edge"><p class="ovl muted">São Paulo</p><div class="big mid" style="color:var(--azul);margin:.45rem 0"><span class="cnt" data-v="7.5" data-dec="1" data-pre="~"></span><small style="font-size:.44em;font-weight:700"> mi</small></div><p class="small" style="color:#33415F">de clientes em <strong>24 municípios</strong>.</p></div>
-      <div class="card edge"><p class="ovl muted">Rio de Janeiro</p><div class="big mid" style="color:var(--azul);margin:.45rem 0"><span class="cnt" data-v="3" data-pre="~"></span><small style="font-size:.44em;font-weight:700"> mi</small></div><p class="small" style="color:#33415F">de clientes em <strong>66 municípios</strong> e cerca de <strong>73% do território</strong> fluminense.</p></div>
-      <div class="card edge"><p class="ovl muted">Ceará</p><div class="big mid" style="color:var(--azul);margin:.45rem 0"><span class="cnt" data-v="4" data-pre="+"></span><small style="font-size:.44em;font-weight:700"> mi</small></div><p class="small" style="color:#33415F">de clientes e presença <strong>em todo o estado</strong>.</p></div>
-    </div>
-    <div class="banner rv" style="margin-top:1.8rem"><span class="ovl" style="color:var(--amarelo)">Além da distribuição</span><br>Geração renovável, comercialização, eficiência energética, eletrificação e soluções energéticas.</div>
-  </div>
-</section>
-
-<!-- ============ CAP. 5 · CONCESSÃO RJ ============ -->
-<section class="sec dark tall" id="concessao" data-dot="Concessão RJ">
-  <div class="wrap">
-    <div class="cols c2">
-      <figure class="rv"><div class="shot dark r45">
-        <svg class="fill" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustração do Rio de Janeiro à noite, com o Pão de Açúcar e a cidade iluminada">
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1E4E"/><stop offset=".65" stop-color="#123A8A"/><stop offset="1" stop-color="#1B4FB0"/></linearGradient>
-            <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B2760"/><stop offset="1" stop-color="#061024"/></linearGradient>
-          </defs>
-          <rect width="400" height="500" fill="url(#sky)"/>
-          <circle cx="316" cy="86" r="26" fill="#FFCC29" opacity=".9"/>
-          <circle cx="316" cy="86" r="44" fill="#FFCC29" opacity=".12"/>
-          <g fill="#FFFFFF" opacity=".5"><circle cx="52" cy="60" r="1.2"/><circle cx="120" cy="42" r="1"/><circle cx="200" cy="70" r="1.3"/><circle cx="255" cy="38" r="1"/><circle cx="365" cy="150" r="1.1"/><circle cx="30" cy="130" r="1"/><circle cx="150" cy="110" r="1"/></g>
-          <path d="M0 322 Q60 250 118 322 Z" fill="#081739"/>
-          <path d="M96 322 C120 236 160 218 178 236 C196 254 200 292 208 322 Z" fill="#0A1E4E"/>
-          <path d="M226 322 Q300 226 400 300 L400 322 Z" fill="#081739"/>
-          <rect y="322" width="400" height="178" fill="url(#sea)"/>
-          <g stroke="#FFCC29" stroke-width="1.4" opacity=".85">
-            <path d="M20 322v-14M34 322v-9M48 322v-17M62 322v-11M244 322v-12M258 322v-18M272 322v-9M286 322v-15M300 322v-10M330 322v-13M344 322v-8M358 322v-16M372 322v-11"/>
-          </g>
-          <g fill="#FFCC29"><circle cx="20" cy="306" r="1.4"/><circle cx="48" cy="303" r="1.4"/><circle cx="258" cy="302" r="1.4"/><circle cx="286" cy="305" r="1.4"/><circle cx="358" cy="304" r="1.4"/></g>
-          <g stroke="#FFCC29" opacity=".35" stroke-width="1"><path d="M20 336h32M244 340h48M320 344h56M60 352h40M270 358h60"/></g>
-          <g opacity=".5" stroke="#7FD6A8" stroke-width="1"><path d="M120 470 h60"/><path d="M200 480 h80"/></g>
-          <text x="28" y="466" fill="#FFFFFF" opacity=".55" font-family="Inter" font-size="10" letter-spacing="3">RIO DE JANEIRO · 22H</text>
-        </svg>
-      </div></figure>
-      <div>
-        <span class="kicker rv">Momento</span>
-        <h2 class="rv">Concessão no <em>centro da agenda</em></h2>
-        <div class="rule rv"></div>
-        <p class="lead rv">O atual contrato da <strong>Enel Distribuição Rio</strong> chega ao fim de seu ciclo em <strong>9 de dezembro de 2026</strong>.</p>
-        <p class="lead rv" style="margin-top:1rem">A ANEEL já recomendou sua continuidade por mais 30 anos, após avaliar critérios regulatórios de continuidade e sustentabilidade econômico-financeira. A decisão final, porém, ainda depende do Ministério de Minas e Energia.</p>
-        <div class="card rv" style="margin-top:2rem;display:flex;gap:24px;align-items:center;flex-wrap:wrap">
-          <div><div class="big mid" style="color:var(--amarelo)">R$ <span class="cnt" data-v="6.1" data-dec="1"></span> BI</div><p class="ovl" style="margin-top:.4rem;color:rgba(255,255,255,.7)">Previstos para o Rio entre 2025 e 2027</p></div>
-          <p style="flex:1;min-width:200px;font-size:.92rem">O valor representa crescimento de <strong style="color:#7FD6A8">+74%</strong> sobre o plano anterior.</p>
-        </div>
-        <p class="note">A ANEEL é a Agência Nacional de Energia Elétrica, órgão responsável por regular, fiscalizar e assegurar o cumprimento das regras pelas empresas do setor elétrico no Brasil.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 6 · COMPLEXIDADE ============ -->
-<section class="sec" id="complexidade" data-dot="Complexidade">
+<!-- ============ CAP. 2 · CONTEXTO ============ -->
+<section class="sec soft" id="contexto" data-dot="Contexto">
   <div class="wrap">
     <div class="cols c2">
       <figure class="rv"><div class="shot dark r45">
         <svg class="fill" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustração da rede de distribuição: torres de transmissão e cabos sobre a cidade">
           <defs><linearGradient id="net" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#061024"/><stop offset="1" stop-color="#0E2C6C"/></linearGradient></defs>
           <rect width="400" height="500" fill="url(#net)"/>
-          <g stroke="#31548F" stroke-width="1" opacity=".5">
-            <path d="M0 120 Q200 60 400 130"/><path d="M0 150 Q200 92 400 160"/>
-          </g>
+          <g stroke="#31548F" stroke-width="1" opacity=".5"><path d="M0 120 Q200 60 400 130"/><path d="M0 150 Q200 92 400 160"/></g>
           <g stroke="#FFCC29" stroke-width="1.6" fill="none">
             <path d="M96 470 130 210 164 470M104 420h52M112 356h36M120 292h20M76 258l54-30 54 30M108 228h44"/>
             <path d="M282 470 306 262 330 470M288 432h38M294 380h26M300 328h14M266 300l40-24 40 24"/>
           </g>
           <g stroke="#FFCC29" stroke-width="1.1" opacity=".9"><path d="M130 232 Q210 274 306 284"/><path d="M130 258 Q210 300 306 308"/></g>
           <circle cx="218" cy="288" r="3" fill="#FFCC29"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
-          <g fill="#0A1E4E" stroke="#31548F" stroke-width="1">
-            <rect x="10" y="404" width="42" height="66"/><rect x="58" y="424" width="34" height="46"/><rect x="196" y="416" width="46" height="54"/><rect x="348" y="410" width="40" height="60"/>
-          </g>
+          <g fill="#0A1E4E" stroke="#31548F" stroke-width="1"><rect x="10" y="404" width="42" height="66"/><rect x="58" y="424" width="34" height="46"/><rect x="196" y="416" width="46" height="54"/><rect x="348" y="410" width="40" height="60"/></g>
           <g fill="#FFCC29" opacity=".8"><rect x="18" y="414" width="5" height="5"/><rect x="30" y="428" width="5" height="5"/><rect x="204" y="426" width="5" height="5"/><rect x="222" y="440" width="5" height="5"/><rect x="356" y="420" width="5" height="5"/></g>
-          <g stroke="#0E7C4F" stroke-width="1.4" opacity=".8"><path d="M158 470c0-16 10-24 10-38M168 452c8-4 14-4 20-12M168 452c-8-4-14-4-20-12"/></g>
-          <text x="28" y="44" fill="#FFFFFF" opacity=".55" font-family="Inter" font-size="10" letter-spacing="3">REDE · TERRITÓRIO · CLIMA</text>
+          <text x="28" y="44" fill="#FFFFFF" opacity=".55" font-family="Inter" font-size="10" letter-spacing="3">ESCALA · REDE · TERRITÓRIO</text>
         </svg>
       </div></figure>
       <div>
-        <span class="kicker rv">Complexidade</span>
-        <h2 class="rv">Alta complexidade <em>na concessão</em></h2>
-        <div class="rule rv"></div>
-        <p class="lead rv"><strong>Resiliência:</strong> eventos climáticos, vegetação, grandes extensões territoriais e características geográficas aumentam a complexidade da rede.</p>
-        <div class="stagger" style="margin-top:1.4rem">
-          <div class="rowline"><span class="ic r"><svg class="icon"><use href="#i-bolt"/></svg></span><div><strong>Perdas não técnicas*</strong><br><span class="small" style="color:#33415F">Duque de Caxias: <b style="color:var(--neg)">35,36%</b> &nbsp;·&nbsp; São Gonçalo: <b style="color:var(--neg)">34,61%</b></span></div></div>
-          <div class="rowline"><span class="ic y"><svg class="icon"><use href="#i-cone"/></svg></span><div><strong>Áreas com Severas Restrições Operativas · ASRO</strong><br><span class="small" style="color:#33415F">Cerca de <b>425 mil unidades consumidoras</b> (17% da base considerada) estão em áreas de severa restrição operacional. Esses territórios concentrariam <b>62%</b> das ocorrências de perdas não técnicas.</span></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 7 · ALERTA DE INTERPRETAÇÃO ============ -->
-<section class="sec soft" id="glossario" data-dot="Glossário">
-  <div class="wrap center">
-    <span class="kicker rv" style="justify-content:center">Alerta de interpretação</span>
-    <h2 class="rv" style="margin-inline:auto">Dois termos que <em>mudam a leitura</em></h2>
-    <div class="rule rv" style="margin:0 auto 2rem"></div>
-    <div class="grid g2 stagger" style="text-align:left;max-width:920px;margin:0 auto">
-      <div class="flip" role="button" tabindex="0" aria-expanded="false">
-        <div class="flip-inner">
-          <div class="face front"><span class="ic r"><svg class="icon"><use href="#i-bolt"/></svg></span><h3 style="font-family:var(--serif);font-size:1.6rem">Perdas<br>não técnicas</h3><span class="cta">Clique para ler <svg class="icon" style="width:14px;height:14px"><use href="#i-play"/></svg></span></div>
-          <div class="face back"><h3 style="color:var(--amarelo)">Perdas não técnicas</h3><p>Energia consumida que <strong>não é corretamente medida ou faturada</strong>.<br><br>Ex.: fraude, furto, ligação irregular, falha de medição.</p><span class="volta">Voltar</span></div>
-        </div>
-      </div>
-      <div class="flip" role="button" tabindex="0" aria-expanded="false">
-        <div class="flip-inner">
-          <div class="face front"><span class="ic y"><svg class="icon"><use href="#i-cone"/></svg></span><h3 style="font-family:var(--serif);font-size:1.6rem">Áreas com Severas<br>Restrições Operativas · ASRO</h3><span class="cta">Clique para ler <svg class="icon" style="width:14px;height:14px"><use href="#i-play"/></svg></span></div>
-          <div class="face back"><h3 style="color:var(--amarelo)">ASRO</h3><p><strong>Dificuldade ou impedimento para acessar uma área e executar serviços.</strong><br><br>Ex.: pode incluir restrições geográficas ou de segurança que dificultam a atuação das equipes.</p><span class="volta">Voltar</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 8 · CONSUMIDOR ============ -->
-<section class="sec" id="consumidor" data-dot="Consumidor">
-  <div class="wrap">
-    <span class="kicker rv">Contexto</span>
-    <h2 class="rv">A experiência do consumidor <em>ainda pressiona a marca</em></h2>
-    <div class="rule rv"></div>
-    <div class="grid g2 stagger" style="margin-top:1.4rem">
-      <div class="card" style="border-top:3px solid var(--neg)">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:.6rem"><span class="ic r"><svg class="icon"><use href="#i-headset"/></svg></span><p class="ovl" style="color:var(--neg)">Reclamações</p></div>
-        <div class="big" style="color:var(--neg)"><span class="cnt" data-v="49.62" data-dec="2"></span></div>
-        <p style="font-weight:700;margin-top:.3rem">reclamações / 10 mil UCs</p>
-        <p class="small" style="margin-top:.8rem;color:#33415F">Entre maio de 2025 e abril de 2026, a Enel Rio apareceu na <strong>primeira posição</strong> do ranking de reclamações citado pela imprensa a partir de dados da Aneel.</p>
-      </div>
-      <div class="card" style="border-top:3px solid var(--azul)">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:.6rem"><span class="ic n"><svg class="icon"><use href="#i-bolt"/></svg></span><p class="ovl" style="color:var(--azul)">Julho de 2026</p></div>
-        <div class="big" style="color:var(--azul)"><span class="cnt" data-v="536"></span><small style="font-size:.4em;font-weight:700"> mil</small></div>
-        <p style="font-weight:700;margin-top:.3rem">clientes afetados</p>
-        <p class="small" style="margin-top:.8rem;color:#33415F">O <strong>vendaval de 29 de julho</strong> provocou interrupções importantes no sistema elétrico fluminense.</p>
-      </div>
-    </div>
-    <div class="banner paper rv" style="margin-top:1.6rem;font-size:.88rem">Nota: o total de <strong>1,9 milhão de imóveis</strong> citado em algumas manchetes considera, em conjunto, consumidores da <strong>Light</strong> e da <strong>Enel</strong>. No caso da Enel, o número correspondente é de <strong>536 mil clientes</strong> em sua área de concessão.</div>
-  </div>
-</section>
-
-<!-- ============ CAP. 9 · RESPOSTA ============ -->
-<section class="sec soft" id="resposta" data-dot="Resposta Enel Rio">
-  <div class="wrap">
-    <div class="cols c2">
-      <div>
-        <span class="kicker rv">Resposta</span>
-        <h2 class="rv">Como a Enel Rio <em>está respondendo</em></h2>
+        <span class="kicker rv">Contexto</span>
+        <h2 class="rv">Uma operação dessa escala faz da confiança <em>um ativo estratégico</em></h2>
         <div class="rule rv"></div>
         <div class="stagger">
-          <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-chart"/></svg></span><div><strong>Investimento</strong><br><span class="small" style="color:#33415F">R$ 6,1 bilhões entre 2025 e 2027.</span></div></div>
-          <div class="rowline"><span class="ic g"><svg class="icon"><use href="#i-users"/></svg></span><div><strong>Equipes</strong><br><span class="small" style="color:#33415F">ampliação e internalização de profissionais.</span></div></div>
-          <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-truck"/></svg></span><div><strong>Frota</strong><br><span class="small" style="color:#33415F">reforço de veículos operacionais.</span></div></div>
-          <div class="rowline"><span class="ic g"><svg class="icon"><use href="#i-leaf"/></svg></span><div><strong>Vegetação</strong><br><span class="small" style="color:#33415F">programa de podas e manejo preventivo.</span></div></div>
-          <div class="rowline"><span class="ic y"><svg class="icon"><use href="#i-sliders"/></svg></span><div><strong>Automação</strong><br><span class="small" style="color:#33415F">ampliação de equipamentos de telecontrole.</span></div></div>
-          <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-tower"/></svg></span><div><strong>Rede</strong><br><span class="small" style="color:#33415F">expansão e modernização de subestações e infraestrutura.</span></div></div>
-          <div class="rowline"><span class="ic y"><svg class="icon"><use href="#i-pin"/></svg></span><div><strong>Proximidade</strong><br><span class="small" style="color:#33415F">novas bases e ações presenciais em diferentes municípios.</span></div></div>
+          <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="15" data-pre="+"></span><small style="font-size:.44em;font-weight:700"> milhões</small></div><p class="lbl">de clientes nas distribuidoras.</p></div>
+          <div class="stat"><div class="big mid" style="color:var(--azul);letter-spacing:0">SP · RJ · CE</div><p class="lbl">estados de atuação das distribuidoras.</p></div>
+          <div class="stat"><div class="big mid" style="color:var(--azul)">R$ <span class="cnt" data-v="25.3" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> bilhões</small></div><p class="lbl">em investimentos previstos no Brasil entre 2025 e 2027, dos quais <strong>R$ 24 bilhões para distribuição</strong>.</p></div>
         </div>
+        <div class="banner rv" style="margin-top:1.6rem">Escala e investimento criam uma base relevante para fortalecer <strong style="color:var(--amarelo)">proximidade, experiência e confiança</strong>.</div>
+        <p class="note">Fonte: Enel Brasil, Relatório da Administração 2024 e comunicado de investimentos de 15/01/2025. Plano de investimentos: 2025 a 2027.</p>
       </div>
-      <figure class="rv"><div class="shot dark r45" style="display:flex;flex-direction:column">
-        <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" style="width:100%;flex:1;min-height:0" role="img" aria-label="Silhueta noturna do Rio de Janeiro">
-          <defs><linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123A8A"/><stop offset="1" stop-color="#0A1E4E"/></linearGradient></defs>
-          <rect width="400" height="240" fill="url(#sky2)"/>
-          <circle cx="330" cy="52" r="18" fill="#FFCC29" opacity=".85"/>
-          <path d="M0 176 Q70 96 140 176Z" fill="#081739"/>
-          <path d="M150 176 C168 108 206 96 224 118 C236 132 240 156 246 176Z" fill="#0A1E4E"/>
-          <path d="M256 176 Q330 110 400 160L400 176Z" fill="#081739"/>
-          <rect y="176" width="400" height="64" fill="#061024"/>
-          <g stroke="#FFCC29" stroke-width="1.2" opacity=".85"><path d="M22 176v-9M40 176v-13M58 176v-7M268 176v-11M288 176v-8M306 176v-14M326 176v-9M348 176v-12"/></g>
-        </svg>
-        <div style="padding:1.5rem 1.6rem;border-top:3px solid var(--amarelo)">
-          <div class="big mid" style="color:#fff">R$ <span class="cnt" data-v="6.1" data-dec="1"></span> BI</div>
-          <p class="ovl" style="color:var(--amarelo);margin-top:.4rem">Previstos para o Rio entre 2025 e 2027</p>
-          <p class="small" style="color:rgba(255,255,255,.72);margin-top:.7rem">Crescimento de <strong style="color:#7FD6A8">+74%</strong> sobre o plano anterior.</p>
-        </div>
-      </div></figure>
     </div>
   </div>
 </section>
 
-<!-- ============ CAP. 10 · SP / APAGÕES ============ -->
-<section class="sec dark tall" id="sp" data-dot="São Paulo">
+<!-- ============ CAP. 3 · PANORAMA ============ -->
+<section class="sec dark" id="panorama" data-dot="Panorama">
   <div class="wrap">
-    <span class="kicker rv">Apagões</span>
-    <h2 class="rv">São Paulo: a maior <em>vulnerabilidade da marca</em></h2>
+    <span class="kicker rv">Panorama</span>
+    <h2 class="rv">A escala já existe. A oportunidade é transformar presença <em>em confiança</em></h2>
     <div class="rule rv"></div>
-    <p class="lead rv">Situação atual: <strong>Enel SP × ANEEL</strong>. A sucessão de grandes interrupções desde 2023 ampliou a discussão sobre quatro eixos críticos:</p>
+    <div class="grid g3 stagger" style="margin-top:1.4rem">
+      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="62.9" data-dec="1"></span><small style="font-size:.4em;font-weight:700"> mil</small></div><p class="lbl"><strong style="color:#fff">resultados</strong> no período.</p></div>
+      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="2"></span><small style="font-size:.4em;font-weight:700"> milhões</small></div><p class="lbl"><strong style="color:#fff">engajamentos</strong> gerados pelos conteúdos.</p></div>
+      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="33.1" data-dec="1"></span><small style="font-size:.4em;font-weight:700"> bilhões</small></div><p class="lbl"><strong style="color:#fff">alcance potencial</strong>: estimativa de exposição; não corresponde a pessoas efetivamente alcançadas.</p></div>
+    </div>
+    <div class="cols c2" style="margin-top:2.6rem;align-items:stretch">
+      <div class="card rv">
+        <p class="ovl" style="color:var(--amarelo)">Sentimento das menções</p>
+        <div style="display:flex;gap:1.6rem;align-items:baseline;flex-wrap:wrap;margin-top:1rem">
+          <div><span class="big mid" style="color:#F0968C"><span class="cnt" data-v="40.3" data-dec="1"></span>%</span><p class="ovl" style="margin-top:.3rem;color:rgba(255,255,255,.6)">Negativo</p></div>
+          <div><span class="big mid" style="color:rgba(255,255,255,.85)"><span class="cnt" data-v="52.1" data-dec="1"></span>%</span><p class="ovl" style="margin-top:.3rem;color:rgba(255,255,255,.6)">Neutro</p></div>
+          <div><span class="big mid" style="color:#7FD6A8"><span class="cnt" data-v="7.6" data-dec="1"></span>%</span><p class="ovl" style="margin-top:.3rem;color:rgba(255,255,255,.6)">Positivo</p></div>
+        </div>
+        <p class="small" style="color:rgba(255,255,255,.66);margin-top:1.1rem">A neutralidade predominou no período, enquanto 40,3% das menções foram negativas e 7,6% positivas, reforçando a importância de acompanhar os temas de maior sensibilidade.</p>
+      </div>
+      <div class="card rv">
+        <p class="ovl" style="color:var(--amarelo)">Onde a conversa aconteceu</p>
+        <div style="margin-top:1rem">
+          <div class="hrow"><span class="hlab">X / Twitter</span><span class="htrack"><span class="hfill" style="--w:93%;--c:#4A90E2"></span></span><span class="hval">56,2%</span></div>
+          <div class="hrow"><span class="hlab">Portais de notícias</span><span class="htrack"><span class="hfill" style="--w:26%;--c:#7FD6A8"></span></span><span class="hval">15,6%</span></div>
+          <div class="hrow"><span class="hlab">Outros canais*</span><span class="htrack"><span class="hfill" style="--w:24%;--c:#AFC4EF"></span></span><span class="hval">14,5%</span></div>
+          <div class="hrow"><span class="hlab">Blogs</span><span class="htrack"><span class="hfill" style="--w:23%;--c:#E9C63B"></span></span><span class="hval">13,7%</span></div>
+        </div>
+        <p class="small" style="color:rgba(255,255,255,.55);margin-top:.9rem">*Outros canais incluem Bluesky, Reddit, YouTube e Facebook.</p>
+      </div>
+    </div>
+    <div class="card rv" style="margin-top:1.4rem;border-left:3px solid var(--amarelo)"><strong style="color:var(--amarelo)">O X/Twitter concentrou 56,2% da conversa sobre a Enel</strong>, o que amplia a velocidade com que episódios de serviço ganham visibilidade pública.</div>
+    <p class="note">Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026. O alcance potencial representa uma estimativa de exposição.</p>
+  </div>
+</section>
+
+<!-- ============ CAP. 4 · CENÁRIO ============ -->
+<section class="sec" id="cenario" data-dot="Cenário">
+  <div class="wrap">
+    <span class="kicker rv">Cenário</span>
+    <h2 class="rv">O serviço abre a conversa. A resposta ajuda a construir <em>a reputação</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">Quando serviço, atendimento e concessão ganham visibilidade, a forma como a empresa responde também influencia a percepção pública.</p>
     <div class="grid g2 stagger" style="margin-top:1.8rem">
-      <div class="card" style="display:flex;gap:16px;align-items:flex-start"><span class="ic y"><svg class="icon"><use href="#i-shield"/></svg></span><div><h3 style="color:var(--amarelo);font-family:var(--sans);font-size:.95rem;letter-spacing:.06em">RESILIÊNCIA</h3><p class="small" style="color:rgba(255,255,255,.75)">capacidade da rede elétrica de aguentar eventos adversos e voltar a funcionar rapidamente.</p></div></div>
-      <div class="card" style="display:flex;gap:16px;align-items:flex-start"><span class="ic y"><svg class="icon"><use href="#i-alert"/></svg></span><div><h3 style="color:var(--amarelo);font-family:var(--sans);font-size:.95rem;letter-spacing:.06em">CONTINGENCIAMENTO</h3><p class="small" style="color:rgba(255,255,255,.75)">planejamento para situações de emergência.</p></div></div>
-      <div class="card" style="display:flex;gap:16px;align-items:flex-start"><span class="ic y"><svg class="icon"><use href="#i-search"/></svg></span><div><h3 style="color:var(--amarelo);font-family:var(--sans);font-size:.95rem;letter-spacing:.06em">FISCALIZAÇÃO</h3><p class="small" style="color:rgba(255,255,255,.75)">acompanhamento feito pela ANEEL.</p></div></div>
-      <div class="card" style="display:flex;gap:16px;align-items:flex-start"><span class="ic y"><svg class="icon"><use href="#i-doc"/></svg></span><div><h3 style="color:var(--amarelo);font-family:var(--sans);font-size:.95rem;letter-spacing:.06em">CONCESSÃO</h3><p class="small" style="color:rgba(255,255,255,.75)">autorização para prestar o serviço.</p></div></div>
+      <div class="card edge"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.7rem"><span class="stepn">01</span><h3>Operação e fornecimento</h3></div><p class="small" style="color:#33415F">As publicações analisadas repercutiram interrupções durante temporais em São Paulo e declarações da Enel sobre apagões. A continuidade do fornecimento aparece como um tema sensível para a percepção da companhia.</p></div>
+      <div class="card edge"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.7rem"><span class="stepn">02</span><h3>Atendimento ao consumidor</h3></div><p class="small" style="color:#33415F">A cobertura de abril repercutiu <strong>5.373 reclamações fundamentadas¹</strong> contra a Enel no Procon-SP em 2025, com <strong style="color:var(--neg)">79,6%</strong> classificadas como não atendidas. Nos comentários examinados, a marca apareceu em comparações críticas com outras prestadoras de serviços.</p></div>
+      <div class="card edge"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.7rem"><span class="stepn">03</span><h3>Concessões e fiscalização</h3></div><p class="small" style="color:#33415F">Em São Paulo, o processo relacionado à concessão manteve o tema em evidência. No Ceará, a recomendação de prorrogação da Aneel conviveu com manifestações contrárias à renovação, mantendo a continuidade da concessão no debate institucional.</p></div>
+      <div class="card edge"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.7rem"><span class="stepn">04</span><h3>Investimentos e melhorias</h3></div><p class="small" style="color:#33415F">A Enel divulgou uma nova base operacional em Horizonte (CE) e ações de poda preventiva. Nos materiais analisados, não foram identificados indicadores suficientes para relacionar diretamente essas iniciativas à redução das interrupções ou do tempo de restabelecimento.</p></div>
     </div>
-    <div class="card rv" style="margin-top:1.8rem;border-left:3px solid var(--amarelo)">
-      <p class="ovl" style="color:var(--amarelo)">Etapa final na ANEEL · 24 de agosto de 2026</p>
-      <p style="margin-top:.7rem;font-size:.95rem;color:rgba(255,255,255,.88)">A ANEEL negou o pedido de perícia apresentado pela Enel SP e encerrou a fase de instrução do processo. A companhia tem <strong>10 dias</strong> para apresentar suas alegações finais. <strong>Próxima etapa:</strong> a Diretoria da ANEEL deverá deliberar sobre eventual recomendação de <strong>caducidade</strong> (extinção do direito de operar).</p>
-      <p style="margin-top:.9rem;font-size:.95rem;color:rgba(255,255,255,.88)"><strong style="color:#7FD6A8">O que a Enel defende:</strong> necessidade de perícia independente; questionamentos sobre aspectos técnicos e processuais; argumento de que o caso envolve fatores meteorológicos, operacionais, estatísticos e regulatórios.</p>
-    </div>
+    <div class="banner rv" style="margin-top:1.6rem">Melhorias comunicadas ganham ainda mais força quando também são percebidas na experiência do consumidor. A Enel tem iniciativas e respostas em curso; a oportunidade está em fazer com que elas sejam percebidas <strong style="color:var(--amarelo)">com a mesma força com que os temas sensíveis ganham repercussão</strong>.</div>
+    <p class="note">Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026. ¹ Dados do Procon-SP referentes a 2025, repercutidos em 2026.</p>
   </div>
 </section>
 
-<!-- ============ CAP. 11 · O QUE É SEGURO DIZER ============ -->
-<section class="sec" id="seguro" data-dot="O que é seguro dizer">
+<!-- ============ CAP. 5 · EVOLUÇÃO ============ -->
+<section class="sec soft" id="evolucao" data-dot="Evolução">
   <div class="wrap">
-    <div class="cols c2">
-      <div>
-        <span class="kicker rv">Atenção</span>
-        <h2 class="rv">O que é <em>seguro dizer?</em></h2>
-        <div class="rule rv"></div>
-        <p class="lead rv">O processo está em etapa final na ANEEL, mas <strong>ainda não houve decisão pela perda de concessão</strong>.</p>
-        <div class="banner rv" style="margin-top:1.8rem">A ANEEL ainda deverá deliberar sobre eventual recomendação de caducidade. A decisão final sobre a caducidade do contrato cabe ao <strong style="color:var(--amarelo)">Ministério de Minas e Energia (MME)</strong>.</div>
-      </div>
-      <figure class="rv"><div class="shot dark r45">
-        <svg class="fill" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustração de um medidor de energia em painel">
-          <defs><linearGradient id="med" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1E4E"/><stop offset="1" stop-color="#061024"/></linearGradient></defs>
-          <rect width="400" height="500" fill="url(#med)"/>
-          <rect x="92" y="96" width="216" height="300" rx="16" fill="#0E2C6C" stroke="#31548F"/>
-          <rect x="116" y="126" width="168" height="88" rx="10" fill="#061024" stroke="#31548F"/>
-          <text x="200" y="182" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="#FFCC29" letter-spacing="4">04 736</text>
-          <text x="200" y="203" text-anchor="middle" font-family="Inter" font-size="9" fill="#7C97CE" letter-spacing="3">kWh</text>
-          <circle cx="200" cy="284" r="42" fill="none" stroke="#31548F" stroke-width="2"/>
-          <circle cx="200" cy="284" r="42" fill="none" stroke="#FFCC29" stroke-width="3" stroke-dasharray="180 264" stroke-linecap="round" transform="rotate(-90 200 284)"/>
-          <text x="200" y="290" text-anchor="middle" font-family="Inter" font-weight="700" font-size="13" fill="#FFFFFF">68%</text>
-          <g stroke="#31548F" stroke-width="1.4"><path d="M140 352h120M140 368h84"/></g>
-          <circle cx="272" cy="360" r="6" fill="#00A859"><animate attributeName="opacity" values="1;.3;1" dur="2s" repeatCount="indefinite"/></circle>
-          <path d="M200 396v56M176 452h48" stroke="#31548F" stroke-width="2"/>
-          <text x="200" y="70" text-anchor="middle" fill="#FFFFFF" opacity=".5" font-family="Inter" font-size="10" letter-spacing="4">MEDIÇÃO · CAMPO</text>
-        </svg>
-      </div></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 12 · COMPARATIVO ============ -->
-<section class="sec soft" id="comparativo" data-dot="Comparativo SP × RJ">
-  <div class="wrap">
-    <span class="kicker rv">Comparativo</span>
-    <h2 class="rv">A marca é a mesma; <em>o problema não.</em></h2>
+    <span class="kicker rv">Evolução</span>
+    <h2 class="rv">A conversa oscila ao longo do ano e alguns temas <em>voltam a ganhar força</em></h2>
     <div class="rule rv"></div>
+    <p class="lead rv">Os volumes variam, mas determinados temas voltam a concentrar atenção em momentos específicos.</p>
+    <div class="chart-box rv" style="margin-top:1.8rem">
+      <svg viewBox="0 0 940 320" role="img" aria-label="Evolução diária das menções entre janeiro e setembro de 2026, com picos em janeiro, fevereiro e março, abril e julho">
+        <text class="anno" x="836" y="30">62,9 mil resultados</text>
+        <line x1="50" y1="70"  x2="920" y2="70"  stroke="#EEF1F7"/><text class="axis" x="12" y="74">5,5K</text>
+        <line x1="50" y1="140" x2="920" y2="140" stroke="#EEF1F7"/><text class="axis" x="12" y="144">3,6K</text>
+        <line x1="50" y1="210" x2="920" y2="210" stroke="#EEF1F7"/><text class="axis" x="12" y="214">1,8K</text>
+        <line x1="50" y1="270" x2="920" y2="270" stroke="#DFE5EF"/>
+        <text class="axis" x="50" y="292">jan</text><text class="axis" x="160" y="292">fev</text><text class="axis" x="268" y="292">mar</text><text class="axis" x="376" y="292">abr</text><text class="axis" x="484" y="292">mai</text><text class="axis" x="592" y="292">jun</text><text class="axis" x="700" y="292">jul</text><text class="axis" x="808" y="292">ago</text><text class="axis" x="905" y="292">set</text>
+        <path d="M50,236 L75,110 L100,185 L125,225 L150,238 L175,150 L200,98 L225,196 L250,232 L280,215 L310,240 L340,120 L365,86 L390,180 L420,232 L450,240 L480,236 L510,244 L540,238 L570,248 L600,120 L625,105 L650,168 L680,230 L700,100 L720,150 L750,224 L780,238 L810,190 L840,232 L870,226 L900,244 L920,240 L920,270 L50,270 Z" fill="rgba(18,58,138,.07)"/>
+        <path d="M50,236 L75,110 L100,185 L125,225 L150,238 L175,150 L200,98 L225,196 L250,232 L280,215 L310,240 L340,120 L365,86 L390,180 L420,232 L450,240 L480,236 L510,244 L540,238 L570,248 L600,120 L625,105 L650,168 L680,230 L700,100 L720,150 L750,224 L780,238 L810,190 L840,232 L870,226 L900,244 L920,240" fill="none" stroke="#123A8A" stroke-width="3" stroke-linecap="round" class="trace" style="--len:2000"/>
+        <g fill="#B3271E"><circle cx="75" cy="110" r="5"/><circle cx="200" cy="98" r="5"/><circle cx="365" cy="86" r="5"/><circle cx="700" cy="100" r="5"/></g>
+      </svg>
+    </div>
+    <div class="banner paper rv" style="margin-top:1.4rem;text-align:center">A conversa permaneceu ativa ao longo do período, com <strong>picos pontuais seguidos de recuos</strong>. O comportamento indica episódios de maior atenção, e não uma escalada contínua da repercussão.</div>
+    <p class="note">Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026.</p>
+  </div>
+</section>
+
+<!-- ============ CAP. 6 · EVENTOS-CHAVE ============ -->
+<section class="sec" id="eventos" data-dot="Eventos-chave">
+  <div class="wrap">
+    <span class="kicker rv">Eventos-chave</span>
+    <h2 class="rv">Em momentos de maior atenção, três temas voltam <em>à superfície</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">Os episódios variam, mas serviço, concessão e tarifa reaparecem nos momentos de maior repercussão.</p>
     <div style="overflow-x:auto" class="rv">
-    <table class="cmp">
-      <thead><tr><th>Tema</th><th>São Paulo</th><th>Rio de Janeiro</th></tr></thead>
+    <table class="cmp" style="margin-top:1.6rem">
+      <thead><tr><th>Período de 2026</th><th>Menções no pico</th><th>Tema em evidência</th></tr></thead>
       <tbody class="stagger">
-        <tr><td>Situação regulatória</td><td>Processo de avaliação para recomendação de caducidade em curso.</td><td>Prorrogação da concessão recomendada pela ANEEL; processo ainda em andamento.</td></tr>
-        <tr><td>Continuidade do serviço</td><td>Qualidade do fornecimento e tempo de restabelecimento estão entre os principais pontos de acompanhamento regulatório.</td><td>Qualidade e continuidade do fornecimento também integram o acompanhamento regulatório.</td></tr>
-        <tr><td>Segurança territorial</td><td>Não aparece como questão central no processo regulatório atual.</td><td>Presença de áreas com severa restrição operativa dificulta o acesso e a atuação das equipes.</td></tr>
-        <tr><td>Perdas não técnicas</td><td>Não são o principal eixo do processo regulatório atual.</td><td>Representam um desafio relevante da concessão, associado inclusive às áreas de restrição operativa.</td></tr>
-        <tr><td>Investimentos previstos 2025 a 2027</td><td><span class="pill b">R$ 10,4 bilhões</span></td><td><span class="pill y">R$ 6,1 bilhões</span></td></tr>
+        <tr><td>Janeiro</td><td><span class="pill b">≈ 4,3 mil</span></td><td><strong style="color:var(--azul)">Interrupções e resposta operacional</strong><br><span class="small muted">Quedas de energia e atenção à atuação da companhia.</span></td></tr>
+        <tr><td>23 fev. a 2 mar.</td><td><span class="pill b">4,7 mil</span></td><td><strong style="color:var(--azul)">Fornecimento em evidência</strong><br><span class="small muted">Ocorrências no serviço e repercussão sobre a atuação da Enel.</span></td></tr>
+        <tr><td>6 a 13 abr.</td><td><span class="pill y">5,1 mil</span></td><td><strong style="color:var(--azul)">Concessão em debate</strong><br><span class="small muted">Repercussão do processo relacionado à concessão em São Paulo.</span></td></tr>
+        <tr><td>29 jun. a 6 jul.</td><td><span class="pill b">4,6 mil</span></td><td><strong style="color:var(--azul)">Reajuste tarifário</strong><br><span class="small muted">Debate sobre o reajuste médio de 10,18% da Enel São Paulo.</span></td></tr>
       </tbody>
     </table>
     </div>
+    <div class="banner rv" style="margin-top:1.6rem">Os momentos de maior repercussão se concentram em três frentes recorrentes: <strong style="color:var(--amarelo)">continuidade do serviço, concessão e impacto tarifário</strong>.</div>
+    <p class="note">Fonte: Talkwalker, Brasil. Período monitorado: 01/01 a 10/09/2026. Volumes dos picos selecionados, com arredondamento. Janeiro é uma estimativa. Os valores dos picos não representam totais mensais.</p>
   </div>
 </section>
 
-<!-- ============ CAP. 13 · DIAGNÓSTICO ============ -->
-<section class="sec" id="diagnostico" data-dot="Diagnóstico">
+<!-- ============ CAP. 7 · INSIGHTS ============ -->
+<section class="sec soft" id="insights" data-dot="Três frentes">
   <div class="wrap">
-    <span class="kicker rv">Síntese</span>
-    <h2 class="rv">Diagnóstico do <em>momento da Enel</em></h2>
+    <span class="kicker rv">Insights</span>
+    <h2 class="rv">Três frentes concentram <em>a atenção</em></h2>
     <div class="rule rv"></div>
-    <div class="grid g3 stagger" style="margin-top:1.2rem">
-      <div class="card" style="display:flex;gap:14px;align-items:center"><span class="ic n"><svg class="icon"><use href="#i-chart"/></svg></span><div><strong>INVESTIMENTOS</strong><br><span class="small muted">ciclo recorde</span></div></div>
-      <div class="card" style="display:flex;gap:14px;align-items:center"><span class="ic n"><svg class="icon"><use href="#i-shield"/></svg></span><div><strong>OPERAÇÃO</strong><br><span class="small muted">resiliência e eventos externos</span></div></div>
-      <div class="card" style="display:flex;gap:14px;align-items:center"><span class="ic n"><svg class="icon"><use href="#i-bank"/></svg></span><div><strong>REGULAÇÃO</strong><br><span class="small muted">SP + concessão RJ</span></div></div>
-      <div class="card" style="display:flex;gap:14px;align-items:center"><span class="ic y"><svg class="icon"><use href="#i-star"/></svg></span><div><strong>CONSUMIDOR</strong><br><span class="small muted">reclamações e experiência</span></div></div>
-      <div class="card" style="display:flex;gap:14px;align-items:center"><span class="ic g"><svg class="icon"><use href="#i-leaf"/></svg></span><div><strong>ESG / SOCIAL</strong><br><span class="small muted">portfólio amplo de iniciativas</span></div></div>
-      <div class="card" style="display:flex;gap:14px;align-items:center"><span class="ic r"><svg class="icon"><use href="#i-mega"/></svg></span><div><strong>REPUTAÇÃO</strong><br><span class="small muted">operação domina a exposição</span></div></div>
+    <div class="grid g3 stagger" style="margin-top:1.8rem">
+      <div class="card"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.8rem"><span class="ic n"><svg class="icon"><use href="#i-tower"/></svg></span><span class="stepn">1</span></div><h3 style="color:var(--azul)">Operação, continuidade e resposta</h3><p class="small muted" style="margin-top:.6rem">Interrupções e questões relacionadas ao fornecimento aparecem de forma recorrente nos momentos de maior repercussão, reforçando a importância da continuidade e da capacidade de resposta.</p></div>
+      <div class="card"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.8rem"><span class="ic n"><svg class="icon"><use href="#i-bank"/></svg></span><span class="stepn">2</span></div><h3 style="color:var(--azul)">Concessão e ambiente regulatório</h3><p class="small muted" style="margin-top:.6rem">A concessão aparece como um tema de atenção institucional no período, com maior visibilidade no momento associado à repercussão do processo envolvendo a operação em São Paulo.</p></div>
+      <div class="card"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.8rem"><span class="ic y"><svg class="icon"><use href="#i-chart"/></svg></span><span class="stepn">3</span></div><h3 style="color:var(--azul)">Preço e impacto no consumidor</h3><p class="small muted" style="margin-top:.6rem">O custo da energia também participa da conversa sobre a marca. O pico entre junho e julho coincidiu com a repercussão do reajuste tarifário médio de 10,18% da Enel São Paulo.</p></div>
     </div>
-    <div class="banner rv" style="margin-top:2rem"><span class="ovl" style="color:var(--amarelo)">Tese central</span><br>A Enel amplia investimentos e capacidade operacional, mas continua sendo julgada principalmente pela experiência cotidiana do consumidor.</div>
+    <div class="banner paper rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--gold-ink)">Leitura-chave</span><br><strong>Os episódios variam, mas três temas reaparecem nos momentos de maior atenção: serviço, concessão e impacto tarifário.</strong></div>
+    <p class="note">Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026.</p>
   </div>
 </section>
 
-<!-- ============ CAP. 14 · IMPRENSA ============ -->
-<section class="sec soft" id="imprensa" data-dot="Imprensa">
+<!-- ============ CAP. 8 · JORNADA ============ -->
+<section class="sec dark" id="jornada" data-dot="Jornada do tema">
   <div class="wrap">
-    <span class="kicker rv">Imprensa</span>
-    <h2 class="rv">Como a Enel <em>aparece na imprensa</em></h2>
+    <span class="kicker rv">Jornada</span>
+    <h2 class="rv">Quando um tema ganha escala, ele também repercute <em>na reputação</em></h2>
     <div class="rule rv"></div>
-    <p class="lead rv">Cobertura desfavorável com contrapesos: a empresa comunica transformação; a imprensa continua cobrando serviço.</p>
-    <div class="grid g3 stagger" style="margin-top:1.8rem;align-items:stretch">
-      <figure class="clickable" data-lb="imprensa" data-cap="Busca de notícias por enel são paulo: pauta dominada por caducidade, perícia negada e alegações finais." tabindex="0" role="button" aria-label="Ampliar painel de manchetes de São Paulo">
-        <div class="shot r45"><div class="browser">
-          <div class="bbar"><span class="bdots"><i></i><i></i><i></i></span><span class="burl">google.com/search?q=enel+são+paulo</span></div>
-          <div class="bbody">
-            <div class="newsrow"><span class="srcb" style="background:#C4170C">G1</span><div><p class="src">G1 · 2 dias atrás</p><p class="tit">Aneel rejeita perícia pedida pela Enel e dá 10 dias para empresa apresentar defesa final</p><p class="meta">Agência encerrou fase de instrução do processo sobre a concessão em SP.</p></div></div>
-            <div class="newsrow"><span class="srcb" style="background:#1B3FA0">F</span><div><p class="src">Folha de S.Paulo · 1 dia atrás</p><p class="tit">Sindicatos cobram solução para riscos trabalhistas com fim de concessão da Enel em SP</p><p class="meta">Setor elétrico se reuniu com o secretário nacional de Energia.</p></div></div>
-            <div class="newsrow"><span class="srcb" style="background:#17233D">B</span><div><p class="src">Band · 2 dias atrás</p><p class="tit">Aneel nega pedido da Enel SP e encerra instrução sobre caducidade</p><p class="meta">Diretoria rejeitou por unanimidade a prova pericial pedida.</p></div></div>
-          </div>
-        </div></div>
-        <figcaption class="figcap"><strong>SP:</strong> concessão · caducidade · apagões · Aneel · capacidade de resposta</figcaption>
-      </figure>
-      <figure class="clickable" data-lb="imprensa" data-cap="Busca de notícias por enel rio de janeiro: interrupções, furto de cabos e investimentos em infraestrutura." tabindex="0" role="button" aria-label="Ampliar painel de manchetes do Rio de Janeiro">
-        <div class="shot r45"><div class="browser">
-          <div class="bbar"><span class="bdots"><i></i><i></i><i></i></span><span class="burl">google.com/search?q=enel+rio+de+janeiro</span></div>
-          <div class="bbody">
-            <div class="newsrow"><span class="srcb" style="background:#7A3FC1">R7</span><div><p class="src">R7 · há 4 horas</p><p class="tit">Enel Rio investe em infraestrutura e reduz tempo de atendimento no estado</p><p class="meta">Distribuidora amplia equipes, abre novas bases e moderniza a rede.</p></div></div>
-            <div class="newsrow"><span class="srcb" style="background:#0555FA">G</span><div><p class="src">O Globo · 1 dia atrás</p><p class="tit">Enel Rio registra furto de 4 km de cabos elétricos no primeiro semestre de 2026</p><p class="meta">Furtos em vias públicas da área de concessão.</p></div></div>
-            <div class="newsrow"><span class="srcb" style="background:#17233D">B</span><div><p class="src">Band · há 23 horas</p><p class="tit">Enel registra furto de quatro quilômetros de cabos no Rio</p><p class="meta">Crimes afetaram cerca de 300 clientes entre janeiro e agosto.</p></div></div>
-          </div>
-        </div></div>
-        <figcaption class="figcap"><strong>RJ:</strong> interrupções · reclamações · furto e perdas · eventos climáticos</figcaption>
-      </figure>
-      <figure class="clickable" data-lb="imprensa" data-cap="Conteúdo de marca: matéria patrocinada sobre investimentos convive com o banner Enel, mais perto de você." tabindex="0" role="button" aria-label="Ampliar painel de conteúdo de marca">
-        <div class="shot r45"><div class="browser">
-          <div class="bbar"><span class="bdots"><i></i><i></i><i></i></span><span class="burl">noticias.r7.com/rio-de-janeiro</span></div>
-          <div class="bbody">
-            <div style="background:linear-gradient(120deg,#00A859,#008C5A);border-radius:10px;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px">
-              <div><p style="font-weight:800;font-size:.86rem;line-height:1.3">Enel, mais perto de você.</p><p style="font-size:.62rem;opacity:.85;margin-top:.2rem">enel.com.br</p></div>
-              <span style="background:#fff;color:#008C5A;font-weight:800;font-size:.56rem;letter-spacing:.1em;padding:.55em 1em;border-radius:999px;white-space:nowrap">SAIBA MAIS</span>
-            </div>
-            <div><p class="src" style="margin-top:.3rem">Notícias R7 &gt; Rio de Janeiro</p>
-            <p style="font-family:var(--serif);font-weight:700;font-size:1.06rem;line-height:1.3;margin-top:.35rem">Enel Rio investe em infraestrutura e reduz tempo de atendimento no estado</p></div>
-            <div style="margin-top:auto;border-top:1px dashed var(--line);padding-top:10px"><span class="ovl" style="color:var(--gold-ink);background:var(--gold-soft);padding:.5em 1em;border-radius:6px">Conteúdo de marca</span></div>
-          </div>
-        </div></div>
-        <figcaption class="figcap"><strong>Branded content:</strong> a narrativa de investimento comprada como mídia.</figcaption>
-      </figure>
+    <p class="lead rv">A atenção cresce quando um gatilho ganha visibilidade, significado e recorrência.</p>
+    <div class="grid g4 stagger" style="margin-top:1.8rem">
+      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-bolt"/></svg></span><p class="ovl" style="color:var(--amarelo)">01 · Gatilho</p><h3 style="margin:.4rem 0 .5rem">O tema entra em evidência</h3><p class="small" style="color:rgba(255,255,255,.72)">Interrupções no fornecimento, decisões sobre concessões e reajustes tarifários trazem a Enel para o centro da conversa.</p></div>
+      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-mega"/></svg></span><p class="ovl" style="color:var(--amarelo)">02 · Amplificação</p><h3 style="margin:.4rem 0 .5rem">A conversa ganha escala</h3><p class="small" style="color:rgba(255,255,255,.72)">Redes sociais e cobertura jornalística ampliam a visibilidade do episódio. O X/Twitter concentrou <strong style="color:#fff">56,2%</strong> das menções do período.</p></div>
+      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-chat"/></svg></span><p class="ovl" style="color:var(--amarelo)">03 · Associação</p><h3 style="margin:.4rem 0 .5rem">O episódio ganha novos significados</h3><p class="small" style="color:rgba(255,255,255,.72)">A conversa se amplia e passa a relacionar o tema à continuidade do serviço, à capacidade de resposta e ao impacto para o consumidor.</p></div>
+      <div class="card" style="border-color:rgba(255,204,41,.45);background:rgba(255,204,41,.08)"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-target"/></svg></span><p class="ovl" style="color:var(--amarelo)">04 · Repercussão reputacional</p><h3 style="margin:.4rem 0 .5rem">A atenção pode se prolongar</h3><p class="small" style="color:rgba(255,255,255,.72)">Em diferentes episódios, temas relacionados a operação, atendimento e concessões voltam a aparecer na conversa sobre a marca.</p></div>
     </div>
-    <p class="click-tip rv">Clique nos painéis para ampliar.</p>
-
-    <h3 class="rv" style="font-family:var(--serif);font-size:1.9rem;margin-top:3.6rem">Assimetria de <em style="color:var(--azul);font-style:italic">narrativas</em></h3>
-    <div class="grid g2 stagger" style="margin-top:1.2rem">
-      <div class="card"><p class="ovl" style="color:var(--ink-2)">O que pauta a imprensa</p>
-        <p style="margin-top:.8rem;font-size:.92rem;color:#33415F"><strong style="color:var(--azul)">SÃO PAULO</strong><br>concessão · caducidade · apagões · Aneel · defesa da companhia · capacidade de resposta</p>
-        <p style="margin-top:.8rem;font-size:.92rem;color:#33415F"><strong style="color:var(--azul)">RIO</strong><br>interrupções · reclamações · reajuste tarifário · furto e perdas · renovação · eventos climáticos</p>
-      </div>
-      <div class="card" style="background:linear-gradient(140deg,var(--navy-deep),#0B2E74);color:#fff;border:none"><p class="ovl" style="color:var(--amarelo)">O que a Enel procura pautar</p>
-        <p style="margin-top:.8rem;font-size:.92rem;color:rgba(255,255,255,.85)">investimentos · modernização · subestações · reforço de equipes · podas · digitalização · projetos sociais · sustentabilidade e cultura</p>
-      </div>
-    </div>
-    <div class="banner paper rv" style="margin-top:1.4rem;text-align:center"><strong>A narrativa corporativa está centrada na transformação da operação; a narrativa externa permanece fortemente centrada na qualidade do serviço.</strong></div>
+    <div class="card rv" style="margin-top:1.6rem;border-left:3px solid var(--amarelo)"><span class="ovl" style="color:var(--amarelo)">Principal aprendizado</span><br><strong>Responder ao episódio é importante. Reconhecer padrões recorrentes amplia a capacidade de antecipação.</strong></div>
+    <p class="note">Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026.</p>
   </div>
 </section>
 
-<!-- ============ CAP. 15 · TALKWALKER ============ -->
-<section class="sec dark" id="numeros" data-dot="A conversa em números">
+<!-- ============ CAP. 9 · TEMAS ============ -->
+<section class="sec" id="temas" data-dot="Temas">
   <div class="wrap">
-    <span class="kicker rv">Talkwalker</span>
-    <h2 class="rv">A conversa <em>em números</em></h2>
+    <span class="kicker rv">Temas</span>
+    <h2 class="rv">Serviço e concessão concentram <em>a maior atenção</em></h2>
     <div class="rule rv"></div>
-    <p class="lead rv">Panorama digital · 30 dias.</p>
-    <div class="grid g2 stagger" style="margin-top:2rem">
-      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="9.3" data-dec="1"></span><small style="font-size:.4em;font-weight:700"> mil</small></div><p class="lbl"><strong style="color:#fff">resultados</strong>: menções encontradas.</p></div>
-      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="161.7" data-dec="1"></span><small style="font-size:.4em;font-weight:700"> mil</small></div><p class="lbl"><strong style="color:#fff">engajamentos</strong>: soma das interações geradas pelos conteúdos, como curtidas, comentários e compartilhamentos.</p></div>
-      <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="3.5" data-dec="1"></span><small style="font-size:.4em;font-weight:700"> bi</small></div><p class="lbl"><strong style="color:#fff">alcance potencial</strong>: estimativa de exposição; não corresponde a pessoas efetivamente alcançadas.</p></div>
-      <div class="stat"><div style="display:flex;gap:1.4rem;align-items:baseline;flex-wrap:wrap"><span class="big" style="color:#7FD6A8;font-size:clamp(1.9rem,3.8vw,2.8rem)"><span class="cnt" data-v="4.2" data-dec="1"></span>%</span><span class="big" style="color:rgba(255,255,255,.85);font-size:clamp(1.5rem,2.9vw,2.1rem)"><span class="cnt" data-v="60.1" data-dec="1"></span>%</span><span class="big" style="color:#F0968C;font-size:clamp(1.9rem,3.8vw,2.8rem)"><span class="cnt" data-v="35.7" data-dec="1"></span>%</span></div><p class="lbl"><strong style="color:#fff">sentimento</strong>: positivo · neutro · negativo.</p></div>
+    <p class="lead rv">Os dois temas de maior incidência conectam a experiência com o serviço ao ambiente institucional.</p>
+    <div class="chart-box rv" style="margin-top:1.8rem">
+      <div class="hrow"><span class="hlab" style="color:var(--azul);font-weight:700">Operação e fornecimento</span><span class="htrack"><span class="hfill" style="--w:86%;--c:#0A1E4E"></span></span><span class="hval">21,6 mil | 34,3%</span></div>
+      <div class="hrow"><span class="hlab" style="color:#2E6DB4;font-weight:700">Concessão e regulação</span><span class="htrack"><span class="hfill" style="--w:83%;--c:#2E6DB4"></span></span><span class="hval">20,8 mil | 33,1%</span></div>
+      <div class="hrow"><span class="hlab" style="color:var(--pos);font-weight:700">Infraestrutura e manutenção</span><span class="htrack"><span class="hfill" style="--w:63%;--c:#0E7C4F"></span></span><span class="hval">15,8 mil | 25,1%</span></div>
+      <div class="hrow"><span class="hlab" style="color:#C57A1D;font-weight:700">Tarifas e cobranças</span><span class="htrack"><span class="hfill" style="--w:50%;--c:#C57A1D"></span></span><span class="hval">12,4 mil | 19,7%</span></div>
+      <div class="hrow"><span class="hlab" style="color:var(--gold-ink);font-weight:700">Atendimento e resolução</span><span class="htrack"><span class="hfill" style="--w:49%;--c:#E9C63B"></span></span><span class="hval">12,3 mil | 19,6%</span></div>
     </div>
-    <p class="note">Fonte: Talkwalker | Período analisado: 28/07 a 26/08/2026 | Brasil</p>
+    <div class="banner rv" style="margin-top:1.4rem"><strong style="color:var(--amarelo)">Operação e fornecimento</strong> e <strong style="color:var(--amarelo)">concessão e regulação</strong> apresentam as maiores incidências temáticas no período. Infraestrutura, tarifas e atendimento complementam a leitura sobre os principais assuntos associados à marca.</div>
+    <p class="note">Obs.: temas não excludentes, obtidos por recortes temáticos. Uma mesma menção pode aparecer em mais de um eixo; por isso, os percentuais não somam 100%. Universo: 62,9 mil resultados. Fonte: Talkwalker. Brasil. 01/01 a 10/09/2026.</p>
   </div>
 </section>
 
-<!-- ============ CAP. 16 · PICO 31 JUL ============ -->
-<section class="sec" id="pico" data-dot="Pico 31 JUL">
-  <div class="wrap">
-    <span class="kicker rv">31 JUL</span>
-    <h2 class="rv">Quando a operação <em>vira reputação</em></h2>
-    <div class="rule rv"></div>
-    <div class="cols c2" style="align-items:flex-start">
-      <div class="chart-box rv" style="grid-column:1/-1">
-        <svg viewBox="0 0 900 320" role="img" aria-label="Gráfico de linha das menções diárias entre 28 de julho e 25 de agosto de 2026, com pico de 1,8 mil resultados em 31 de julho">
-          <line x1="60" y1="270" x2="880" y2="270" stroke="#DFE5EF"/>
-          <line x1="60" y1="200" x2="880" y2="200" stroke="#EEF1F7"/><text class="axis" x="18" y="204">800</text>
-          <line x1="60" y1="130" x2="880" y2="130" stroke="#EEF1F7"/><text class="axis" x="14" y="134">1.2K</text>
-          <line x1="60" y1="60"  x2="880" y2="60"  stroke="#EEF1F7"/><text class="axis" x="14" y="64">1.8K</text>
-          <text class="axis" x="60" y="292">28 Jul</text><text class="axis" x="265" y="292">4 Ago</text><text class="axis" x="470" y="292">11 Ago</text><text class="axis" x="670" y="292">18 Ago</text><text class="axis" x="845" y="292">25 Ago</text>
-          <path d="M60,252 L90,240 L120,150 L150,60 L180,120 L210,225 L250,244 L300,240 L350,246 L400,238 L450,244 L500,225 L540,210 L580,238 L620,215 L650,205 L690,240 L730,232 L770,246 L810,238 L850,225 L880,215 L880,270 L60,270 Z" fill="rgba(0,39,118,.07)" stroke="none"/>
-          <path d="M60,252 L90,240 L120,150 L150,60 L180,120 L210,225 L250,244 L300,240 L350,246 L400,238 L450,244 L500,225 L540,210 L580,238 L620,215 L650,205 L690,240 L730,232 L770,246 L810,238 L850,225 L880,215" fill="none" stroke="#002776" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="trace" style="--len:1400"/>
-          <line x1="150" y1="60" x2="150" y2="18" stroke="#B3271E" stroke-dasharray="4 5" stroke-width="1.6"/>
-          <circle class="pulse" cx="150" cy="60" r="6" fill="none" stroke="#B3271E" stroke-width="2"/>
-          <circle cx="150" cy="60" r="6" fill="#B3271E"/>
-          <text class="anno" x="164" y="26">31 JUL: pico concentra a cobrança sobre a capacidade de resposta da Enel</text>
-        </svg>
-      </div>
-      <div class="card edge rv"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="1.8" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p style="font-weight:700;margin-top:.3rem">resultados no dia · <span class="cnt" data-v="7.7" data-dec="1"></span> mil engajamentos</p><p class="small muted" style="margin-top:.8rem">Cobertura representativa do pico | GloboNews: falta de energia após vendaval no Rio.</p></div>
-      <figure class="clickable rv" data-lb="pico" data-cap="Cobertura representativa do pico na GloboNews: falta de energia após vendaval provoca protestos no RJ." tabindex="0" role="button" aria-label="Ampliar painel da cobertura do pico">
-        <div class="shot dark r169">
-          <svg class="fill" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs><linearGradient id="nite" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#12203F"/><stop offset="1" stop-color="#050A16"/></linearGradient></defs>
-            <rect width="640" height="360" fill="url(#nite)"/>
-            <g fill="#0B1730"><rect x="30" y="180" width="60" height="180"/><rect x="110" y="210" width="46" height="150"/><rect x="480" y="196" width="54" height="164"/><rect x="560" y="224" width="50" height="136"/></g>
-            <ellipse cx="320" cy="330" rx="180" ry="34" fill="#F2A73B" opacity=".16"/>
-            <g fill="#050A16"><ellipse cx="250" cy="308" rx="14" ry="26"/><ellipse cx="290" cy="304" rx="13" ry="28"/><ellipse cx="330" cy="308" rx="14" ry="26"/><ellipse cx="372" cy="305" rx="13" ry="27"/></g>
-            <circle cx="312" cy="268" r="10" fill="#F2A73B" opacity=".8"/>
-          </svg>
-          <div class="vidmock"><span class="playbtn"><svg class="icon"><use href="#i-play"/></svg></span></div>
-          <div class="lower3"><span class="tag">GLOBONEWS</span><p class="tt">Falta de luz após vendaval provoca protestos no RJ</p></div>
-        </div>
-      </figure>
-    </div>
-    <div class="banner rv" style="margin-top:1.6rem">O evento climático aciona a exposição; a pressão reputacional se forma na avaliação da resposta, velocidade de restabelecimento, previsibilidade da solução e atendimento.</div>
-    <p class="note">Fonte: Talkwalker | Período analisado: 28/07 a 26/08/2026 | Brasil</p>
-  </div>
-</section>
-
-<!-- ============ CAP. 17 · WORD CLOUD ============ -->
-<section class="sec soft" id="conversa" data-dot="Do que era feita a conversa">
-  <div class="wrap center">
-    <span class="kicker rv" style="justify-content:center">31 JUL</span>
-    <h2 class="rv" style="margin-inline:auto">"Do que era feita <em>essa conversa?"</em></h2>
-    <div class="rule rv" style="margin:0 auto 1.6rem"></div>
-    <p class="lead rv" style="margin:0 auto">No momento de maior intensidade do pico, três dimensões estruturam a repercussão: serviço, resposta operacional e impacto territorial.</p>
-    <div class="cloud rv" style="margin-top:2.6rem" aria-label="Nuvem de palavras do pico de 31 de julho">
-      <span class="w3">luz</span><span class="w4">restabelecimento</span><span class="w2">moradores</span><span class="w4">equipes</span><span class="w1">enel</span><span class="w3">bairro</span><span class="w2">energia</span><span class="w4">fatura</span><span class="w1">serviço</span><span class="w5">metropolitana</span><span class="w2">qualidade</span><span class="w3">empresa</span><span class="w4">normalização</span><span class="w2">fornecimento</span><span class="w5">jacarepaguá</span><span class="w3">região</span><span class="w4">interrupção</span><span class="w5">prefeitura</span><span class="w3">consumidores</span><span class="w4">atendimento</span><span class="w5">emergência</span>
-    </div>
-    <div class="grid g3 stagger" style="margin-top:2.8rem;text-align:left">
-      <div class="card edge"><p class="ovl" style="color:var(--azul)">Serviço</p><p class="small muted" style="margin-top:.35rem">energia · fornecimento · qualidade · interrupção</p></div>
-      <div class="card edge"><p class="ovl" style="color:var(--azul)">Resposta</p><p class="small muted" style="margin-top:.35rem">restabelecimento · normalização · equipes · atendimento</p></div>
-      <div class="card edge"><p class="ovl" style="color:var(--azul)">Território</p><p class="small muted" style="margin-top:.35rem">moradores · bairros · municípios · áreas afetadas</p></div>
-    </div>
-    <p class="note">Fonte: Talkwalker | 31/07/2026, 11h às 12h | Intervalo de maior intensidade do pico.</p>
-  </div>
-</section>
-
-<!-- ============ CAP. 18 · SENTIMENTO ============ -->
-<section class="sec" id="sentimento" data-dot="Sentimento">
+<!-- ============ CAP. 10 · SENTIMENTO MENSAL ============ -->
+<section class="sec soft" id="tom" data-dot="Sentimento mensal">
   <div class="wrap">
     <span class="kicker rv">Sentimento</span>
-    <h2 class="rv">O negativo domina <em>a polaridade</em></h2>
+    <h2 class="rv">O tom varia ao longo <em>do período</em></h2>
     <div class="rule rv"></div>
-    <p class="lead rv">As recuperações são episódicas; o saldo negativo é persistente no período.</p>
-    <div class="cols c2" style="margin-top:1.8rem;align-items:stretch">
+    <p class="lead rv">A neutralidade predomina na maior parte dos meses, enquanto julho registra a maior participação de menções negativas.</p>
+    <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start;grid-template-columns:1.7fr 1fr">
       <div class="chart-box rv">
-        <p class="ovl" style="color:#93A0B8;margin-bottom:.7rem">Net sentiment over time*</p>
-        <svg viewBox="0 0 620 260" role="img" aria-label="Gráfico do saldo de sentimento ao longo do período, quase sempre abaixo de zero">
-          <line x1="40" y1="70" x2="600" y2="70" stroke="#C9D2E2" stroke-dasharray="3 4"/><text class="axis" x="10" y="74">0%</text>
-          <line x1="40" y1="140" x2="600" y2="140" stroke="#EEF1F7"/><text class="axis" x="2" y="144">-50%</text>
-          <line x1="40" y1="210" x2="600" y2="210" stroke="#EEF1F7"/><text class="axis" x="0" y="214">-100%</text>
-          <path d="M40,58 L60,110 L85,185 L110,195 L140,170 L170,160 L200,150 L230,90 L255,75 L280,120 L305,130 L330,128 L360,150 L390,132 L420,140 L450,95 L470,150 L495,165 L520,120 L545,140 L570,160 L600,80 L600,70 L40,70 Z" fill="rgba(179,39,30,.09)"/>
-          <path d="M40,58 L60,110 L85,185 L110,195 L140,170 L170,160 L200,150 L230,90 L255,75 L280,120 L305,130 L330,128 L360,150 L390,132 L420,140 L450,95 L470,150 L495,165 L520,120 L545,140 L570,160 L600,80" fill="none" stroke="#B3271E" stroke-width="2.6" stroke-linecap="round" class="trace" style="--len:1200"/>
-          <text class="axis" x="40" y="240">28 Jul</text><text class="axis" x="200" y="240">4 Ago</text><text class="axis" x="340" y="240">11 Ago</text><text class="axis" x="470" y="240">18 Ago</text><text class="axis" x="575" y="240">25 Ago</text>
+        <svg viewBox="0 0 940 350" role="img" aria-label="Distribuição mensal do sentimento entre janeiro e setembro de 2026: julho registra 57,3 por cento de menções negativas">
+          <text class="anno" x="560" y="24" fill="#B3271E">Maior participação negativa: 57,3%</text>
+          <line x1="676" y1="30" x2="676" y2="46" stroke="#B3271E" stroke-dasharray="3 4" stroke-width="1.6"/>
+          <!-- Jan -->
+          <rect x="70" y="52" width="60" height="90" fill="#C4453C"/><rect x="70" y="142" width="60" height="136" fill="#E9C63B"/><rect x="70" y="278" width="60" height="14" fill="#0E7C4F"/>
+          <text class="axis" x="100" y="102" text-anchor="middle" fill="#fff" font-weight="700">37,6%</text><text class="axis" x="100" y="215" text-anchor="middle" fill="#4A3F00" font-weight="700">56,7%</text>
+          <text class="axis" x="100" y="312" text-anchor="middle">Jan</text><text class="axis" x="100" y="328" text-anchor="middle" fill="#B6C0D2">8,6 mil</text>
+          <!-- Fev -->
+          <rect x="166" y="63" width="60" height="79" fill="#C4453C"/><rect x="166" y="142" width="60" height="149" fill="#E9C63B"/><rect x="166" y="291" width="60" height="13" fill="#0E7C4F"/>
+          <text class="axis" x="196" y="107" text-anchor="middle" fill="#fff" font-weight="700">32,7%</text><text class="axis" x="196" y="222" text-anchor="middle" fill="#4A3F00" font-weight="700">62,0%</text>
+          <text class="axis" x="196" y="318" text-anchor="middle">Fev</text><text class="axis" x="196" y="334" text-anchor="middle" fill="#B6C0D2">8,0 mil</text>
+          <!-- Mar -->
+          <rect x="262" y="53" width="60" height="91" fill="#C4453C"/><rect x="262" y="144" width="60" height="132" fill="#E9C63B"/><rect x="262" y="276" width="60" height="17" fill="#0E7C4F"/>
+          <text class="axis" x="292" y="103" text-anchor="middle" fill="#fff" font-weight="700">37,9%</text><text class="axis" x="292" y="215" text-anchor="middle" fill="#4A3F00" font-weight="700">55,0%</text>
+          <text class="axis" x="292" y="312" text-anchor="middle">Mar</text><text class="axis" x="292" y="328" text-anchor="middle" fill="#B6C0D2">9,2 mil</text>
+          <!-- Abr -->
+          <rect x="358" y="66" width="60" height="74" fill="#C4453C"/><rect x="358" y="140" width="60" height="148" fill="#E9C63B"/><rect x="358" y="288" width="60" height="18" fill="#0E7C4F"/>
+          <text class="axis" x="388" y="108" text-anchor="middle" fill="#fff" font-weight="700">30,9%</text><text class="axis" x="388" y="220" text-anchor="middle" fill="#4A3F00" font-weight="700">61,6%</text>
+          <text class="axis" x="388" y="320" text-anchor="middle">Abr</text><text class="axis" x="388" y="336" text-anchor="middle" fill="#B6C0D2">9,4 mil</text>
+          <!-- Mai -->
+          <rect x="454" y="58" width="60" height="104" fill="#C4453C"/><rect x="454" y="162" width="60" height="104" fill="#E9C63B"/><rect x="454" y="266" width="60" height="31" fill="#0E7C4F"/>
+          <text class="axis" x="484" y="115" text-anchor="middle" fill="#fff" font-weight="700">43,3%</text><text class="axis" x="484" y="219" text-anchor="middle" fill="#4A3F00" font-weight="700">43,5%</text><text class="axis" x="484" y="285" text-anchor="middle" fill="#fff" font-weight="700">13,1%</text>
+          <text class="axis" x="484" y="315" text-anchor="middle">Mai</text><text class="axis" x="484" y="331" text-anchor="middle" fill="#B6C0D2">6,1 mil</text>
+          <!-- Jun -->
+          <rect x="550" y="66" width="60" height="87" fill="#C4453C"/><rect x="550" y="153" width="60" height="117" fill="#E9C63B"/><rect x="550" y="270" width="60" height="36" fill="#0E7C4F"/>
+          <text class="axis" x="580" y="115" text-anchor="middle" fill="#fff" font-weight="700">36,5%</text><text class="axis" x="580" y="217" text-anchor="middle" fill="#4A3F00" font-weight="700">48,5%</text><text class="axis" x="580" y="292" text-anchor="middle" fill="#fff" font-weight="700">15,1%</text>
+          <text class="axis" x="580" y="322" text-anchor="middle">Jun</text><text class="axis" x="580" y="338" text-anchor="middle" fill="#B6C0D2">2,3 mil</text>
+          <!-- Jul -->
+          <rect x="646" y="52" width="60" height="138" fill="#B3271E"/><rect x="646" y="190" width="60" height="88" fill="#E9C63B"/><rect x="646" y="278" width="60" height="15" fill="#0E7C4F"/>
+          <text class="axis" x="676" y="126" text-anchor="middle" fill="#fff" font-weight="800">57,3%</text><text class="axis" x="676" y="238" text-anchor="middle" fill="#4A3F00" font-weight="700">36,5%</text>
+          <text class="axis" x="676" y="312" text-anchor="middle" font-weight="700">Jul</text><text class="axis" x="676" y="328" text-anchor="middle" fill="#B6C0D2">11,3 mil</text>
+          <!-- Ago -->
+          <rect x="742" y="60" width="60" height="93" fill="#C4453C"/><rect x="742" y="153" width="60" height="127" fill="#E9C63B"/><rect x="742" y="280" width="60" height="20" fill="#0E7C4F"/>
+          <text class="axis" x="772" y="112" text-anchor="middle" fill="#fff" font-weight="700">38,8%</text><text class="axis" x="772" y="222" text-anchor="middle" fill="#4A3F00" font-weight="700">52,9%</text>
+          <text class="axis" x="772" y="314" text-anchor="middle">Ago</text><text class="axis" x="772" y="330" text-anchor="middle" fill="#B6C0D2">6,6 mil</text>
+          <!-- Set -->
+          <rect x="838" y="56" width="60" height="101" fill="#C4453C"/><rect x="838" y="157" width="60" height="124" fill="#E9C63B"/><rect x="838" y="281" width="60" height="15" fill="#0E7C4F"/>
+          <text class="axis" x="868" y="112" text-anchor="middle" fill="#fff" font-weight="700">41,9%</text><text class="axis" x="868" y="224" text-anchor="middle" fill="#4A3F00" font-weight="700">51,8%</text>
+          <text class="axis" x="868" y="315" text-anchor="middle">Set*</text><text class="axis" x="868" y="331" text-anchor="middle" fill="#B6C0D2">1,5 mil</text>
         </svg>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
-        <div class="card rv" style="border-top:3px solid var(--neg);text-align:center">
-          <div class="big" style="color:var(--neg)"><span class="cnt" data-v="8.5" data-dec="1"></span>x</div>
-          <p style="font-weight:700;margin-top:.3rem">mais menções negativas do que positivas</p>
-          <p class="small muted" style="margin-top:.5rem">Entre as menções polarizadas, há forte assimetria negativa.</p>
+        <div style="display:flex;gap:18px;margin-top:.8rem;font-size:.74rem;color:var(--ink-2);flex-wrap:wrap">
+          <span style="display:flex;align-items:center;gap:6px"><i style="width:10px;height:10px;border-radius:3px;background:#0E7C4F;display:inline-block"></i>Positivo</span>
+          <span style="display:flex;align-items:center;gap:6px"><i style="width:10px;height:10px;border-radius:3px;background:#E9C63B;display:inline-block"></i>Neutro</span>
+          <span style="display:flex;align-items:center;gap:6px"><i style="width:10px;height:10px;border-radius:3px;background:#C4453C;display:inline-block"></i>Negativo</span>
         </div>
-        <div class="banner rv">O ponto central não é apenas a presença de críticas, mas a baixa capacidade do positivo de funcionar como contrapeso.</div>
+      </div>
+      <div class="stagger">
+        <p class="ovl rv" style="color:var(--azul);margin-bottom:.4rem">Destaques</p>
+        <div class="card" style="border-left:4px solid var(--neg)"><strong>1 · Julho</strong><p class="small muted" style="margin-top:.3rem">apresentou a maior participação de menções negativas: <strong style="color:var(--neg)">57,3%</strong>.</p></div>
+        <div class="card" style="border-left:4px solid var(--amarelo);margin-top:14px"><strong>2 · Fevereiro e abril</strong><p class="small muted" style="margin-top:.3rem">apresentaram os maiores percentuais de neutralidade: <strong>62,0% e 61,6%</strong>.</p></div>
+        <div class="card" style="border-left:4px solid var(--verde);margin-top:14px"><strong>3 · Maio e junho</strong><p class="small muted" style="margin-top:.3rem">apresentaram os maiores percentuais de menções positivas: <strong style="color:var(--pos)">13,1% e 15,1%</strong>.</p></div>
       </div>
     </div>
-    <p class="note">*Net Sentiment Over Time: evolução do saldo entre menções positivas e negativas. Fonte: Talkwalker | 28/07 a 26/08/2026 | Brasil</p>
+    <div class="banner paper rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--gold-ink)">Interpretação</span><br>A neutralidade predominou na maior parte do período. Julho se destacou por uma participação mais elevada de menções negativas, enquanto maio e junho apresentaram os maiores percentuais positivos.</div>
+    <p class="note">Setembro considera o período parcial de 1º a 10/09/2026. Os percentuais representam a distribuição do sentimento em cada mês. Fonte: Talkwalker. Brasil.</p>
   </div>
 </section>
 
-<!-- ============ CAP. 19 · REDES ============ -->
-<section class="sec soft" id="redes" data-dot="Redes">
+<!-- ============ CAP. 11 · PERCEPÇÃO ============ -->
+<section class="sec" id="percepcao" data-dot="Percepção">
   <div class="wrap">
-    <span class="kicker rv">Redes</span>
-    <h2 class="rv">Como essa percepção <em>aparece na prática</em></h2>
+    <span class="kicker rv">Percepção</span>
+    <h2 class="rv">A percepção combina pontos de atenção e <em>sinais favoráveis</em></h2>
     <div class="rule rv"></div>
-    <p class="lead rv">Críticas espontâneas se concentram em interrupção, demora e capacidade de resposta. Identidades preservadas.</p>
     <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start">
       <div class="stagger">
-        <p class="ovl rv" style="color:var(--ink-2);margin-bottom:.8rem">São Paulo</p>
-        <div class="cmt"><div class="chead"><span class="cava"></span><span class="cname"></span><span class="ctime">3 sem</span></div><p>"Aqui em São Paulo a Enel por muito menos deixou a gente 1 SEMANA sem energia. Sei que é difícil, mas vocês ainda estão no lucro."</p><div class="cfoot"><svg class="icon"><use href="#i-heart"/></svg><svg class="icon"><use href="#i-chat"/></svg></div></div>
-        <div class="cmt"><div class="chead"><span class="cava"></span><span class="cname"></span><span class="ctime">5 d</span></div><p>"Agora que estão com a corda no pescoço começam a investir em melhorias. Pior companhia de energia de São Paulo."</p><div class="cfoot"><svg class="icon"><use href="#i-heart"/></svg><svg class="icon"><use href="#i-chat"/></svg></div></div>
-        <div class="cmt"><div class="chead"><span class="cava"></span><span class="cname"></span><span class="ctime">3 sem</span></div><p>"Isso é 2 vias de culpa: Enel que terceiriza todos os serviços e terceirizada que faz de tudo para baratear custos."</p><div class="cfoot"><svg class="icon"><use href="#i-heart"/></svg><svg class="icon"><use href="#i-chat"/></svg></div></div>
-        <p class="ovl rv" style="color:var(--ink-2);margin:1.4rem 0 .8rem">Rio de Janeiro</p>
-        <div class="cmt"><div class="chead"><span class="cava"></span><span class="cname"></span><span class="ctime">3 sem</span></div><p>"@enelbrasil pior empresa de energia. Estamos sem luz a 28:00 horas."</p><div class="cfoot"><svg class="icon"><use href="#i-heart"/></svg><svg class="icon"><use href="#i-chat"/></svg></div></div>
+        <p class="ovl rv" style="color:var(--neg);margin-bottom:.8rem">Pontos de atenção na experiência · identidades preservadas</p>
+        <div class="cmt" style="border-left:3px solid var(--neg)"><div class="chead"><span class="cava"></span><span class="cname"></span><span class="ctime">3 jun · 88,8 mil visualizações</span></div><p>"Sexto, SEXTO, SEIS dia sem luz. Alimentos de geladeira que comprei? Lixo. Estudos e trabalho? Prejudicadíssimo. Atendimento? Não funciona, ninguém pode fazer nada. Luz é um serviço BÁSICO para o consumidor."</p><div class="cfoot"><svg class="icon"><use href="#i-heart"/></svg><svg class="icon"><use href="#i-chat"/></svg></div><p class="small" style="margin-top:.6rem;color:var(--neg);font-weight:700;font-size:.72rem;letter-spacing:.06em">IMPACTO NO COTIDIANO: a percepção se torna mais sensível quando a falta de energia afeta alimentação, trabalho e estudos.</p></div>
+        <div class="cmt" style="border-left:3px solid var(--neg)"><div class="chead"><span class="cava"></span><span class="cname"></span><span class="ctime">18 fev · 2.503 visualizações</span></div><p>"Estou sem luz na Região do Butantã desde as 17 horas. A previsão de retorno era para as 20:00, depois para as 23:47, depois 04:00 e agora 08:00. Serviço caro e ruim."</p><div class="cfoot"><svg class="icon"><use href="#i-heart"/></svg><svg class="icon"><use href="#i-chat"/></svg></div><p class="small" style="margin-top:.6rem;color:var(--neg);font-weight:700;font-size:.72rem;letter-spacing:.06em">PREVISIBILIDADE DA RESPOSTA: mudanças na previsão de retorno pedem informações mais consistentes ao longo da ocorrência.</p></div>
+        <div class="cmt" style="border-left:3px solid var(--neg)"><div class="chead"><span class="cava"></span><span class="cname"></span><span class="ctime">3 jul · 78 visualizações</span></div><p>"Péssimo serviço e com aumento. Se privatizou pra isso, melhor tomar a concessão."<br><span class="small" style="color:#8895AD">Citando: "Conta de luz da Enel fica 10,18% mais cara a partir de sábado em SP" (g1)</span></p><div class="cfoot"><svg class="icon"><use href="#i-heart"/></svg><svg class="icon"><use href="#i-chat"/></svg></div><p class="small" style="margin-top:.6rem;color:var(--neg);font-weight:700;font-size:.72rem;letter-spacing:.06em">CUSTO E QUALIDADE PERCEBIDA: o reajuste ganha sensibilidade quando associado à avaliação da qualidade do serviço.</p></div>
+      </div>
+      <div class="stagger">
+        <p class="ovl rv" style="color:var(--pos);margin-bottom:.8rem">Entregas com potencial de ampliar a percepção positiva</p>
+        <div class="card" style="border-left:4px solid var(--verde)"><div class="newsrow" style="border:none;padding:0"><span class="srcb" style="background:#C4170C">EX</span><div><p class="src">Extra · @jornalextra</p><p class="tit">Reforço operacional no Rio</p></div></div><p class="small muted" style="margin-top:.5rem">A Enel Rio de Janeiro contratou mais de dois mil funcionários para reforçar os times operacionais. A ampliação das equipes e as iniciativas de capacitação oferecem evidências de fortalecimento da estrutura de atendimento e resposta.</p></div>
+        <div class="card" style="border-left:4px solid var(--verde);margin-top:14px"><div class="newsrow" style="border:none;padding:0"><span class="srcb" style="background:#7A3FC1">R7</span><div><p class="src">R7 · @portalr7</p><p class="tit">Formação e oportunidade</p></div></div><p class="small muted" style="margin-top:.5rem">A Enel amplia oportunidades de formação e entrada no mercado de trabalho por meio da Escola de Eletricistas, iniciativa que capacita novos profissionais e contribui para o desenvolvimento das comunidades.</p></div>
+        <div class="card" style="border-left:4px solid var(--verde);margin-top:14px"><div class="newsrow" style="border:none;padding:0"><span class="srcb" style="background:#0E7C4F">M</span><div><p class="src">Metronews · @metronews</p><p class="tit">Benefício direto ao consumidor</p></div></div><p class="small muted" style="margin-top:.5rem">Santo André iniciou uma nova etapa de troca de lâmpadas por LED, em parceria com a Enel, até outubro de 2026, ampliando a eficiência energética e a economia para a população. A iniciativa aproxima a marca de benefícios concretos no cotidiano.</p></div>
+      </div>
+    </div>
+    <p class="note">Leitura qualitativa baseada em amostra de menções classificadas no Talkwalker e em exemplos externos de iniciativas e repercussões favoráveis. Os conteúdos da coluna direita não representam, necessariamente, manifestações espontâneas de consumidores.</p>
+  </div>
+</section>
+
+<!-- ============ CAP. 12 · CASO APLICADO ============ -->
+<section class="sec dark tall" id="caso" data-dot="Caso aplicado">
+  <div class="wrap">
+    <span class="kicker rv">Caso aplicado</span>
+    <h2 class="rv">Da interrupção à repercussão <em>reputacional</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">A percepção sobre a ocorrência também passa por prazo, previsibilidade e clareza da resposta.</p>
+    <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start">
+      <div>
+        <figure class="clickable rv" data-lb="caso" data-cap="Publicação representativa do pico de 31 de julho: mais de 100 mil clientes seguem sem luz no RJ no segundo dia após vendaval." tabindex="0" role="button" aria-label="Ampliar publicação representativa do pico de 31 de julho">
+          <div class="shot dark r169">
+            <svg class="fill" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><linearGradient id="rua" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#39505C"/><stop offset="1" stop-color="#141F26"/></linearGradient></defs>
+              <rect width="640" height="360" fill="url(#rua)"/>
+              <rect y="250" width="640" height="110" fill="#20303A"/>
+              <path d="M0 250h640" stroke="#4A616E" stroke-width="2"/>
+              <path d="M120 258 Q300 200 470 262" stroke="#2B3E49" stroke-width="26" fill="none" stroke-linecap="round"/>
+              <path d="M150 252 C210 214 300 206 420 250" stroke="#3E5561" stroke-width="9" fill="none" stroke-linecap="round"/>
+              <g stroke="#3E5561" stroke-width="5" stroke-linecap="round"><path d="M250 224c-10-22-4-38 6-50M320 214c2-24 14-36 28-42M380 228c14-16 30-20 44-18"/></g>
+              <g fill="#151F27"><ellipse cx="250" cy="196" rx="42" ry="26"/><ellipse cx="330" cy="184" rx="48" ry="28"/><ellipse cx="404" cy="200" rx="40" ry="24"/></g>
+              <g fill="#C57A1D"><path d="M180 292l10-24 10 24zM440 296l10-24 10 24z"/></g>
+              <g stroke="#7C97AE" stroke-width="1" opacity=".4"><path d="M80 40l-16 52M140 28l-16 52M520 36l-16 52M580 52l-16 52"/></g>
+            </svg>
+            <div class="lower3"><span class="tag" style="background:#123A8A">31 JUL · RIO DE JANEIRO</span><p class="tt" style="font-size:1.02rem;font-weight:700">Mais de 100 mil clientes seguem sem luz no RJ no segundo dia após vendaval</p></div>
+          </div>
+        </figure>
+        <div class="card rv" style="margin-top:16px;display:flex;gap:26px;flex-wrap:wrap">
+          <div><div class="big mid" style="color:var(--amarelo)"><span class="cnt" data-v="1.8" data-dec="1"></span> mil</div><p class="ovl" style="color:rgba(255,255,255,.6);margin-top:.3rem">resultados no dia</p></div>
+          <div><div class="big mid" style="color:var(--amarelo)"><span class="cnt" data-v="7.7" data-dec="1"></span> mil</div><p class="ovl" style="color:rgba(255,255,255,.6);margin-top:.3rem">engajamentos</p></div>
+        </div>
+      </div>
+      <div class="stagger">
+        <div class="rowline"><span class="ic y"><svg class="icon"><use href="#i-bolt"/></svg></span><div><p class="ovl" style="color:var(--amarelo)">01 · Ocorrência</p><strong>A energia é interrompida</strong><br><span class="small" style="color:rgba(255,255,255,.7)">Vendaval e interrupções no fornecimento colocam a Enel no centro da conversa.</span></div></div>
+        <div class="rowline"><span class="ic y"><svg class="icon"><use href="#i-clock"/></svg></span><div><p class="ovl" style="color:var(--amarelo)">02 · Expectativa</p><strong>O consumidor espera uma previsão</strong><br><span class="small" style="color:rgba(255,255,255,.7)">A atenção se desloca para prazo de retorno e atualização sobre a ocorrência.</span></div></div>
+        <div class="rowline"><span class="ic y"><svg class="icon"><use href="#i-users"/></svg></span><div><p class="ovl" style="color:var(--amarelo)">03 · Resposta</p><strong>A resposta ganha protagonismo</strong><br><span class="small" style="color:rgba(255,255,255,.7)">Restabelecimento, equipes em campo, atendimento e clareza da informação passam a ter maior peso na percepção do episódio.</span></div></div>
+        <div class="rowline"><span class="ic y"><svg class="icon"><use href="#i-chart"/></svg></span><div><p class="ovl" style="color:var(--amarelo)">04 · Repercussão reputacional</p><strong>A experiência passa a influenciar a percepção da marca</strong><br><span class="small" style="color:rgba(255,255,255,.7)">Quando prazo, informação e solução não correspondem à expectativa, a ocorrência pode se ampliar para uma avaliação mais ampla sobre confiabilidade e capacidade de resposta.</span></div></div>
+      </div>
+    </div>
+    <div class="card rv" style="margin-top:1.8rem;border-left:3px solid var(--amarelo)"><span class="ovl" style="color:var(--amarelo)">Leitura principal</span><br><strong>A interrupção gera atenção. A qualidade da resposta influencia como o episódio evolui na percepção pública.</strong></div>
+    <p class="note">Os volumes referem-se ao pico selecionado e não ao total mensal. Fonte: Talkwalker. Caso analisado: 31/07/2026. Recorte complementar: 28/07 a 26/08/2026.</p>
+  </div>
+</section>
+<!-- ============ CAP. 13 · TERRITÓRIOS ============ -->
+<section class="sec soft" id="territorios" data-dot="Territórios">
+  <div class="wrap">
+    <span class="kicker rv">Territórios</span>
+    <h2 class="rv">A marca se relaciona com três <em>contextos diferentes</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">SP, RJ e CE apresentam dinâmicas próprias e pedem abordagens reputacionais específicas.</p>
+    <div class="grid g3 stagger" style="margin-top:1.8rem;align-items:stretch">
+      <div class="card edge"><p class="ovl" style="color:var(--azul)">São Paulo</p><h3 style="margin:.4rem 0 .8rem;color:var(--azul)">Serviço + regulação + custo</h3><p class="small muted">A experiência com o fornecimento se conecta ao debate sobre concessão e ao impacto tarifário.</p>
+        <div class="rowline" style="margin-top:.6rem"><span class="ic n"><svg class="icon"><use href="#i-bolt"/></svg></span><div><strong>Serviço</strong><br><span class="small muted">qualidade e continuidade</span></div></div>
+        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-bank"/></svg></span><div><strong>Regulação</strong><br><span class="small muted">concessão e fiscalização</span></div></div>
+        <div class="rowline"><span class="ic y"><svg class="icon"><use href="#i-chart"/></svg></span><div><strong>Custo</strong><br><span class="small muted">tarifas e cobranças</span></div></div>
+      </div>
+      <div class="card edge"><p class="ovl" style="color:var(--azul)">Rio de Janeiro</p><h3 style="margin:.4rem 0 .8rem;color:var(--azul)">Clima + resposta + serviço</h3><p class="small muted">Eventos climáticos ampliam a atenção sobre interrupções e tornam prazo, informação e restabelecimento ainda mais relevantes para a experiência.</p>
+        <div class="rowline" style="margin-top:.6rem"><span class="ic r"><svg class="icon"><use href="#i-alert"/></svg></span><div><strong>Clima</strong><br><span class="small muted">eventos extremos e impactos</span></div></div>
+        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-headset"/></svg></span><div><strong>Resposta</strong><br><span class="small muted">atendimento e restabelecimento</span></div></div>
+        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-bolt"/></svg></span><div><strong>Serviço</strong><br><span class="small muted">qualidade e continuidade</span></div></div>
+      </div>
+      <div class="card edge"><p class="ovl" style="color:var(--azul)">Ceará</p><h3 style="margin:.4rem 0 .8rem;color:var(--azul)">Concessão + serviço + investimento</h3><p class="small muted">O debate sobre a renovação da concessão convive com questões ligadas ao serviço e com uma agenda de investimento e modernização.</p>
+        <div class="rowline" style="margin-top:.6rem"><span class="ic n"><svg class="icon"><use href="#i-doc"/></svg></span><div><strong>Concessão</strong><br><span class="small muted">renovação e segurança jurídica</span></div></div>
+        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-bolt"/></svg></span><div><strong>Serviço</strong><br><span class="small muted">qualidade e continuidade</span></div></div>
+        <div class="rowline"><span class="ic g"><svg class="icon"><use href="#i-gear"/></svg></span><div><strong>Investimento</strong><br><span class="small muted">modernização e expansão</span></div></div>
+      </div>
+    </div>
+    <div class="banner rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--amarelo)">Leitura principal</span><br>A reputação da Enel assume características diferentes em cada território: São Paulo combina serviço, regulação e tarifa; no Rio, eventos críticos ampliam a importância da capacidade de resposta; e o Ceará reúne debate sobre concessão, experiência com o serviço e sinais de investimento e modernização.</div>
+    <p class="note">Nota metodológica: os recortes territoriais refletem consultas e termos associados aos estados, e não necessariamente a geolocalização dos autores.</p>
+  </div>
+</section>
+
+<!-- ============ CAP. 14 · SÃO PAULO ============ -->
+<section class="sec" id="sp" data-dot="São Paulo">
+  <div class="wrap">
+    <span class="kicker rv">Território</span>
+    <h2 class="rv">Em São Paulo, serviço e concessão concentram <em>a atenção</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">A conversa sobre a Enel se concentra na experiência com o serviço, no debate regulatório e no impacto tarifário.</p>
+    <div class="grid g4 stagger" style="margin-top:1.6rem">
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="32.5" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="lbl">resultados</p></div>
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="16.1" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="lbl">autores únicos</p></div>
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="903.6" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="lbl">engajamentos</p></div>
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="19.8" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> bi</small></div><p class="lbl">alcance potencial</p></div>
+    </div>
+    <div class="cols c2" style="margin-top:2rem;align-items:flex-start;grid-template-columns:1.6fr 1fr">
+      <div class="chart-box rv">
+        <p class="ovl" style="color:#93A0B8;margin-bottom:.9rem">Principais temas da conversa em São Paulo</p>
+        <div class="hrow"><span class="hlab">Serviço e continuidade</span><span class="htrack"><span class="hfill" style="--w:92%;--c:#0A1E4E"></span></span><span class="hval">16,5 mil</span></div>
+        <div class="hrow"><span class="hlab">Concessão e regulação</span><span class="htrack"><span class="hfill" style="--w:68%;--c:#2E6DB4"></span></span><span class="hval">12,3 mil</span></div>
+        <div class="hrow"><span class="hlab">Tarifas e cobranças</span><span class="htrack"><span class="hfill" style="--w:22%;--c:#C57A1D"></span></span><span class="hval">3,9 mil</span></div>
+        <p class="small" style="color:#8895AD;margin-top:.9rem">Obs.: os eixos podem se sobrepor. Uma mesma menção pode aparecer em mais de um tema; por isso, a soma dos eixos supera a base de 32,5 mil resultados.</p>
+      </div>
+      <div class="stagger">
+        <div class="card" style="border-left:4px solid #0A1E4E"><strong>1 · Serviço e continuidade</strong><p class="small muted" style="margin-top:.3rem">apresentam a maior incidência temática.</p></div>
+        <div class="card" style="border-left:4px solid #2E6DB4;margin-top:14px"><strong>2 · Concessão e regulação</strong><p class="small muted" style="margin-top:.3rem">também ocupam espaço relevante na conversa institucional.</p></div>
+        <div class="card" style="border-left:4px solid #C57A1D;margin-top:14px"><strong>3 · Tarifas e cobranças</strong><p class="small muted" style="margin-top:.3rem">aparecem em menor volume, mas conectam a percepção da marca ao custo do serviço.</p></div>
+      </div>
+    </div>
+    <div class="banner paper rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--gold-ink)">Interpretação</span><br>Em São Paulo, a experiência com o serviço ocupa o centro da conversa. A esse eixo se somam o debate sobre concessão e as repercussões tarifárias, formando uma leitura que combina operação, ambiente institucional e custo para o consumidor.</div>
+    <p class="note">Alcance potencial é uma estimativa de exposição e não representa pessoas únicas. Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026.</p>
+  </div>
+</section>
+
+<!-- ============ CAP. 15 · RIO DE JANEIRO ============ -->
+<section class="sec soft" id="rj" data-dot="Rio de Janeiro">
+  <div class="wrap">
+    <span class="kicker rv">Território</span>
+    <h2 class="rv">No Rio, eventos climáticos ampliam a importância <em>da resposta</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">Em episódios de interrupção, prazo, informação e restabelecimento ganham maior relevância na percepção do serviço.</p>
+    <div class="grid g4 stagger" style="margin-top:1.6rem">
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="3.7" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="lbl">resultados</p></div>
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="1.9" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="lbl">autores únicos</p></div>
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="11.7" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="lbl">engajamentos</p></div>
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="3.5" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> bi</small></div><p class="lbl">alcance potencial</p></div>
+    </div>
+    <div class="cols c2" style="margin-top:2rem;align-items:stretch">
+      <div class="chart-box rv">
+        <p class="ovl" style="color:#93A0B8;margin-bottom:.9rem">Eixos que estruturam a conversa</p>
+        <div class="hrow"><span class="hlab">Resposta e restabelecimento</span><span class="htrack"><span class="hfill" style="--w:94%;--c:#0A1E4E"></span></span><span class="hval">1,7 mil</span></div>
+        <div class="hrow"><span class="hlab">Serviço e continuidade</span><span class="htrack"><span class="hfill" style="--w:72%;--c:#2E6DB4"></span></span><span class="hval">1,3 mil</span></div>
+        <div class="hrow"><span class="hlab">Clima como gatilho operacional</span><span class="htrack"><span class="hfill" style="--w:36%;--c:#E9C63B"></span></span><span class="hval">653</span></div>
+        <p class="small" style="color:#8895AD;margin-top:.9rem">Recortes temáticos do universo Enel Rio.</p>
+      </div>
+      <div class="chart-box rv">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><p class="ovl" style="color:#93A0B8">Clima como gatilho operacional</p><span class="ovl" style="background:var(--gold-soft);color:var(--gold-ink);padding:.5em 1em;border-radius:6px">Fim de julho · pico climático</span></div>
+        <div style="display:flex;gap:14px;align-items:baseline;margin-top:.8rem"><span class="big mid" style="color:var(--azul)"><span class="cnt" data-v="653"></span></span><span style="font-weight:700">resultados</span></div>
+        <p class="small muted" style="margin-top:.5rem">Vendavais, temporais e chuvas ganharam maior visibilidade sobretudo no fim de julho, quando a conversa passou a destacar restabelecimento, equipes em campo e capacidade de resposta.</p>
+        <svg viewBox="0 0 560 120" style="margin-top:.8rem" role="img" aria-label="Curva do recorte climático ao longo do ano, com pico acentuado no fim de julho">
+          <line x1="10" y1="100" x2="550" y2="100" stroke="#DFE5EF"/>
+          <path d="M10,94 L60,92 L110,95 L160,90 L210,94 L260,92 L310,95 L360,93 L400,88 L425,30 L445,86 L480,92 L520,90 L550,94" fill="none" stroke="#123A8A" stroke-width="2.4" stroke-linecap="round" class="trace" style="--len:700"/>
+          <circle cx="425" cy="30" r="4.5" fill="#B3271E"/>
+          <text class="axis" x="10" y="115">jan</text><text class="axis" x="200" y="115">abr</text><text class="axis" x="410" y="115">jul</text><text class="axis" x="528" y="115">set</text>
+        </svg>
+        <p class="small" style="color:#8895AD;margin-top:.6rem">Obs.: 653 resultados correspondem ao recorte que associa clima à operação e não representam toda a conversa sobre eventos climáticos no estado.</p>
+      </div>
+    </div>
+    <div class="banner rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--amarelo)">Leitura</span><br>No Rio, eventos climáticos tornam a capacidade de resposta especialmente relevante para a percepção do serviço. Além da interrupção, prazo, atualização de informações e restabelecimento aparecem como elementos importantes da experiência do consumidor.</div>
+    <p class="note">Alcance potencial é uma estimativa de exposição e não representa pessoas únicas. Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026.</p>
+  </div>
+</section>
+
+<!-- ============ CAP. 16 · CEARÁ ============ -->
+<section class="sec" id="ce" data-dot="Ceará">
+  <div class="wrap">
+    <span class="kicker rv">Território</span>
+    <h2 class="rv">No Ceará, concessão e serviço concentram <em>a atenção</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">Investimentos e modernização ampliam o repertório da conversa, enquanto concessão e fornecimento permanecem entre os principais temas.</p>
+    <div class="grid g4 stagger" style="margin-top:1.6rem">
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="3"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="lbl">resultados</p></div>
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="1.2" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="lbl">autores únicos</p></div>
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="166.1" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p class="lbl">engajamentos</p></div>
+      <div class="stat"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="2.9" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> bi</small></div><p class="lbl">alcance potencial</p></div>
+    </div>
+    <div class="cols c2" style="margin-top:2rem;align-items:flex-start;grid-template-columns:1.6fr 1fr">
+      <div class="chart-box rv">
+        <p class="ovl" style="color:#93A0B8;margin-bottom:.9rem">Eixos que estruturam a conversa</p>
+        <div class="hrow"><span class="hlab">Concessão e renovação</span><span class="htrack"><span class="hfill" style="--w:83%;--c:#0A1E4E"></span></span><span class="hval">1,5 mil</span></div>
+        <div class="hrow"><span class="hlab">Serviço e continuidade</span><span class="htrack"><span class="hfill" style="--w:61%;--c:#2E6DB4"></span></span><span class="hval">1,1 mil</span></div>
+        <div class="hrow"><span class="hlab">Investimentos e modernização</span><span class="htrack"><span class="hfill" style="--w:51%;--c:#E9C63B"></span></span><span class="hval">926</span></div>
+        <p class="small" style="color:#8895AD;margin-top:.9rem">Os eixos não são excludentes e podem se sobrepor.</p>
+      </div>
+      <div class="stagger">
+        <div class="card" style="border-left:4px solid #0A1E4E"><strong>1 · Concessão e renovação</strong><p class="small muted" style="margin-top:.3rem">apresentam a maior incidência temática no Ceará.</p></div>
+        <div class="card" style="border-left:4px solid #2E6DB4;margin-top:14px"><strong>2 · Serviço e continuidade</strong><p class="small muted" style="margin-top:.3rem">mantêm presença relevante na experiência associada à marca.</p></div>
+        <div class="card" style="border-left:4px solid #E9C63B;margin-top:14px"><strong>3 · Investimentos e modernização</strong><p class="small muted" style="margin-top:.3rem">formam uma agenda complementar, com potencial de ampliar a percepção sobre evolução e entrega.</p></div>
+      </div>
+    </div>
+    <div class="banner paper rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--gold-ink)">Interpretação</span><br>No Ceará, a conversa combina temas institucionais e operacionais. A renovação da concessão apresenta a maior incidência, enquanto serviço e continuidade permanecem relevantes. Investimentos e modernização acrescentam uma agenda de evolução que pode contribuir para equilibrar a percepção sobre a marca.</div>
+    <p class="note">Alcance potencial é uma estimativa de exposição e não representa pessoas únicas. Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026.</p>
+  </div>
+</section>
+
+<!-- ============ CAP. 17 · IMPRENSA ============ -->
+<section class="sec soft" id="imprensa" data-dot="Imprensa">
+  <div class="wrap">
+    <span class="kicker rv">Repercussão</span>
+    <h2 class="rv">Na imprensa, operação, concessão e tarifa organizam <em>a cobertura</em></h2>
+    <div class="rule rv"></div>
+    <div class="cols c2" style="align-items:center">
+      <p class="lead rv">A cobertura se distribui entre temas operacionais, institucionais e questões relacionadas ao consumidor, com maior concentração de menções em janeiro, março/abril e julho.</p>
+      <div class="card edge rv"><div class="big mid" style="color:var(--azul)"><span class="cnt" data-v="12.9" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div><p style="font-weight:700;margin-top:.3rem">resultados na imprensa</p><p class="small muted" style="margin-top:.4rem">Todas as menções à Enel na imprensa entre 01/01 e 10/09/2026.</p></div>
+    </div>
+    <div class="grid g3 stagger" style="margin-top:2rem;align-items:stretch">
+      <div class="card" style="border-top:3px solid var(--neg)">
+        <p class="ovl" style="color:var(--neg)">1 · Operação e fornecimento</p>
+        <div class="big mid" style="color:var(--neg);margin:.5rem 0 .2rem"><span class="cnt" data-v="5.1" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div>
+        <p class="small muted">apagões e queda de energia · ocorrências no fornecimento · resposta da Enel e do poder público</p>
+        <div class="banner paper" style="margin-top:1rem;padding:1rem 1.2rem;font-size:.84rem">"Lula manda apurar falhas no fornecimento de energia em São Paulo"<br><span class="small" style="color:#8895AD">CartaCapital | jan/2026</span></div>
+      </div>
+      <div class="card" style="border-top:3px solid var(--azul)">
+        <p class="ovl" style="color:var(--azul)">2 · Regulação e concessões</p>
+        <div class="big mid" style="color:var(--azul);margin:.5rem 0 .2rem"><span class="cnt" data-v="3.4" data-dec="1"></span><small style="font-size:.44em;font-weight:700"> mil</small></div>
+        <p class="small muted">processo de concessão · renovação e prorrogação do contrato · fiscalização da Aneel · multas e sanções regulatórias</p>
+        <div class="banner paper" style="margin-top:1rem;padding:1rem 1.2rem;font-size:.84rem">"Tarcísio cobra governo Lula sobre rompimento de contrato da Enel"<br><span class="small" style="color:#8895AD">Pleno.News | abr/2026</span></div>
+      </div>
+      <div class="card" style="border-top:3px solid var(--verde)">
+        <p class="ovl" style="color:var(--pos)">3 · Tarifas e consumidor</p>
+        <div class="big mid" style="color:var(--pos);margin:.5rem 0 .2rem"><span class="cnt" data-v="990"></span></div>
+        <p class="small muted">reajuste tarifário · conta de luz e cobranças · reclamações de consumidores · repercussão de dados do Procon</p>
+        <div class="banner paper" style="margin-top:1rem;padding:1rem 1.2rem;font-size:.84rem">"Conta de luz da Enel fica 10,8% mais cara a partir de sábado em SP"<br><span class="small" style="color:#8895AD">G1 | jun/2026</span></div>
+      </div>
+    </div>
+    <div class="banner rv" style="margin-top:1.6rem">"Enel segue no centro do debate sobre energia no Brasil em 2026", em coberturas de <strong style="color:var(--amarelo)">diversos veículos</strong> ao longo do período.</div>
+    <p class="note">Os eixos não são excludentes; uma mesma matéria pode estar associada a mais de um tema. Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026.</p>
+  </div>
+</section>
+
+<!-- ============ CAP. 18 · AMPLIFICAÇÃO ============ -->
+<section class="sec" id="amplificacao" data-dot="Amplificação">
+  <div class="wrap">
+    <span class="kicker rv">Amplificação</span>
+    <h2 class="rv">Onde a conversa sobre a Enel ganhou <em>mais visibilidade</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">Na imprensa e no X, diferentes atores ampliam a visibilidade de temas ligados a serviço, concessão, tarifa e atendimento.</p>
+    <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start">
+      <div class="card rv">
+        <p class="ovl" style="color:var(--azul)">Imprensa · principais veículos por volume de matérias</p>
+        <div style="margin-top:.6rem">
+          <div class="rank"><span class="srcb" style="background:#C4170C">g1</span><div><p class="who">g1</p><p class="what">reajuste tarifário e efeitos para o consumidor</p></div><span class="val">257 matérias</span></div>
+          <div class="rank"><span class="srcb" style="background:#8A1F1F">RD</span><div><p class="who">Repórter Diário</p><p class="what">cobranças sobre concessão e serviço</p></div><span class="val">218 matérias</span></div>
+          <div class="rank"><span class="srcb" style="background:#0A1E4E">OD</span><div><p class="who">O Dia</p><p class="what">impactos do serviço e repercussão no Rio</p></div><span class="val">216 matérias</span></div>
+          <div class="rank"><span class="srcb" style="background:#17233D">OP</span><div><p class="who">O Povo</p><p class="what">concessão, operação e atendimento no Ceará</p></div><span class="val">204 matérias</span></div>
+          <div class="rank"><span class="srcb" style="background:#123A8A">ES</span><div><p class="who">Estadão</p><p class="what">pressão institucional e debate regulatório</p></div><span class="val">189 matérias</span></div>
+        </div>
       </div>
       <div class="card rv">
-        <p class="ovl" style="color:var(--azul)">Temas recorrentes</p>
-        <div class="rowline" style="margin-top:.4rem"><span class="ic n"><svg class="icon"><use href="#i-clock"/></svg></span><div><strong>Interrupções</strong><br><span class="small muted">tempo sem energia e recorrência</span></div></div>
-        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-headset"/></svg></span><div><strong>Atendimento</strong><br><span class="small muted">dificuldade de resolução</span></div></div>
-        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-wrench"/></svg></span><div><strong>Infraestrutura</strong><br><span class="small muted">cobrança sobre manutenção e resposta</span></div></div>
-        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-layers"/></svg></span><div><strong>Terceirização</strong><br><span class="small muted">críticas à estrutura operacional</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 20 · CRÍTICA × POSITIVO ============ -->
-<section class="sec" id="quali" data-dot="Leitura quali">
-  <div class="wrap">
-    <span class="kicker rv">Leitura quali</span>
-    <h2 class="rv">Crítica espontânea <em>× comunicação positiva</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">Há mais evidência de ações positivas realizadas pela empresa do que de elogios espontâneos à marca.</p>
-    <div class="grid g2 stagger" style="margin-top:1.8rem">
-      <div class="card" style="border-top:3px solid var(--neg)">
-        <div style="display:flex;align-items:center;gap:12px"><span class="ic r"><svg class="icon"><use href="#i-alert"/></svg></span><h3 style="color:var(--neg)">Críticas identificadas</h3></div>
-        <p style="margin-top:.8rem;color:#33415F;font-size:.94rem">interrupções recorrentes · atendimento · infraestrutura · cobrança e percepção tarifária · demora na resolução</p>
-      </div>
-      <div class="card" style="border-top:3px solid var(--verde)">
-        <div style="display:flex;align-items:center;gap:12px"><span class="ic g"><svg class="icon"><use href="#i-check"/></svg></span><h3 style="color:var(--pos)">Conteúdos positivos</h3></div>
-        <p style="margin-top:.8rem;color:#33415F;font-size:.94rem">investimento em infraestrutura · novas subestações · eficiência energética · projetos sociais · melhoria anunciada de indicadores</p>
-      </div>
-    </div>
-    <div class="banner rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--amarelo)">Observação</span><br>Parte importante do positivo é institucional ou patrocinada; as manifestações críticas aparecem de forma espontânea entre consumidores.</div>
-  </div>
-</section>
-
-<!-- ============ CAP. 21 · FRENTES ============ -->
-<section class="sec soft" id="frentes" data-dot="Agenda positiva">
-  <div class="wrap">
-    <span class="kicker rv">Frentes</span>
-    <h2 class="rv">O que sustenta <em>a agenda positiva</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">As iniciativas favoráveis identificadas se concentram em seis frentes de atuação.</p>
-    <div class="grid g3 stagger" style="margin-top:1.8rem">
-      <div class="card"><span class="ic g" style="margin-bottom:.9rem"><svg class="icon"><use href="#i-bolt"/></svg></span><strong>EFICIÊNCIA ENERGÉTICA</strong><p class="small muted" style="margin-top:.3rem">Troca de equipamentos e consumo consciente.</p></div>
-      <div class="card"><span class="ic n" style="margin-bottom:.9rem"><svg class="icon"><use href="#i-cap"/></svg></span><strong>EDUCAÇÃO E CAPACITAÇÃO</strong><p class="small muted" style="margin-top:.3rem">Formação profissional e programas educacionais.</p></div>
-      <div class="card"><span class="ic y" style="margin-bottom:.9rem"><svg class="icon"><use href="#i-hands"/></svg></span><strong>COMUNIDADES</strong><p class="small muted" style="margin-top:.3rem">Atendimento móvel, relacionamento territorial e regularização.</p></div>
-      <div class="card"><span class="ic n" style="margin-bottom:.9rem"><svg class="icon"><use href="#i-culture"/></svg></span><strong>CULTURA E ESPORTE</strong><p class="small muted" style="margin-top:.3rem">Patrocínios e projetos incentivados.</p></div>
-      <div class="card"><span class="ic g" style="margin-bottom:.9rem"><svg class="icon"><use href="#i-leaf"/></svg></span><strong>SUSTENTABILIDADE</strong><p class="small muted" style="margin-top:.3rem">Renováveis, eletrificação e eficiência.</p></div>
-      <div class="card"><span class="ic n" style="margin-bottom:.9rem"><svg class="icon"><use href="#i-brief"/></svg></span><strong>EMPREGO</strong><p class="small muted" style="margin-top:.3rem">Contratações ligadas à expansão operacional.</p></div>
-    </div>
-    <div class="banner paper rv" style="margin-top:1.6rem;text-align:center"><strong>Essas iniciativas ampliam a exposição favorável, mas não equivalem, por si só, à percepção positiva espontânea dos consumidores.</strong></div>
-  </div>
-</section>
-
-<!-- ============ CAP. 22 · CASES ============ -->
-<section class="sec" id="cases" data-dot="Cases">
-  <div class="wrap">
-    <span class="kicker rv">Case</span>
-    <h2 class="rv">Esporte</h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">A Enel mantém parceria de patrocínio com a Confederação Brasileira de Voleibol (CBV), que inclui os <strong>naming rights do Centro de Desenvolvimento do Voleibol, em Saquarema (RJ)</strong>. Em agosto de 2026, o espaço sediou a homenagem aos 50 anos da geração masculina que disputou os Jogos Olímpicos de Montreal de 1976.</p>
-    <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start">
-      <figure class="clickable" data-lb="cases" data-cap="Publicação da CBV: homenagem aos 50 anos da geração masculina de Montreal 1976, no Centro de Desenvolvimento do Voleibol, em Saquarema." tabindex="0" role="button" aria-label="Ampliar publicação da CBV">
-        <div class="shot r45"><div class="igcard">
-          <div class="ihead"><span class="iava">CBV</span><span class="ihandle">cbvolei <span class="iver">&#10004;</span></span></div>
-          <div class="iart">
-            <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs><linearGradient id="quadra" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1E4E"/><stop offset="1" stop-color="#123A8A"/></linearGradient></defs>
-              <rect width="400" height="320" fill="url(#quadra)"/>
-              <rect x="40" y="200" width="320" height="86" fill="#0E7C4F" opacity=".5"/>
-              <path d="M40 200h320M200 200v86" stroke="#FFFFFF" opacity=".55" stroke-width="1.5"/>
-              <path d="M196 128v76M204 128v76" stroke="#FFFFFF" opacity=".8" stroke-width="2"/>
-              <path d="M196 132h8M196 146h8M196 160h8M196 174h8M196 188h8" stroke="#FFFFFF" opacity=".5"/>
-              <circle cx="286" cy="96" r="26" fill="#FFCC29"/>
-              <path d="M262 90c14-8 34-8 48 0M268 112c10-16 26-22 36-24M286 70c-6 14-6 34 0 52" stroke="#0A1E4E" stroke-width="2" fill="none"/>
-              <text x="200" y="52" text-anchor="middle" fill="#FFCC29" font-family="Inter" font-weight="800" font-size="15" letter-spacing="3">MONTREAL 1976</text>
-              <text x="200" y="72" text-anchor="middle" fill="#FFFFFF" opacity=".8" font-family="Inter" font-size="10" letter-spacing="2">50 ANOS DE HISTÓRIA</text>
-              <text x="200" y="306" text-anchor="middle" fill="#FFFFFF" opacity=".55" font-family="Inter" font-size="8.5" letter-spacing="2">CENTRO DE DESENVOLVIMENTO DO VOLEIBOL · SAQUAREMA</text>
-            </svg>
-          </div>
-          <div class="ifoot"><div class="istats"><span>3.734 curtidas</span><span>128 comentários</span></div><strong>cbvolei</strong> Homenagem aos atletas que marcaram época: a geração masculina de Montreal 1976 celebrada no CDV Enel.</div>
-        </div></div>
-      </figure>
-      <div>
-        <div class="cmt pos rv"><div class="chead"><span class="cava"></span><span class="cname"></span><span class="ctime">3 sem</span></div><p>"Muito legal esse reconhecimento e justa homenagem a tantos atletas que nos deram tantas alegrias com este maravilhoso esporte. Voleibol na veia e no coração. Muito obrigada!"</p><div class="cfoot"><svg class="icon"><use href="#i-heart"/></svg><svg class="icon"><use href="#i-chat"/></svg></div></div>
-        <div class="card rv" style="margin-top:16px;background:linear-gradient(140deg,var(--navy-deep),#0B2E74);color:#fff;border:none">
-          <p class="ovl" style="color:var(--amarelo)">Leitura</p>
-          <p style="margin-top:.6rem;font-size:.94rem;color:rgba(255,255,255,.88)">O esporte gera engajamento espontaneamente positivo e associa a marca a memória afetiva, um dos poucos territórios em que isso ocorre de forma natural.</p>
+        <p class="ovl" style="color:var(--azul)">Perfis de destaque no X · por engajamento</p>
+        <div style="margin-top:.6rem">
+          <div class="rank"><span class="pos">1</span><div><p class="who">@amesmaGIO</p><p class="what">cobrança sobre fiação, risco e capacidade de resposta</p></div><span class="val">51,3 mil</span></div>
+          <div class="rank"><span class="pos">2</span><div><p class="who">@lcn_fernandes</p><p class="what">repercussão de interrupções prolongadas</p></div><span class="val">10,7 mil</span></div>
+          <div class="rank"><span class="pos">3</span><div><p class="who">@lcesgusto</p><p class="what">reação ao reajuste tarifário</p></div><span class="val">10,1 mil</span></div>
+          <div class="rank"><span class="pos">4</span><div><p class="who">@euclidesvasc</p><p class="what">comentários sobre recorrência das quedas</p></div><span class="val">9,4 mil</span></div>
+          <div class="rank"><span class="pos">5</span><div><p class="who">@jonesmanoel_PE</p><p class="what">amplificação política do debate sobre privatização</p></div><span class="val">8,9 mil</span></div>
+          <div class="rank"><span class="pos">6</span><div><p class="who">@cortezpsol</p><p class="what">debate sobre concessão e caducidade</p></div><span class="val">8,6 mil</span></div>
         </div>
       </div>
     </div>
-
-    <span class="kicker rv" style="margin-top:4.5rem">Case</span>
-    <h2 class="rv">Eficiência <em>energética</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">Troca de geladeiras em Mauá combina benefício direto às famílias e redução do consumo de energia.</p>
-    <div class="cols c2" style="margin-top:1.6rem;align-items:stretch">
-      <figure class="clickable rv" data-lb="cases" data-cap="Mauá entrega 150 geladeiras novas e prevê nova edição em parceria com a Enel (ABC Agora, 10/08/2026)." tabindex="0" role="button" aria-label="Ampliar matéria sobre a troca de geladeiras em Mauá">
-        <div class="shot r169"><div class="browser">
-          <div class="bbar"><span class="bdots"><i></i><i></i><i></i></span><span class="burl">abcagora.com.br/maua</span></div>
-          <div class="bbody">
-            <p class="src">ABC Agora · Cidades · 10/08/2026</p>
-            <p style="font-family:var(--serif);font-weight:700;font-size:1.12rem;line-height:1.3">Mauá entrega 150 geladeiras novas e prevê nova edição em parceria com a Enel</p>
-            <svg viewBox="0 0 560 130" style="margin-top:auto" aria-hidden="true">
-              <g fill="#F1F4F9" stroke="#C6CFDF" stroke-width="1.4">
-                <rect x="8"   y="14" width="72" height="104" rx="7"/><rect x="96"  y="14" width="72" height="104" rx="7"/><rect x="184" y="14" width="72" height="104" rx="7"/><rect x="272" y="14" width="72" height="104" rx="7"/><rect x="360" y="14" width="72" height="104" rx="7"/><rect x="448" y="14" width="72" height="104" rx="7"/>
-              </g>
-              <g stroke="#C6CFDF" stroke-width="1.4"><path d="M8 50h72M96 50h72M184 50h72M272 50h72M360 50h72M448 50h72"/></g>
-              <g stroke="#8895AD" stroke-width="2" stroke-linecap="round"><path d="M20 32v8M108 32v8M196 32v8M284 32v8M372 32v8M460 32v8M20 62v14M108 62v14M196 62v14M284 62v14M372 62v14M460 62v14"/></g>
-              <g fill="#0E7C4F"><circle cx="70" cy="26" r="4"/><circle cx="158" cy="26" r="4"/><circle cx="246" cy="26" r="4"/><circle cx="334" cy="26" r="4"/><circle cx="422" cy="26" r="4"/><circle cx="510" cy="26" r="4"/></g>
-            </svg>
-          </div>
-        </div></div>
-        <figcaption class="figcap">"Mauá entrega 150 geladeiras novas e prevê nova edição em parceria com a Enel."</figcaption>
-      </figure>
-      <div class="card edge rv">
-        <p class="ovl" style="color:var(--azul)">O que a ação entrega</p>
-        <p style="margin-top:.8rem;font-size:.94rem;color:#33415F">substituição gratuita de equipamentos antigos · modelos mais eficientes · potencial redução do consumo doméstico · benefício tangível e facilmente percebido</p>
-        <div style="margin-top:1.4rem;display:flex;align-items:center;gap:12px;background:var(--pos-soft);border:1px solid #CBE9D8;color:var(--pos);font-weight:700;border-radius:10px;padding:.9rem 1.1rem;font-size:.86rem;letter-spacing:.04em"><svg class="icon"><use href="#i-check"/></svg>BENEFÍCIO CONCRETO + EFICIÊNCIA</div>
-      </div>
-    </div>
-    <p class="note">Fonte do case: ABC Agora | 10/08/2026</p>
+    <div class="banner paper rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--gold-ink)">Leitura-chave</span><br><strong>Os atores mudam, mas serviço, concessão e tarifa atravessam os dois ambientes.</strong></div>
+    <p class="note">Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026.</p>
   </div>
 </section>
 
-<!-- ============ CAP. 23 · PORTFÓLIO ============ -->
-<section class="sec soft" id="portfolio" data-dot="Portfólio">
-  <div class="wrap">
-    <span class="kicker rv">Portfólio</span>
-    <h2 class="rv">Outras iniciativas com <em>exposição favorável</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">Projetos sociais, culturais, ambientais e de emprego ampliam os territórios positivos da marca.</p>
-    <div class="grid g3 stagger" style="margin-top:1.8rem">
-      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-cap"/></svg></span><p class="ovl">Educação e capacitação</p><p class="small" style="color:var(--azul);font-weight:700;margin:.3rem 0">Escola de Eletricistas | Record/R7</p><p class="small muted">Formação profissional gratuita; caso de aluno posteriormente contratado. Branded content oferecido pela Enel Brasil.</p></div>
-      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-hands"/></svg></span><p class="ovl">Comunidades</p><p class="small" style="color:var(--azul);font-weight:700;margin:.3rem 0">Energia Legal | Folha1</p><p class="small muted">Regularização, atendimento móvel, consumo consciente e troca de equipamentos em Campos dos Goytacazes.</p></div>
-      <div class="card"><span class="ic g" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-leaf"/></svg></span><p class="ovl">Sustentabilidade</p><p class="small" style="color:var(--azul);font-weight:700;margin:.3rem 0">Sala São Paulo | Folha de S.Paulo</p><p class="small muted">R$ 4,5 milhões em modernização energética, climatização, iluminação e geração fotovoltaica.</p></div>
-      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-culture"/></svg></span><p class="ovl">Cultura</p><p class="small" style="color:var(--azul);font-weight:700;margin:.3rem 0">Enel Festival de Inverno Rio | Gshow</p><p class="small muted">Patrocínio com presença da marca incorporada ao nome do evento em 2026.</p></div>
-      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-brief"/></svg></span><p class="ovl">Emprego</p><p class="small" style="color:var(--azul);font-weight:700;margin:.3rem 0">Expansão operacional | Extra</p><p class="small muted">476 vagas abertas em todo o Estado do Rio.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 24 · CAMPANHAS ============ -->
-<section class="sec dark tall" id="campanhas" data-dot="Campanhas">
-  <div class="wrap">
-    <div class="cols c2">
-      <div>
-        <span class="kicker rv">Campanha</span>
-        <h2 class="rv">A promessa de estar <em>"mais perto"</em></h2>
-        <div class="rule rv"></div>
-        <p class="muted rv ovl">Publicidade e posicionamento</p>
-        <p class="tagline rv" style="font-size:clamp(1.4rem,3vw,2rem);margin-top:1rem">"Compromisso tem marca.<br>Enel, mais perto de você."</p>
-        <p class="rv" style="margin-top:1.2rem;color:rgba(255,255,255,.82)">Criada pela Leo, a comunicação coloca em primeiro plano investimentos, melhoria do serviço e aproximação com o consumidor.</p>
-        <p class="rv ovl" style="margin-top:1.1rem;color:#7FD6A8">Proximidade · Investimentos · Atendimento · Modernização · Presença territorial</p>
-        <div class="card rv" style="margin-top:1.6rem">A comunicação transforma investimentos e expansão operacional em uma promessa de maior proximidade com o consumidor.</div>
-        <p class="note">Campanha institucional | JUL A SET 2025 | SP, RJ e CE</p>
-      </div>
-      <figure class="clickable rv" data-lb="campanha" data-cap="Recriação tipográfica da peça institucional: Compromisso tem marca. Enel, mais perto de você. (Leo, jul a set 2025)." tabindex="0" role="button" aria-label="Ampliar peça da campanha Compromisso tem marca">
-        <div class="shot dark r45">
-          <svg class="fill" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Releitura gráfica da peça publicitária Compromisso tem marca">
-            <defs><linearGradient id="peca" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#061024"/><stop offset="1" stop-color="#123A8A"/></linearGradient></defs>
-            <rect width="400" height="500" fill="url(#peca)"/>
-            <g stroke="#FFCC29" stroke-width="1.4" opacity=".9"><path d="M318 500 336 330 354 500M323 458h26M328 414h16M310 392l26-16 26 16"/></g>
-            <path d="M336 330 Q260 300 180 306" stroke="#FFCC29" opacity=".55" stroke-width="1.1" fill="none"/>
-            <rect x="36" y="52" width="120" height="34" rx="8" fill="#FFFFFF"/>
-            <text x="52" y="75" font-family="Inter" font-weight="800" font-size="17" fill="#00A859">enel</text><text x="96" y="75" font-family="Inter" font-weight="700" font-size="9" letter-spacing="3" fill="#002776">BRASIL</text>
-            <text x="36" y="220" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="38" fill="#FFFFFF">Compromisso</text>
-            <text x="36" y="264" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="38" fill="#FFFFFF">tem marca<tspan fill="#FFCC29">.</tspan></text>
-            <rect x="36" y="292" width="52" height="4" fill="#FFCC29"/>
-            <text x="36" y="336" font-family="Inter" font-size="13.5" fill="#FFFFFF" opacity=".85">Enel, mais perto de você.</text>
-            <text x="36" y="452" font-family="Inter" font-size="9" letter-spacing="2" fill="#FFFFFF" opacity=".5">CAMPANHA INSTITUCIONAL · 2025</text>
-          </svg>
-        </div>
-      </figure>
-    </div>
-
-    <div class="cols c2" style="margin-top:5rem">
-      <figure class="clickable rv" data-lb="campanha" data-cap="Filme de gestão de crise: trabalho contínuo de restabelecimento durante tempestade (nov/2023, SP)." tabindex="0" role="button" aria-label="Ampliar painel do filme de gestão de crise">
-        <div class="shot dark r169">
-          <svg class="fill" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs><linearGradient id="storm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22333F"/><stop offset="1" stop-color="#0B141B"/></linearGradient></defs>
-            <rect width="640" height="360" fill="url(#storm)"/>
-            <path d="M96 360 C90 300 84 262 62 226 M96 360 C104 306 122 282 148 262 M96 360 C98 316 92 288 96 250" stroke="#3E5561" stroke-width="7" fill="none" stroke-linecap="round"/>
-            <path d="M62 226c-14-8-20-22-16-34M148 262c16-6 24-18 22-32M96 250c-4-16 2-28 12-36" stroke="#3E5561" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <g stroke="#7C97AE" stroke-width="1.1" opacity=".55"><path d="M240 40l-24 70M300 30l-24 70M360 44l-24 70M420 26l-24 70M480 48l-24 70M540 34l-24 70M270 150l-20 60M330 160l-20 60M400 150l-20 60M470 162l-20 60M530 150l-20 60"/></g>
-            <path d="M420 360V208M404 240h32M410 300h20" stroke="#55707F" stroke-width="3"/>
-            <path d="M420 208 Q520 224 640 216" stroke="#55707F" stroke-width="1.4" fill="none"/>
-          </svg>
-          <div class="vidmock"><span class="playbtn"><svg class="icon"><use href="#i-play"/></svg></span></div>
-          <div class="lower3"><span class="tag" style="background:#0E7C4F">ENEL · FILME</span><p class="tt">"Seguimos trabalhando 24 horas por dia, 7 dias por semana."</p></div>
-        </div>
-        <figcaption class="figcap" style="color:rgba(255,255,255,.5)">Campanha institucional | NOV 2023 | SP</figcaption>
-      </figure>
-      <div>
-        <span class="kicker rv">Campanha</span>
-        <h2 class="rv" style="font-size:clamp(1.7rem,3.2vw,2.6rem)">Reestabelecendo <em>a energia</em></h2>
-        <div class="rule rv"></div>
-        <p class="muted rv ovl">Gestão de crise</p>
-        <p class="tagline rv" style="font-size:clamp(1.25rem,2.4vw,1.7rem);margin-top:1rem">"Seguimos trabalhando 24 horas por dia, 7 dias por semana."</p>
-        <p class="rv" style="margin-top:1.2rem;color:rgba(255,255,255,.82)">Campanha focada em gestão de crise, alegando que a empresa trabalha sem parar para restaurar a energia e conter os danos causados na rede elétrica.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 25 · POSICIONAMENTO ≠ PERCEPÇÃO ============ -->
-<section class="sec" id="percepcao" data-dot="Posicionamento e percepção">
-  <div class="wrap">
-    <span class="kicker rv">Leitura reputacional</span>
-    <h2 class="rv">Posicionamento <em>&ne;</em> Percepção</h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">A proximidade prometida precisa aparecer na experiência.</p>
-    <div class="cols c2" style="margin-top:1.8rem">
-      <div class="card rv" style="border-top:3px solid var(--verde)">
-        <p class="ovl" style="color:var(--pos)">O que a marca promete</p>
-        <p class="tagline" style="color:var(--pos);font-size:1.5rem;margin:.8rem 0 .4rem">"Mais perto de você"</p>
-        <div class="rowline"><span class="ic g"><svg class="icon"><use href="#i-hands"/></svg></span><div><strong>Proximidade</strong><br><span class="small muted">relação com o cliente</span></div></div>
-        <div class="rowline"><span class="ic g"><svg class="icon"><use href="#i-chart"/></svg></span><div><strong>Investimentos</strong><br><span class="small muted">expansão da rede</span></div></div>
-        <div class="rowline"><span class="ic g"><svg class="icon"><use href="#i-headset"/></svg></span><div><strong>Atendimento</strong><br><span class="small muted">mais canais e equipes</span></div></div>
-        <div class="rowline"><span class="ic g"><svg class="icon"><use href="#i-gear"/></svg></span><div><strong>Modernização</strong><br><span class="small muted">infraestrutura e operação</span></div></div>
-      </div>
-      <div class="card rv" style="border-top:3px solid var(--azul)">
-        <p class="ovl" style="color:var(--azul)">O que o cliente vivencia</p>
-        <p class="tagline" style="color:var(--azul);font-size:1.5rem;margin:.8rem 0 .4rem">A experiência concreta</p>
-        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-bolt"/></svg></span><div><strong>Restabelecimento</strong><br><span class="small muted">rapidez e confiabilidade</span></div></div>
-        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-target"/></svg></span><div><strong>Resolutividade</strong><br><span class="small muted">soluções na primeira interação</span></div></div>
-        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-phone"/></svg></span><div><strong>Canais digitais</strong><br><span class="small muted">jornadas simples e integradas</span></div></div>
-        <div class="rowline"><span class="ic n"><svg class="icon"><use href="#i-chat"/></svg></span><div><strong>Atendimento</strong><br><span class="small muted">clareza, empatia e eficiência</span></div></div>
-      </div>
-    </div>
-    <div class="banner paper rv" style="margin-top:1.6rem;text-align:center">Parte da exposição positiva aparece em publicidade, informes patrocinados e branded content. Esses conteúdos evidenciam o posicionamento que a marca busca consolidar, <strong>mas não devem ser lidos isoladamente como percepção espontânea.</strong></div>
-  </div>
-</section>
-
-<!-- ============ CAP. 26 · GOOGLE TRENDS ============ -->
-<section class="sec soft" id="trends" data-dot="Google Trends">
-  <div class="wrap">
-    <span class="kicker rv">Google Trends</span>
-    <h2 class="rv">Da conversa <em>à busca</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">Picos de interesse coincidem com momentos de maior exposição operacional e regulatória.</p>
-    <div class="chart-box rv" style="margin-top:1.8rem">
-      <svg viewBox="0 0 940 360" role="img" aria-label="Evolução do interesse de busca por Enel no Brasil entre janeiro e agosto de 2026, com anotações na semana de 4 de janeiro e na semana de 22 de fevereiro">
-        <line x1="50" y1="60"  x2="920" y2="60"  stroke="#EEF1F7"/><text class="axis" x="18" y="64">100</text>
-        <line x1="50" y1="130" x2="920" y2="130" stroke="#EEF1F7"/><text class="axis" x="24" y="134">80</text>
-        <line x1="50" y1="200" x2="920" y2="200" stroke="#EEF1F7"/><text class="axis" x="24" y="204">60</text>
-        <line x1="50" y1="270" x2="920" y2="270" stroke="#EEF1F7"/><text class="axis" x="24" y="274">40</text>
-        <line x1="50" y1="310" x2="920" y2="310" stroke="#DFE5EF"/>
-        <text class="axis" x="50" y="332">jan</text><text class="axis" x="172" y="332">fev</text><text class="axis" x="294" y="332">mar</text><text class="axis" x="416" y="332">abr</text><text class="axis" x="538" y="332">mai</text><text class="axis" x="660" y="332">jun</text><text class="axis" x="782" y="332">jul</text><text class="axis" x="890" y="332">ago</text>
-        <path d="M50,190 L70,60 L95,120 L125,116 L160,122 L185,90 L205,110 L235,62 L260,130 L285,95 L305,190 L330,222 L355,215 L380,110 L400,75 L425,180 L450,140 L470,95 L495,60 L520,125 L545,110 L570,95 L590,100 L620,150 L650,185 L675,180 L700,160 L725,135 L750,95 L775,130 L800,145 L825,110 L850,95 L875,70 L900,130 L920,150" fill="none" stroke="#123A8A" stroke-width="3" stroke-linecap="round" class="trace" style="--len:1900"/>
-        <circle cx="70" cy="60" r="6" fill="#B3271E"/><line x1="70" y1="60" x2="70" y2="20" stroke="#B3271E" stroke-dasharray="4 5" stroke-width="1.6"/>
-        <text class="anno" x="84" y="20">SEMANA DE 4 JAN: reunião com concessionárias após falhas de luz e água em Búzios</text>
-        <circle cx="235" cy="62" r="6" fill="#B3271E"/><line x1="235" y1="62" x2="300" y2="44" stroke="#B3271E" stroke-dasharray="4 5" stroke-width="1.6"/>
-        <text class="anno" x="308" y="44">SEMANA DE 22 FEV: Aneel adia para março a decisão sobre o contrato da Enel em SP</text>
-        <text class="axis" x="330" y="300" style="font-weight:700">Evolução do interesse de busca no Brasil | jan a ago/2026</text>
-      </svg>
-    </div>
-    <div class="banner paper rv" style="margin-top:1.4rem;text-align:center"><strong>A marca mantém atenção contínua também no ambiente de busca e os picos não são apenas institucionais: respondem a episódios de serviço e concessão.</strong></div>
-    <p class="note">Fonte: Google Trends | 01/01 a 25/08/2026</p>
-  </div>
-</section>
-
-<!-- ============ CAP. 27 · O QUE O CONSUMIDOR PROCURA ============ -->
-<section class="sec" id="busca" data-dot="O que o consumidor procura">
+<!-- ============ CAP. 19 · BUSCA ============ -->
+<section class="sec soft" id="busca" data-dot="Busca">
   <div class="wrap">
     <span class="kicker rv">Busca</span>
-    <h2 class="rv">O que o consumidor <em>procura</em></h2>
+    <h2 class="rv">Quem busca Enel geralmente chega com uma tarefa <em>para resolver</em></h2>
     <div class="rule rv"></div>
-    <p class="lead rv">A demanda digital é fortemente transacional: resolver serviço vem antes de navegar pela instituição.</p>
-    <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start">
-      <div class="stagger">
-        <div class="card edge"><p class="ovl" style="color:var(--azul)">01 · Resolver uma demanda</p><p class="small muted" style="margin-top:.4rem">atendimento · WhatsApp · débitos · segunda via · pendências</p></div>
-        <div class="card edge" style="margin-top:16px"><p class="ovl" style="color:var(--azul)">02 · Entender controle e responsabilidade</p><p class="small muted" style="margin-top:.4rem">propriedade · origem · relação com a Eletropaulo · natureza pública ou privada</p></div>
+    <p class="lead rv">As buscas relacionadas à marca se concentram em tarefas de serviço, contato e gestão da conta.</p>
+    <div class="cols c2" style="margin-top:1.8rem;align-items:stretch;grid-template-columns:1.6fr 1fr">
+      <div class="chart-box rv">
+        <p class="ovl" style="color:#93A0B8;margin-bottom:.7rem">Interesse ao longo do tempo · Google Trends</p>
+        <svg viewBox="0 0 620 240" role="img" aria-label="Índice de interesse de busca pela Enel, com pontos altos em 6 de janeiro, 1º de fevereiro, 6 de abril, 3 de maio e 9 de agosto">
+          <line x1="40" y1="40" x2="600" y2="40" stroke="#EEF1F7"/><text class="axis" x="8" y="44">100</text>
+          <line x1="40" y1="105" x2="600" y2="105" stroke="#EEF1F7"/><text class="axis" x="14" y="109">50</text>
+          <line x1="40" y1="170" x2="600" y2="170" stroke="#DFE5EF"/><text class="axis" x="20" y="174">0</text>
+          <text class="axis" x="40" y="192">jan</text><text class="axis" x="180" y="192">mar</text><text class="axis" x="320" y="192">mai</text><text class="axis" x="460" y="192">jul</text><text class="axis" x="585" y="192">set</text>
+          <path d="M40,60 L52,40 L80,58 L110,47 L140,62 L170,55 L200,68 L230,48 L260,64 L290,58 L310,50 L340,66 L370,60 L400,70 L430,62 L460,72 L490,52 L520,64 L550,60 L580,70 L600,66" fill="none" stroke="#123A8A" stroke-width="2.6" stroke-linecap="round" class="trace" style="--len:900"/>
+          <g fill="#123A8A"><circle cx="52" cy="40" r="4.5"/><circle cx="110" cy="47" r="4.5"/><circle cx="230" cy="48" r="4.5"/><circle cx="310" cy="50" r="4.5"/><circle cx="490" cy="52" r="4.5"/></g>
+          <g class="anno" font-size="10.5"><text x="34" y="26">06 Jan · 100</text><text x="118" y="38">01 Fev · 95</text><text x="206" y="32">06 Abr · 94</text><text x="322" y="38">03 Mai · 92</text><text x="470" y="36">09 Ago · 91</text></g>
+          <text class="axis" x="40" y="222">Índice do Google Trends. 100 representa o maior nível de interesse relativo no período.</text>
+        </svg>
       </div>
-      <figure class="clickable rv" data-lb="busca" data-cap="Mapa de perguntas associadas à busca por Enel (Answer the Public, 26/08/2026). Redesenho esquemático." tabindex="0" role="button" aria-label="Ampliar mapa de perguntas de busca">
-        <div class="shot r169">
-          <svg class="fill" viewBox="0 0 640 360" role="img" aria-label="Mapa ramificado de perguntas de busca sobre a Enel">
-            <rect width="640" height="360" fill="#FFFFFF"/>
-            <g stroke="#C9D4E6" stroke-width="1.3" fill="none">
-              <path d="M150 180 C220 180 220 84 292 84M150 180 C220 180 220 150 292 150M150 180 C220 180 220 216 292 216M150 180 C220 180 220 282 292 282"/>
-            </g>
-            <circle cx="112" cy="180" r="40" fill="#0A1E4E"/>
-            <text x="112" y="186" text-anchor="middle" font-family="Inter" font-weight="800" font-size="15" fill="#FFCC29">enel</text>
-            <g font-family="Inter" font-size="11.5" fill="#33415F">
-              <circle cx="292" cy="84" r="3.5" fill="#123A8A"/><text x="304" y="80">Como falar com um atendente da</text><text x="304" y="94">Enel pelo WhatsApp?</text>
-              <circle cx="292" cy="150" r="3.5" fill="#123A8A"/><text x="304" y="154">Como ver débitos Enel?</text>
-              <circle cx="292" cy="216" r="3.5" fill="#123A8A"/><text x="304" y="220">Quem é o dono da Enel?</text>
-              <circle cx="292" cy="282" r="3.5" fill="#123A8A"/><text x="304" y="278">O que é a Enel Brasil?</text><text x="304" y="292" fill="#8895AD">empresa pública ou privada?</text>
-            </g>
-            <text x="24" y="336" font-family="Inter" font-size="9" letter-spacing="2" fill="#8895AD">PERGUNTAS ASSOCIADAS À BUSCA · REDESENHO ESQUEMÁTICO</text>
-          </svg>
+      <div class="card rv">
+        <p class="ovl" style="color:var(--azul)">Interesse relativo por região</p>
+        <div style="margin-top:.8rem">
+          <div class="hrow"><span class="hlab" style="width:110px">1. Ceará</span><span class="htrack" style="height:20px"><span class="hfill" style="--w:100%;--c:#123A8A"></span></span><span class="hval" style="width:44px">100</span></div>
+          <div class="hrow"><span class="hlab" style="width:110px">2. São Paulo</span><span class="htrack" style="height:20px"><span class="hfill" style="--w:86%;--c:#123A8A"></span></span><span class="hval" style="width:44px">86</span></div>
+          <div class="hrow"><span class="hlab" style="width:110px">3. Rio de Janeiro</span><span class="htrack" style="height:20px"><span class="hfill" style="--w:83%;--c:#123A8A"></span></span><span class="hval" style="width:44px">83</span></div>
+          <div class="hrow"><span class="hlab" style="width:110px">4. Goiás</span><span class="htrack" style="height:20px"><span class="hfill" style="--w:64%;--c:#7C97CE"></span></span><span class="hval" style="width:44px">64</span></div>
+          <div class="hrow"><span class="hlab" style="width:110px">5. Distrito Federal</span><span class="htrack" style="height:20px"><span class="hfill" style="--w:62%;--c:#7C97CE"></span></span><span class="hval" style="width:44px">62</span></div>
         </div>
-        <figcaption class="figcap">Clique para ampliar. A posição dos termos não representa ranking de volume.</figcaption>
-      </figure>
-    </div>
-    <p class="note">Fonte: Answer the Public | 26/08/2026</p>
-  </div>
-</section>
-
-<!-- ============ CAP. 28 · ACESSIBILIDADE + SITE ============ -->
-<section class="sec soft" id="acessibilidade" data-dot="Acessibilidade">
-  <div class="wrap">
-    <span class="kicker rv">Acessibilidade</span>
-    <h2 class="rv">Acessibilidade <em>digital</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">Há barreiras que merecem atenção, especialmente para leitores de tela e usuários que precisam ampliar o conteúdo.</p>
-    <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start">
-      <figure class="clickable rv" data-lb="acess" data-cap="Representação da home da Enel Rio: objeto da avaliação de acessibilidade." tabindex="0" role="button" aria-label="Ampliar representação da home do site da Enel Rio">
-        <div class="shot r169"><div class="browser dk">
-          <div class="bbar"><span class="bdots"><i></i><i></i><i></i></span><span class="burl">enel.com.br/rj</span></div>
-          <div class="bbody" style="color:#fff">
-            <div style="display:flex;gap:14px;align-items:center;font-size:.66rem;color:#8FA2C9;letter-spacing:.06em"><strong style="color:#7FD6A8;font-size:.8rem;letter-spacing:0">enel</strong><span>Para Você</span><span>Empresas</span><span>Institucional</span><span style="margin-left:auto;border:1px solid #31548F;border-radius:999px;padding:.3em 1em;color:#fff">Login</span></div>
-            <p style="font-family:var(--serif);font-weight:700;font-size:1.2rem;line-height:1.3;margin-top:.6rem">Enel Rio amplia em 40% os investimentos em distribuição em 2026</p>
-            <div style="display:flex;gap:10px;margin-top:.4rem"><span style="background:#FFCC29;color:#0A1E4E;font-weight:800;font-size:.6rem;letter-spacing:.08em;padding:.5em 1.1em;border-radius:999px">SEGUNDA VIA</span><span style="border:1px solid #31548F;color:#AFC4EF;font-weight:700;font-size:.6rem;letter-spacing:.08em;padding:.5em 1.1em;border-radius:999px">FALTA DE ENERGIA</span></div>
-            <div style="margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
-              <span style="background:#101F42;border:1px solid #22376B;border-radius:8px;height:34px"></span><span style="background:#101F42;border:1px solid #22376B;border-radius:8px;height:34px"></span><span style="background:#101F42;border:1px solid #22376B;border-radius:8px;height:34px"></span>
-            </div>
-          </div>
-        </div></div>
-        <figcaption class="figcap click-tip">Clique para ampliar a representação.</figcaption>
-      </figure>
-      <div class="stagger">
-        <div class="card" style="border-left:4px solid var(--azul)"><strong>IMAGENS</strong><p class="small muted" style="margin-top:.3rem">Mais da metade das imagens analisadas na home não apresentou descrição textual detectável para leitores de tela.</p></div>
-        <div class="card" style="border-left:4px solid var(--verde);margin-top:14px"><strong>CONTROLES INTERATIVOS</strong><p class="small muted" style="margin-top:.3rem">Botões, ícones e links sem identificação textual detectável podem dificultar o uso por tecnologias assistivas.</p></div>
-        <div class="card" style="border-left:4px solid var(--amarelo);margin-top:14px"><strong>ZOOM</strong><p class="small muted" style="margin-top:.3rem">A página possui uma configuração que pode limitar a ampliação do conteúdo para pessoas com baixa visão.</p></div>
-      </div>
-    </div>
-    <div class="banner paper rv" style="margin-top:1.6rem;text-align:center"><strong>Os achados indicam oportunidades de aprimoramento.</strong> Uma avaliação mais completa, com diferentes dispositivos, navegadores e tecnologias assistivas, pode aprofundar o diagnóstico.</div>
-  </div>
-</section>
-
-<!-- ============ CAP. 29 · SITE ENEL RJ ============ -->
-<section class="sec" id="site" data-dot="Site Enel RJ">
-  <div class="wrap">
-    <span class="kicker rv">Experiência digital</span>
-    <h2 class="rv">Site Enel RJ | o que funciona <em>× onde há fricção</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">O problema central não é falta de serviços; é a consistência da jornada quando o usuário precisa resolver.</p>
-    <div class="grid g3 stagger" style="margin-top:1.8rem;align-items:stretch">
-      <div class="card" style="background:linear-gradient(150deg,var(--navy-deep),#0B2E74);color:#fff;border:none">
-        <div class="big mid" style="color:#fff"><span class="cnt" data-v="1.8" data-dec="1"></span><small style="font-size:.42em;font-weight:700"> milhão</small></div>
-        <p class="small" style="color:rgba(255,255,255,.75);margin-top:.3rem">visitas orgânicas estimadas para enel.com.br em agosto de 2026*</p>
-        <p class="ovl" style="color:var(--amarelo);margin-top:1.2rem">Principais termos estimados</p>
-        <table style="width:100%;font-size:.86rem;margin-top:.5rem;border-collapse:collapse">
-          <tr><td style="padding:.4rem 0;color:rgba(255,255,255,.85)">"enel"</td><td style="text-align:right;font-weight:800">~277,5 mil</td></tr>
-          <tr><td style="padding:.4rem 0;color:rgba(255,255,255,.85)">"enel segunda via"</td><td style="text-align:right;font-weight:800">~181 mil</td></tr>
-          <tr><td style="padding:.4rem 0;color:rgba(255,255,255,.85)">"enel rj"</td><td style="text-align:right;font-weight:800">~39,2 mil</td></tr>
-          <tr><td style="padding:.4rem 0;color:rgba(255,255,255,.85)">"enel telefone"</td><td style="text-align:right;font-weight:800">~24 mil</td></tr>
-        </table>
-      </div>
-      <div class="card" style="border-top:3px solid var(--verde)">
-        <div style="display:flex;align-items:center;gap:12px"><span class="ic g"><svg class="icon"><use href="#i-check"/></svg></span><h3 style="color:var(--pos)">O que funciona bem</h3></div>
-        <p class="small muted" style="margin-top:.6rem">principais serviços fáceis de localizar:</p>
-        <p style="margin-top:.5rem;line-height:2;font-size:.92rem;color:#33415F">segunda via<br>falta de energia<br>troca de titularidade<br>ligação nova<br>débito automático<br>canais de atendimento</p>
-      </div>
-      <div class="card" style="border-top:3px solid var(--amarelo)">
-        <div style="display:flex;align-items:center;gap:12px"><span class="ic y"><svg class="icon"><use href="#i-alert"/></svg></span><h3 style="color:var(--gold-ink)">Falta de energia</h3></div>
-        <p class="ovl" style="margin-top:.8rem;color:var(--pos)">Pontos positivos</p>
-        <p class="small" style="color:#33415F">diferencia tipos de ocorrência · orienta verificações de segurança · permite acompanhar estágios</p>
-        <p class="ovl" style="margin-top:1rem;color:var(--neg)">Fricções</p>
-        <p class="small" style="color:#33415F"><strong>CAPTCHA</strong>: etapa adicional de validação.<br><strong>Dados adicionais</strong>: aumentam o número de etapas até o registro da ocorrência.</p>
-      </div>
-    </div>
-    <div class="banner rv" style="margin-top:1.6rem;text-align:center">Em situação de apagão, etapas adicionais podem aumentar a fricção justamente quando há urgência ou conectividade limitada.</div>
-    <p class="note">*Fonte: Ahrefs, estimativa de tráfego orgânico, não equivalente a dados oficiais de acesso da Enel Rio.</p>
-  </div>
-</section>
-
-<!-- ============ CAP. 30 · DIAGNÓSTICO DIGITAL ============ -->
-<section class="sec soft" id="digital" data-dot="Diagnóstico digital">
-  <div class="wrap">
-    <span class="kicker rv">Síntese digital</span>
-    <h2 class="rv">Diagnóstico da <em>experiência digital</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">Muitos canais, mas experiência fragmentada.</p>
-    <div class="cols c2" style="margin-top:1.8rem;align-items:flex-start">
-      <div class="flow stagger" aria-label="Fluxo de canais digitais da Enel">
-        <div class="st">enel.com.br</div><div class="ar"><svg class="icon"><use href="#i-down"/></svg></div>
-        <div class="st">eneldistribuicao.com.br</div><div class="ar"><svg class="icon"><use href="#i-down"/></svg></div>
-        <div class="st">Agência Virtual</div><div class="ar"><svg class="icon"><use href="#i-down"/></svg></div>
-        <div class="st">WhatsApp Elena</div><div class="ar"><svg class="icon"><use href="#i-down"/></svg></div>
-        <div class="st">Aplicativo Enel</div><div class="ar"><svg class="icon"><use href="#i-down"/></svg></div>
-        <div class="st">formulário externo</div><div class="ar"><svg class="icon"><use href="#i-down"/></svg></div>
-        <div class="st">lojas e telefone</div>
-      </div>
-      <div>
-        <div class="card rv" style="background:linear-gradient(150deg,var(--navy-deep),#0B2E74);color:#fff;border:none">
-          <h3 style="color:var(--amarelo)">O principal problema não é falta de canais.</h3>
-          <p class="tagline" style="font-size:1.3rem;margin-top:.8rem;color:#fff">É a ausência de uma experiência suficientemente unificada, previsível e resiliente.</p>
-          <p class="small" style="color:rgba(255,255,255,.72);margin-top:1rem">O cliente muitas vezes começa no site e termina em outro portal, aplicativo, WhatsApp ou formulário.</p>
+        <p class="ovl" style="color:var(--azul);margin-top:1.4rem">Consultas em alta</p>
+        <div style="margin-top:.7rem">
+          <div class="qchip"><span>número da enel rj</span><span class="up">+130%</span></div>
+          <div class="qchip"><span>número do cliente enel</span><span class="up">+90%</span></div>
+          <div class="qchip"><span>número da enel sp</span><span class="up">+90%</span></div>
+          <div class="qchip"><span>troca de titularidade enel sp</span><span class="up">+80%</span></div>
         </div>
-        <div class="banner paper rv" style="margin-top:16px;text-align:center"><strong>A Enel já tem presença digital; o desafio é transformar presença em resolução.</strong></div>
+        <p class="small" style="color:#8895AD;margin-top:.7rem">Percentuais indicam crescimento relativo apontado pelo Google Trends; não representam volume absoluto de buscas.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ CAP. 31 · PONTOS DE ATENÇÃO ============ -->
-<section class="sec dark tall" id="conclusao" data-dot="Pontos de atenção">
-  <div class="wrap">
-    <span class="kicker rv">Conclusão</span>
-    <h2 class="rv">Pontos de <em>atenção</em></h2>
-    <div class="rule rv"></div>
-    <p class="lead rv">O que precisa ficar na cabeça de quem entra nesta conversa. <span class="small" style="color:var(--amarelo)">Clique nos cards.</span></p>
-    <div class="grid g3 stagger" style="margin-top:1.8rem">
-      <div class="flip" role="button" tabindex="0" aria-expanded="false"><div class="flip-inner">
-        <div class="face front"><span class="num">/ 01</span><h3>Operação continua ditando a reputação</h3><span class="cta">Clique para ler</span></div>
-        <div class="face back"><p>Interrupções, tempo de restabelecimento e capacidade de resposta seguem como principais testes reputacionais.</p><span class="volta">Voltar</span></div>
-      </div></div>
-      <div class="flip" role="button" tabindex="0" aria-expanded="false"><div class="flip-inner">
-        <div class="face front"><span class="num">/ 02</span><h3>SP e RJ exigem leituras diferentes</h3><span class="cta">Clique para ler</span></div>
-        <div class="face back"><p>São Paulo concentra maior pressão regulatória; o Rio combina concessão, serviço, perdas e complexidade territorial.</p><span class="volta">Voltar</span></div>
-      </div></div>
-      <div class="flip" role="button" tabindex="0" aria-expanded="false"><div class="flip-inner">
-        <div class="face front"><span class="num">/ 03</span><h3>No Rio, território é parte do desafio</h3><span class="cta">Clique para ler</span></div>
-        <div class="face back"><p>Restrições de acesso e perdas não técnicas exigem precisão e evitam generalizações sobre comunidades.</p><span class="volta">Voltar</span></div>
-      </div></div>
-      <div class="flip" role="button" tabindex="0" aria-expanded="false"><div class="flip-inner">
-        <div class="face front"><span class="num">/ 04</span><h3>O positivo tem menor força espontânea</h3><span class="cta">Clique para ler</span></div>
-        <div class="face back"><p>Ações favoráveis existem, mas parte importante da exposição vem de canais institucionais e branded content.</p><span class="volta">Voltar</span></div>
-      </div></div>
-      <div class="flip" role="button" tabindex="0" aria-expanded="false"><div class="flip-inner">
-        <div class="face front"><span class="num">/ 05</span><h3>"Mais perto" aumenta a cobrança</h3><span class="cta">Clique para ler</span></div>
-        <div class="face back"><p>A promessa de proximidade eleva a expectativa de resolução em atendimento e falta de energia.</p><span class="volta">Voltar</span></div>
-      </div></div>
-      <div class="flip" role="button" tabindex="0" aria-expanded="false"><div class="flip-inner">
-        <div class="face front"><span class="num">/ 06</span><h3>No digital, o desafio é resolução</h3><span class="cta">Clique para ler</span></div>
-        <div class="face back"><p>Há muitos canais; a prioridade é torná-los integrados, previsíveis e resolutivos.</p><span class="volta">Voltar</span></div>
-      </div></div>
+    <div class="grid g4 stagger" style="margin-top:1.8rem;align-items:stretch">
+      <div class="card"><span class="stepn" style="margin-bottom:.7rem">01</span><p class="ovl" style="color:var(--azul);margin-top:.5rem">Acessar conta e documentos</p><div style="margin-top:.7rem"><div class="qchip"><span>enel segunda via</span><span style="font-weight:800">&gt;100 mil/mês</span></div><div class="qchip"><span>enel 2 via</span><span style="font-weight:800">&gt;100 mil/mês</span></div><div class="qchip"><span>enel conta de luz</span><span style="font-weight:800">&gt;1 mil/mês</span></div></div></div>
+      <div class="card"><span class="stepn" style="margin-bottom:.7rem">02</span><p class="ovl" style="color:var(--azul);margin-top:.5rem">Encontrar contato e resolver ocorrências</p><div style="margin-top:.7rem"><div class="qchip"><span>enel telefone</span><span style="font-weight:800">&gt;10 mil/mês</span></div><div class="qchip"><span>enel whatsapp</span><span style="font-weight:800">&gt;1 mil/mês</span></div><div class="qchip"><span>enel falta de luz</span><span style="font-weight:800">&gt;1 mil/mês</span></div><div class="qchip"><span>enel falta de energia</span><span style="font-weight:800">&gt;1 mil/mês</span></div></div></div>
+      <div class="card"><span class="stepn" style="margin-bottom:.7rem">03</span><p class="ovl" style="color:var(--azul);margin-top:.5rem">Gerenciar a relação com a distribuidora</p><div style="margin-top:.7rem"><div class="qchip"><span>troca de titularidade enel</span><span style="font-weight:800">&gt;10 mil/mês</span></div><div class="qchip"><span>troca de titularidade enel sp</span><span style="font-weight:800">&gt;100 mil/mês</span></div><div class="qchip"><span>enel sp</span><span style="font-weight:800">&gt;10 mil/mês</span></div></div></div>
+      <div class="card"><p class="ovl" style="color:var(--azul)">Exemplos de perguntas · AnswerThePublic</p><p class="small" style="margin-top:.8rem;line-height:2.15;color:#33415F">"enel como trocar titularidade"<br>"enel como falar com atendente"<br>"enel como ver contas atrasadas"<br>"enel como parcelar conta de luz"<br>"enel onde reclamar"<br>"enel quando volta a energia"</p></div>
     </div>
-    <div class="card rv" style="margin-top:2.2rem;border-left:3px solid var(--amarelo);font-weight:600;font-size:clamp(1rem,1.7vw,1.18rem)">O desafio reputacional da Enel não é apenas comunicar transformação, mas fazer com que essa transformação seja <em style="color:var(--amarelo);font-family:var(--serif)">percebida na experiência do serviço.</em></div>
+    <div class="banner rv" style="margin-top:1.6rem"><strong style="color:var(--amarelo)">A busca relacionada à Enel é predominantemente funcional.</strong> Segunda via aparece na maior faixa de volume estimado do Ahrefs, enquanto telefone, WhatsApp, titularidade e falta de energia reforçam o uso da busca como porta de entrada para tarefas de atendimento e resolução de ocorrências.</div>
+    <p class="note">Fontes: Google Trends, Ahrefs (volumes estimados) e AnswerThePublic.</p>
   </div>
 </section>
 
-<!-- ============ CAP. 32 · FONTES ============ -->
-<section class="sec" id="fontes" data-dot="Fontes">
+<!-- ============ CAP. 20 · EXPERIÊNCIA ============ -->
+<section class="sec" id="experiencia" data-dot="Experiência">
   <div class="wrap">
-    <span class="kicker rv">Fontes</span>
-    <h2 class="rv">Referências e <em>fontes utilizadas</em></h2>
+    <span class="kicker rv">Experiência</span>
+    <h2 class="rv">A experiência começa antes <em>do atendimento</em></h2>
     <div class="rule rv"></div>
-    <p class="lead rv">Fontes públicas, ferramentas de monitoramento e veículos citados.</p>
+    <p class="lead rv">Da necessidade à resolução, busca, acesso aos canais e previsibilidade da resposta ajudam a definir como o consumidor percebe a marca.</p>
+    <div class="grid g5 stagger" style="margin-top:1.8rem;align-items:stretch">
+      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-users"/></svg></span><p class="ovl" style="color:var(--azul)">01 · Necessidade</p><p class="small muted" style="margin-top:.6rem;line-height:1.9">segunda via<br>falta de energia<br>telefone<br>troca de titularidade</p></div>
+      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-search"/></svg></span><p class="ovl" style="color:var(--azul)">02 · Busca</p><p class="small muted" style="margin-top:.6rem;line-height:1.9">Google<br>busca direta pela Enel<br>termos orientados a serviço</p></div>
+      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-phone"/></svg></span><p class="ovl" style="color:var(--azul)">03 · Entrada no ecossistema</p><p class="small muted" style="margin-top:.6rem;line-height:1.9">site<br>WhatsApp<br>Elena<br>telefone</p></div>
+      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-headset"/></svg></span><p class="ovl" style="color:var(--azul)">04 · Atendimento</p><p class="small muted" style="margin-top:.6rem;line-height:1.9">orientação clara<br>protocolo<br>previsão<br>atualizações</p></div>
+      <div class="card" style="border-color:#CBE9D8"><span class="ic g" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-check"/></svg></span><p class="ovl" style="color:var(--azul)">05 · Desfecho</p><p class="small" style="margin-top:.6rem;color:var(--pos)"><strong>Resolução:</strong> solicitação concluída, informação encontrada, problema solucionado.</p><p class="small" style="margin-top:.5rem;color:var(--neg)"><strong>Fricção:</strong> nova tentativa, reclamação, exposição pública.</p></div>
+    </div>
+    <div class="cols c2" style="margin-top:1.8rem;align-items:stretch">
+      <div class="card rv" style="border-left:4px solid var(--azul)">
+        <div style="display:flex;gap:12px;align-items:center"><span class="ic n"><svg class="icon"><use href="#i-search"/></svg></span><strong>O consumidor chega com intenção de resolver</strong></div>
+        <div style="margin-top:.9rem"><div class="qchip"><span>enel segunda via</span><span style="font-weight:800">&gt;100 mil/mês</span></div><div class="qchip"><span>enel telefone</span><span style="font-weight:800">&gt;10 mil/mês</span></div><div class="qchip"><span>troca de titularidade enel</span><span style="font-weight:800">&gt;10 mil/mês</span></div><div class="qchip"><span>enel falta de energia</span><span style="font-weight:800">&gt;1 mil/mês</span></div></div>
+      </div>
+      <div class="card rv" style="border-left:4px solid var(--amarelo)">
+        <div style="display:flex;gap:12px;align-items:center"><span class="ic y"><svg class="icon"><use href="#i-alert"/></svg></span><strong>A experiência digital pode adicionar fricção</strong></div>
+        <p class="small muted" style="margin-top:.9rem">A auditoria do ambiente digital sugere que a navegação e a hierarquia de acesso aos canais podem dificultar a resolução rápida da demanda.</p>
+      </div>
+    </div>
+    <div class="banner rv" style="margin-top:1.6rem;text-align:center">A jornada reputacional começa antes do atendimento: <strong style="color:var(--amarelo)">clareza, acesso ao canal correto e previsibilidade da resposta</strong> definem se a experiência avança para a resolução ou gera nova fricção.</div>
+    <p class="note">Jornada analítica construída a partir dos sinais de busca, canais comunicados pela Enel e achados da auditoria digital; não representa um funil de conversão medido.</p>
+  </div>
+</section>
+
+<!-- ============ CAP. 21 · VIRADA ============ -->
+<section class="sec dark tall" id="virada" data-dot="Ponto de virada">
+  <div class="wrap center">
+    <p class="rv lead" style="margin:0 auto;color:rgba(255,255,255,.7)">Até aqui, mostramos os principais pontos de atenção.</p>
+    <h2 class="rv" style="margin:1.2rem auto 0;max-width:22ch">A partir daqui, a pergunta muda: <em>onde podemos agir</em> para fortalecer a experiência e a confiança?</h2>
+    <div class="rule rv" style="margin:2rem auto 0"></div>
+  </div>
+</section>
+
+<!-- ============ CAP. 22 · PRIORIDADES ============ -->
+<section class="sec" id="prioridades" data-dot="Prioridades">
+  <div class="wrap">
+    <span class="kicker rv">Prioridades</span>
+    <h2 class="rv">Quatro movimentos ajudam a aproximar experiência <em>e confiança</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">Quatro frentes concentram oportunidades para reduzir fricções, aumentar a previsibilidade e aproximar comunicação, atendimento e entrega.</p>
     <div class="grid g2 stagger" style="margin-top:1.8rem">
-      <div class="card edge"><div style="display:flex;align-items:center;gap:12px"><span class="ic n"><svg class="icon"><use href="#i-bank"/></svg></span><h3 style="color:var(--azul)">Dados e fontes institucionais</h3></div><p style="margin-top:.8rem;line-height:2.1;color:#33415F;font-size:.94rem">Enel Brasil / Enel Distribuição Rio<br>ANEEL<br>Talkwalker<br>Google Trends<br>AnswerThePublic</p></div>
-      <div class="card edge"><div style="display:flex;align-items:center;gap:12px"><span class="ic n"><svg class="icon"><use href="#i-doc"/></svg></span><h3 style="color:var(--azul)">Veículos e cases</h3></div><p style="margin-top:.8rem;line-height:2.1;color:#33415F;font-size:.94rem">Record / R7<br>Folha1 · Gshow · Folha de S.Paulo<br>ABC Agora · Extra<br>Coberturas jornalísticas citadas no briefing</p></div>
+      <div class="card edge"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.7rem"><span class="ic n"><svg class="icon"><use href="#i-clock"/></svg></span><span class="ovl" style="background:var(--gold-soft);color:var(--gold-ink);padding:.45em 1em;border-radius:6px">Resposta</span></div><h3 style="color:var(--azul)">01 · Aumentar a previsibilidade da resposta</h3><p class="small muted" style="margin-top:.5rem">Comunicar ocorrência, prazo, atualizações e restabelecimento com maior clareza e consistência.</p><p class="small" style="margin-top:.9rem;background:var(--navy-soft);border-radius:8px;padding:.6rem .9rem"><strong>Foco:</strong> previsibilidade da resposta.</p></div>
+      <div class="card edge"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.7rem"><span class="ic n"><svg class="icon"><use href="#i-chart"/></svg></span><span class="ovl" style="background:var(--gold-soft);color:var(--gold-ink);padding:.45em 1em;border-radius:6px">Evidência</span></div><h3 style="color:var(--azul)">02 · Tornar melhorias mais perceptíveis</h3><p class="small muted" style="margin-top:.5rem">Associar investimentos, prevenção e novas estruturas a resultados verificáveis, com território, escala e efeito percebido.</p><p class="small" style="margin-top:.9rem;background:var(--navy-soft);border-radius:8px;padding:.6rem .9rem"><strong>Foco:</strong> percepção da entrega.</p></div>
+      <div class="card edge"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.7rem"><span class="ic n"><svg class="icon"><use href="#i-phone"/></svg></span><span class="ovl" style="background:var(--gold-soft);color:var(--gold-ink);padding:.45em 1em;border-radius:6px">Jornada</span></div><h3 style="color:var(--azul)">03 · Reduzir fricções na jornada digital</h3><p class="small muted" style="margin-top:.5rem">Priorizar segunda via, telefone, WhatsApp, falta de energia e titularidade, reduzindo barreiras de performance, acessibilidade e navegação nos caminhos críticos.</p><p class="small" style="margin-top:.9rem;background:var(--navy-soft);border-radius:8px;padding:.6rem .9rem"><strong>Foco:</strong> chegar à solução com menos esforço.</p></div>
+      <div class="card edge"><div style="display:flex;gap:14px;align-items:center;margin-bottom:.7rem"><span class="ic n"><svg class="icon"><use href="#i-chat"/></svg></span><span class="ovl" style="background:var(--gold-soft);color:var(--gold-ink);padding:.45em 1em;border-radius:6px">Comunicação</span></div><h3 style="color:var(--azul)">04 · Aproximar comunicação e experiência</h3><p class="small muted" style="margin-top:.5rem">Dar mais espaço a pessoas, entregas concretas, utilidade e resultados, conectando conteúdo próprio à experiência real do consumidor.</p><p class="small" style="margin-top:.9rem;background:var(--navy-soft);border-radius:8px;padding:.6rem .9rem"><strong>Foco:</strong> coerência entre comunicação e experiência.</p></div>
     </div>
+    <div class="banner rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--amarelo)">Prioridade transversal</span><br>Integrar social listening, imprensa, busca, conteúdo próprio, mídia paga e experiência digital em uma <strong style="color:var(--amarelo)">leitura contínua da reputação</strong>, permitindo identificar rapidamente onde comunicação, atendimento e entrega precisam se aproximar.</div>
   </div>
 </section>
 
-<!-- ============ CAP. 33 · ENCERRAMENTO ============ -->
+<!-- ============ CAP. 23 · SÍNTESE ============ -->
+<section class="sec soft" id="sintese" data-dot="Síntese">
+  <div class="wrap">
+    <span class="kicker rv">Síntese</span>
+    <h2 class="rv">A oportunidade é tornar as entregas <em>mais perceptíveis</em></h2>
+    <div class="rule rv"></div>
+    <p class="lead rv">O diagnóstico indica que a comunicação ganha força quando serviço, atendimento e canais digitais reforçam uma experiência coerente e reconhecível pelo consumidor.</p>
+    <div class="grid g3 stagger" style="margin-top:1.8rem">
+      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-tower"/></svg></span><h3 style="color:var(--azul)">01 · Serviço estrutura a reputação</h3><p class="small muted" style="margin-top:.6rem">Continuidade do fornecimento e capacidade de resposta permanecem entre os principais eixos da percepção reputacional.</p></div>
+      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-clock"/></svg></span><h3 style="color:var(--azul)">02 · A resposta é um momento central da experiência</h3><p class="small muted" style="margin-top:.6rem">Prazo, informação, atualização e resolução influenciam como uma ocorrência evolui na percepção pública.</p></div>
+      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-chat"/></svg></span><h3 style="color:var(--azul)">03 · Comunicação e experiência precisam se conectar</h3><p class="small muted" style="margin-top:.6rem">Investimentos, prevenção e iniciativas positivas ganham força quando se tornam entregas percebidas e reconhecíveis pelo consumidor.</p></div>
+    </div>
+    <div class="banner paper rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--gold-ink)">Oportunidade</span><br>A principal oportunidade está em aproximar operação, atendimento e comunicação: <strong>reduzir fricções, aumentar a previsibilidade e tornar as entregas mais perceptíveis para o consumidor</strong>.</div>
+    <div class="banner rv" style="margin-top:1rem;text-align:center;font-size:clamp(1rem,1.7vw,1.18rem)">Mais do que ampliar a mensagem, o desafio é aproximar <em style="color:var(--amarelo);font-family:var(--serif)">comunicação, entrega e experiência percebida.</em></div>
+  </div>
+</section>
+
+<!-- ============ CAP. 24 · ENCERRAMENTO ============ -->
 <footer class="sec tall" id="fim" data-dot="Encerramento">
   <div class="wrap">
-    <h2 class="rv">Obrigado<em style="color:var(--amarelo)">.</em></h2>
-    <p class="rv" style="color:rgba(255,255,255,.7);max-width:52ch;margin:1rem auto 0">Briefing Executivo: Quem é a Enel? Diagnóstico de marca, reputação e experiência digital.</p>
+    <h2 class="rv">Obrigada<em style="color:var(--amarelo)">!</em></h2>
+    <p class="rv" style="color:rgba(255,255,255,.7);max-width:56ch;margin:1rem auto 0">Reputação, experiência e presença digital: leitura estratégica sobre a Enel Brasil, de 1º de janeiro a 10 de setembro de 2026.</p>
     <div class="sign rv">
       <span class="logo-leiaute"><img src="assets/leiaute-propaganda.png" alt="Leiaute Propaganda" onerror="this.outerHTML='&lt;span class=&quot;txt&quot;&gt;Leiaute&lt;/span&gt;'"></span>
-      <span class="yr">LEIAUTE PROPAGANDA · 2026 · v3</span>
+      <span class="yr">LEIAUTE PROPAGANDA · 2026 · v4</span>
     </div>
   </div>
 </footer>
