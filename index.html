@@ -315,7 +315,11 @@ h3{font-size:1.16rem;font-weight:700}
 .hrow{display:flex;align-items:center;gap:12px;padding:.45rem 0}
 .hlab{width:190px;font-size:.85rem;font-weight:600;color:#33415F;flex:none}
 .htrack{flex:1;background:#EEF1F7;border-radius:7px;height:26px;overflow:hidden}
-.hfill{height:100%;width:var(--w,50%);background:var(--c,#123A8A);border-radius:7px;transform-origin:left;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.7,.25,1) .15s}
+.hfill{display:block;height:100%;width:var(--w,50%);background:var(--c,#123A8A);border-radius:7px;transform-origin:left;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.7,.25,1) .15s}
+.hrow+.hrow .hfill{transition-delay:.3s}
+.hrow+.hrow+.hrow .hfill{transition-delay:.45s}
+.hrow+.hrow+.hrow+.hrow .hfill{transition-delay:.6s}
+.hrow+.hrow+.hrow+.hrow+.hrow .hfill{transition-delay:.75s}
 .in .hfill{transform:scaleX(1)}
 .hval{width:118px;font-size:.8rem;font-weight:800;color:var(--ink);flex:none;font-variant-numeric:tabular-nums}
 @media(max-width:700px){.hlab{width:120px;font-size:.76rem}.hval{width:84px;font-size:.72rem}}
@@ -341,6 +345,25 @@ h3{font-size:1.16rem;font-weight:700}
 .qchip{display:flex;justify-content:space-between;gap:10px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:.6rem .9rem;font-size:.84rem;background:#fff}
 .qchip+.qchip{margin-top:8px}
 .qchip .up{color:var(--pos);font-weight:800;white-space:nowrap}
+
+
+/* ---------- v5: rosca animada ---------- */
+.arc{fill:none;stroke-width:27;stroke-dasharray:0 440;transition:stroke-dasharray 1.5s cubic-bezier(.2,.7,.25,1) .3s}
+.in .arc{stroke-dasharray:var(--seg) 440}
+/* ---------- v5: fluxograma de etapas ---------- */
+.steps{display:flex;align-items:stretch;margin-top:1.8rem}
+.step{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.3rem 1.15rem;box-shadow:var(--sh)}
+.step h3{font-size:1.02rem;margin:.5rem 0 .5rem;color:var(--azul)}
+.step .ovl{color:var(--gold-ink)}
+.step p{font-size:.82rem;color:#33415F}
+.step.t1{background:#FFFBEE}
+.step.t2{background:#FFF3CF}
+.step.t3{background:var(--amarelo);border-color:#E2B31C}
+.step.t3 h3{color:var(--azul)}.step.t3 .ovl{color:#6B5300}.step.t3 p{color:#4A3A00}
+.step.t4{background:#EEF9F2;border-color:#CBE9D8}
+.sarr{flex:none;align-self:center;width:38px;height:38px;border-radius:50%;background:var(--amarelo);color:var(--azul);display:grid;place-items:center;margin:0 -19px;z-index:3;border:3px solid #fff;box-shadow:0 4px 12px -4px rgba(13,27,62,.35)}
+.sarr .icon{width:17px;height:17px;transform:rotate(-90deg)}
+@media(max-width:1020px){.steps{flex-direction:column}.sarr{margin:-19px auto}.sarr .icon{transform:none}}
 
 /* foco visível */
 a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;border-radius:4px}
@@ -476,22 +499,31 @@ button{font-family:inherit}
       <div class="stat"><div class="big" style="color:var(--amarelo)"><span class="cnt" data-v="33.1" data-dec="1"></span><small style="font-size:.4em;font-weight:700"> bilhões</small></div><p class="lbl"><strong style="color:#fff">alcance potencial</strong>: estimativa de exposição; não corresponde a pessoas efetivamente alcançadas.</p></div>
     </div>
     <div class="cols c2" style="margin-top:2.6rem;align-items:stretch">
-      <div class="card rv">
+      <div class="card rv" style="display:flex;flex-wrap:wrap;gap:22px;align-items:center">
+        <div style="flex:1;min-width:230px">
         <p class="ovl" style="color:var(--amarelo)">Sentimento das menções</p>
-        <div style="display:flex;gap:1.6rem;align-items:baseline;flex-wrap:wrap;margin-top:1rem">
-          <div><span class="big mid" style="color:#F0968C"><span class="cnt" data-v="40.3" data-dec="1"></span>%</span><p class="ovl" style="margin-top:.3rem;color:rgba(255,255,255,.6)">Negativo</p></div>
-          <div><span class="big mid" style="color:rgba(255,255,255,.85)"><span class="cnt" data-v="52.1" data-dec="1"></span>%</span><p class="ovl" style="margin-top:.3rem;color:rgba(255,255,255,.6)">Neutro</p></div>
-          <div><span class="big mid" style="color:#7FD6A8"><span class="cnt" data-v="7.6" data-dec="1"></span>%</span><p class="ovl" style="margin-top:.3rem;color:rgba(255,255,255,.6)">Positivo</p></div>
+        <svg viewBox="0 0 200 200" style="max-width:210px;margin-top:1rem" role="img" aria-label="Rosca do sentimento: 40,3 por cento negativo, 52,1 por cento neutro e 7,6 por cento positivo">
+          <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="27"/>
+          <circle class="arc" cx="100" cy="100" r="70" stroke="#E2574C" style="--seg:177" transform="rotate(-90 100 100)"/>
+          <circle class="arc" cx="100" cy="100" r="70" stroke="#F2C230" style="--seg:229" transform="rotate(55.1 100 100)"/>
+          <circle class="arc" cx="100" cy="100" r="70" stroke="#35B36B" style="--seg:33" transform="rotate(242.6 100 100)"/>
+          <text x="100" y="95" text-anchor="middle" font-family="Inter" font-weight="800" font-size="22" fill="#FFFFFF">62,9 mil</text>
+          <text x="100" y="114" text-anchor="middle" font-family="Inter" font-size="10" letter-spacing="2" fill="rgba(255,255,255,.6)">MENÇÕES</text>
+        </svg>
         </div>
-        <p class="small" style="color:rgba(255,255,255,.66);margin-top:1.1rem">A neutralidade predominou no período, enquanto 40,3% das menções foram negativas e 7,6% positivas, reforçando a importância de acompanhar os temas de maior sensibilidade.</p>
+        <div style="flex:1;min-width:190px">
+          <div style="display:flex;align-items:baseline;gap:12px;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.12)"><span class="big mid" style="color:#E2574C;font-size:1.9rem"><span class="cnt" data-v="40.3" data-dec="1"></span>%</span><span class="ovl" style="color:rgba(255,255,255,.7)">Negativo</span></div>
+          <div style="display:flex;align-items:baseline;gap:12px;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.12)"><span class="big mid" style="color:#F2C230;font-size:1.9rem"><span class="cnt" data-v="52.1" data-dec="1"></span>%</span><span class="ovl" style="color:rgba(255,255,255,.7)">Neutro</span></div>
+          <div style="display:flex;align-items:baseline;gap:12px;padding:.5rem 0"><span class="big mid" style="color:#35B36B;font-size:1.9rem"><span class="cnt" data-v="7.6" data-dec="1"></span>%</span><span class="ovl" style="color:rgba(255,255,255,.7)">Positivo</span></div>
+        </div>
       </div>
       <div class="card rv">
         <p class="ovl" style="color:var(--amarelo)">Onde a conversa aconteceu</p>
         <div style="margin-top:1rem">
-          <div class="hrow"><span class="hlab">X / Twitter</span><span class="htrack"><span class="hfill" style="--w:93%;--c:#4A90E2"></span></span><span class="hval">56,2%</span></div>
-          <div class="hrow"><span class="hlab">Portais de notícias</span><span class="htrack"><span class="hfill" style="--w:26%;--c:#7FD6A8"></span></span><span class="hval">15,6%</span></div>
-          <div class="hrow"><span class="hlab">Outros canais*</span><span class="htrack"><span class="hfill" style="--w:24%;--c:#AFC4EF"></span></span><span class="hval">14,5%</span></div>
-          <div class="hrow"><span class="hlab">Blogs</span><span class="htrack"><span class="hfill" style="--w:23%;--c:#E9C63B"></span></span><span class="hval">13,7%</span></div>
+          <div class="hrow"><span class="hlab">X / Twitter</span><span class="htrack"><span class="hfill" style="--w:93%;--c:#1D9BF0"></span></span><span class="hval">56,2%</span></div>
+          <div class="hrow"><span class="hlab">Portais de notícias</span><span class="htrack"><span class="hfill" style="--w:26%;--c:#27AE60"></span></span><span class="hval">15,6%</span></div>
+          <div class="hrow"><span class="hlab">Blogs</span><span class="htrack"><span class="hfill" style="--w:23%;--c:#E67E22"></span></span><span class="hval">13,7%</span></div>
+          <div class="hrow"><span class="hlab">Outros canais*</span><span class="htrack"><span class="hfill" style="--w:24%;--c:#8E44AD"></span></span><span class="hval">14,5%</span></div>
         </div>
         <p class="small" style="color:rgba(255,255,255,.55);margin-top:.9rem">*Outros canais incluem Bluesky, Reddit, YouTube e Facebook.</p>
       </div>
@@ -584,19 +616,22 @@ button{font-family:inherit}
 </section>
 
 <!-- ============ CAP. 8 · JORNADA ============ -->
-<section class="sec dark" id="jornada" data-dot="Jornada do tema">
+<section class="sec" id="jornada" data-dot="Jornada do tema">
   <div class="wrap">
     <span class="kicker rv">Jornada</span>
     <h2 class="rv">Quando um tema ganha escala, ele também repercute <em>na reputação</em></h2>
     <div class="rule rv"></div>
     <p class="lead rv">A atenção cresce quando um gatilho ganha visibilidade, significado e recorrência.</p>
-    <div class="grid g4 stagger" style="margin-top:1.8rem">
-      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-bolt"/></svg></span><p class="ovl" style="color:var(--amarelo)">01 · Gatilho</p><h3 style="margin:.4rem 0 .5rem">O tema entra em evidência</h3><p class="small" style="color:rgba(255,255,255,.72)">Interrupções no fornecimento, decisões sobre concessões e reajustes tarifários trazem a Enel para o centro da conversa.</p></div>
-      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-mega"/></svg></span><p class="ovl" style="color:var(--amarelo)">02 · Amplificação</p><h3 style="margin:.4rem 0 .5rem">A conversa ganha escala</h3><p class="small" style="color:rgba(255,255,255,.72)">Redes sociais e cobertura jornalística ampliam a visibilidade do episódio. O X/Twitter concentrou <strong style="color:#fff">56,2%</strong> das menções do período.</p></div>
-      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-chat"/></svg></span><p class="ovl" style="color:var(--amarelo)">03 · Associação</p><h3 style="margin:.4rem 0 .5rem">O episódio ganha novos significados</h3><p class="small" style="color:rgba(255,255,255,.72)">A conversa se amplia e passa a relacionar o tema à continuidade do serviço, à capacidade de resposta e ao impacto para o consumidor.</p></div>
-      <div class="card" style="border-color:rgba(255,204,41,.45);background:rgba(255,204,41,.08)"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-target"/></svg></span><p class="ovl" style="color:var(--amarelo)">04 · Repercussão reputacional</p><h3 style="margin:.4rem 0 .5rem">A atenção pode se prolongar</h3><p class="small" style="color:rgba(255,255,255,.72)">Em diferentes episódios, temas relacionados a operação, atendimento e concessões voltam a aparecer na conversa sobre a marca.</p></div>
+    <div class="steps stagger" aria-label="Fluxo em quatro etapas: gatilho, amplificação, associação e repercussão reputacional">
+      <div class="step"><span class="ic y" style="margin-bottom:.7rem"><svg class="icon"><use href="#i-bolt"/></svg></span><p class="ovl">01 · Gatilho</p><h3>O tema entra em evidência</h3><p>Interrupções no fornecimento, decisões sobre concessões e reajustes tarifários trazem a Enel para o centro da conversa.</p></div>
+      <div class="sarr" aria-hidden="true"><svg class="icon"><use href="#i-down"/></svg></div>
+      <div class="step t1"><span class="ic y" style="margin-bottom:.7rem"><svg class="icon"><use href="#i-mega"/></svg></span><p class="ovl">02 · Amplificação</p><h3>A conversa ganha escala</h3><p>Redes sociais e cobertura jornalística ampliam a visibilidade do episódio. O X/Twitter concentrou <strong>56,2%</strong> das menções do período.</p></div>
+      <div class="sarr" aria-hidden="true"><svg class="icon"><use href="#i-down"/></svg></div>
+      <div class="step t2"><span class="ic y" style="margin-bottom:.7rem"><svg class="icon"><use href="#i-chat"/></svg></span><p class="ovl">03 · Associação</p><h3>O episódio ganha novos significados</h3><p>A conversa se amplia e passa a relacionar o tema à continuidade do serviço, à capacidade de resposta e ao impacto para o consumidor.</p></div>
+      <div class="sarr" aria-hidden="true"><svg class="icon"><use href="#i-down"/></svg></div>
+      <div class="step t3"><span class="ic" style="margin-bottom:.7rem;background:rgba(10,30,78,.12);color:var(--azul)"><svg class="icon"><use href="#i-target"/></svg></span><p class="ovl">04 · Repercussão reputacional</p><h3>A atenção pode se prolongar</h3><p>Em diferentes episódios, temas relacionados a operação, atendimento e concessões voltam a aparecer na conversa sobre a marca.</p></div>
     </div>
-    <div class="card rv" style="margin-top:1.6rem;border-left:3px solid var(--amarelo)"><span class="ovl" style="color:var(--amarelo)">Principal aprendizado</span><br><strong>Responder ao episódio é importante. Reconhecer padrões recorrentes amplia a capacidade de antecipação.</strong></div>
+    <div class="banner rv" style="margin-top:1.8rem"><span class="ovl" style="color:var(--amarelo)">Principal aprendizado</span><br><strong>Responder ao episódio é importante. Reconhecer padrões recorrentes amplia a capacidade de antecipação.</strong></div>
     <p class="note">Fonte: Talkwalker. Brasil. Período: 01/01 a 10/09/2026.</p>
   </div>
 </section>
@@ -610,10 +645,10 @@ button{font-family:inherit}
     <p class="lead rv">Os dois temas de maior incidência conectam a experiência com o serviço ao ambiente institucional.</p>
     <div class="chart-box rv" style="margin-top:1.8rem">
       <div class="hrow"><span class="hlab" style="color:var(--azul);font-weight:700">Operação e fornecimento</span><span class="htrack"><span class="hfill" style="--w:86%;--c:#0A1E4E"></span></span><span class="hval">21,6 mil | 34,3%</span></div>
-      <div class="hrow"><span class="hlab" style="color:#2E6DB4;font-weight:700">Concessão e regulação</span><span class="htrack"><span class="hfill" style="--w:83%;--c:#2E6DB4"></span></span><span class="hval">20,8 mil | 33,1%</span></div>
-      <div class="hrow"><span class="hlab" style="color:var(--pos);font-weight:700">Infraestrutura e manutenção</span><span class="htrack"><span class="hfill" style="--w:63%;--c:#0E7C4F"></span></span><span class="hval">15,8 mil | 25,1%</span></div>
-      <div class="hrow"><span class="hlab" style="color:#C57A1D;font-weight:700">Tarifas e cobranças</span><span class="htrack"><span class="hfill" style="--w:50%;--c:#C57A1D"></span></span><span class="hval">12,4 mil | 19,7%</span></div>
-      <div class="hrow"><span class="hlab" style="color:var(--gold-ink);font-weight:700">Atendimento e resolução</span><span class="htrack"><span class="hfill" style="--w:49%;--c:#E9C63B"></span></span><span class="hval">12,3 mil | 19,6%</span></div>
+      <div class="hrow"><span class="hlab" style="color:#2E9BB5;font-weight:700">Concessão e regulação</span><span class="htrack"><span class="hfill" style="--w:83%;--c:#2E9BB5"></span></span><span class="hval">20,8 mil | 33,1%</span></div>
+      <div class="hrow"><span class="hlab" style="color:#27AE60;font-weight:700">Infraestrutura e manutenção</span><span class="htrack"><span class="hfill" style="--w:63%;--c:#27AE60"></span></span><span class="hval">15,8 mil | 25,1%</span></div>
+      <div class="hrow"><span class="hlab" style="color:#E67E22;font-weight:700">Tarifas e cobranças</span><span class="htrack"><span class="hfill" style="--w:50%;--c:#E67E22"></span></span><span class="hval">12,4 mil | 19,7%</span></div>
+      <div class="hrow"><span class="hlab" style="color:#D9A50B;font-weight:700">Atendimento e resolução</span><span class="htrack"><span class="hfill" style="--w:49%;--c:#F2C230"></span></span><span class="hval">12,3 mil | 19,6%</span></div>
     </div>
     <div class="banner rv" style="margin-top:1.4rem"><strong style="color:var(--amarelo)">Operação e fornecimento</strong> e <strong style="color:var(--amarelo)">concessão e regulação</strong> apresentam as maiores incidências temáticas no período. Infraestrutura, tarifas e atendimento complementam a leitura sobre os principais assuntos associados à marca.</div>
     <p class="note">Obs.: temas não excludentes, obtidos por recortes temáticos. Uma mesma menção pode aparecer em mais de um eixo; por isso, os percentuais não somam 100%. Universo: 62,9 mil resultados. Fonte: Talkwalker. Brasil. 01/01 a 10/09/2026.</p>
@@ -799,14 +834,14 @@ button{font-family:inherit}
       <div class="chart-box rv">
         <p class="ovl" style="color:#93A0B8;margin-bottom:.9rem">Principais temas da conversa em São Paulo</p>
         <div class="hrow"><span class="hlab">Serviço e continuidade</span><span class="htrack"><span class="hfill" style="--w:92%;--c:#0A1E4E"></span></span><span class="hval">16,5 mil</span></div>
-        <div class="hrow"><span class="hlab">Concessão e regulação</span><span class="htrack"><span class="hfill" style="--w:68%;--c:#2E6DB4"></span></span><span class="hval">12,3 mil</span></div>
-        <div class="hrow"><span class="hlab">Tarifas e cobranças</span><span class="htrack"><span class="hfill" style="--w:22%;--c:#C57A1D"></span></span><span class="hval">3,9 mil</span></div>
+        <div class="hrow"><span class="hlab">Concessão e regulação</span><span class="htrack"><span class="hfill" style="--w:68%;--c:#2E9BB5"></span></span><span class="hval">12,3 mil</span></div>
+        <div class="hrow"><span class="hlab">Tarifas e cobranças</span><span class="htrack"><span class="hfill" style="--w:22%;--c:#E67E22"></span></span><span class="hval">3,9 mil</span></div>
         <p class="small" style="color:#8895AD;margin-top:.9rem">Obs.: os eixos podem se sobrepor. Uma mesma menção pode aparecer em mais de um tema; por isso, a soma dos eixos supera a base de 32,5 mil resultados.</p>
       </div>
       <div class="stagger">
         <div class="card" style="border-left:4px solid #0A1E4E"><strong>1 · Serviço e continuidade</strong><p class="small muted" style="margin-top:.3rem">apresentam a maior incidência temática.</p></div>
-        <div class="card" style="border-left:4px solid #2E6DB4;margin-top:14px"><strong>2 · Concessão e regulação</strong><p class="small muted" style="margin-top:.3rem">também ocupam espaço relevante na conversa institucional.</p></div>
-        <div class="card" style="border-left:4px solid #C57A1D;margin-top:14px"><strong>3 · Tarifas e cobranças</strong><p class="small muted" style="margin-top:.3rem">aparecem em menor volume, mas conectam a percepção da marca ao custo do serviço.</p></div>
+        <div class="card" style="border-left:4px solid #2E9BB5;margin-top:14px"><strong>2 · Concessão e regulação</strong><p class="small muted" style="margin-top:.3rem">também ocupam espaço relevante na conversa institucional.</p></div>
+        <div class="card" style="border-left:4px solid #E67E22;margin-top:14px"><strong>3 · Tarifas e cobranças</strong><p class="small muted" style="margin-top:.3rem">aparecem em menor volume, mas conectam a percepção da marca ao custo do serviço.</p></div>
       </div>
     </div>
     <div class="banner paper rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--gold-ink)">Interpretação</span><br>Em São Paulo, a experiência com o serviço ocupa o centro da conversa. A esse eixo se somam o debate sobre concessão e as repercussões tarifárias, formando uma leitura que combina operação, ambiente institucional e custo para o consumidor.</div>
@@ -831,8 +866,8 @@ button{font-family:inherit}
       <div class="chart-box rv">
         <p class="ovl" style="color:#93A0B8;margin-bottom:.9rem">Eixos que estruturam a conversa</p>
         <div class="hrow"><span class="hlab">Resposta e restabelecimento</span><span class="htrack"><span class="hfill" style="--w:94%;--c:#0A1E4E"></span></span><span class="hval">1,7 mil</span></div>
-        <div class="hrow"><span class="hlab">Serviço e continuidade</span><span class="htrack"><span class="hfill" style="--w:72%;--c:#2E6DB4"></span></span><span class="hval">1,3 mil</span></div>
-        <div class="hrow"><span class="hlab">Clima como gatilho operacional</span><span class="htrack"><span class="hfill" style="--w:36%;--c:#E9C63B"></span></span><span class="hval">653</span></div>
+        <div class="hrow"><span class="hlab">Serviço e continuidade</span><span class="htrack"><span class="hfill" style="--w:72%;--c:#4A90E2"></span></span><span class="hval">1,3 mil</span></div>
+        <div class="hrow"><span class="hlab">Clima como gatilho operacional</span><span class="htrack"><span class="hfill" style="--w:36%;--c:#F2C230"></span></span><span class="hval">653</span></div>
         <p class="small" style="color:#8895AD;margin-top:.9rem">Recortes temáticos do universo Enel Rio.</p>
       </div>
       <div class="chart-box rv">
@@ -870,14 +905,14 @@ button{font-family:inherit}
       <div class="chart-box rv">
         <p class="ovl" style="color:#93A0B8;margin-bottom:.9rem">Eixos que estruturam a conversa</p>
         <div class="hrow"><span class="hlab">Concessão e renovação</span><span class="htrack"><span class="hfill" style="--w:83%;--c:#0A1E4E"></span></span><span class="hval">1,5 mil</span></div>
-        <div class="hrow"><span class="hlab">Serviço e continuidade</span><span class="htrack"><span class="hfill" style="--w:61%;--c:#2E6DB4"></span></span><span class="hval">1,1 mil</span></div>
-        <div class="hrow"><span class="hlab">Investimentos e modernização</span><span class="htrack"><span class="hfill" style="--w:51%;--c:#E9C63B"></span></span><span class="hval">926</span></div>
+        <div class="hrow"><span class="hlab">Serviço e continuidade</span><span class="htrack"><span class="hfill" style="--w:61%;--c:#4A90E2"></span></span><span class="hval">1,1 mil</span></div>
+        <div class="hrow"><span class="hlab">Investimentos e modernização</span><span class="htrack"><span class="hfill" style="--w:51%;--c:#F2C230"></span></span><span class="hval">926</span></div>
         <p class="small" style="color:#8895AD;margin-top:.9rem">Os eixos não são excludentes e podem se sobrepor.</p>
       </div>
       <div class="stagger">
         <div class="card" style="border-left:4px solid #0A1E4E"><strong>1 · Concessão e renovação</strong><p class="small muted" style="margin-top:.3rem">apresentam a maior incidência temática no Ceará.</p></div>
-        <div class="card" style="border-left:4px solid #2E6DB4;margin-top:14px"><strong>2 · Serviço e continuidade</strong><p class="small muted" style="margin-top:.3rem">mantêm presença relevante na experiência associada à marca.</p></div>
-        <div class="card" style="border-left:4px solid #E9C63B;margin-top:14px"><strong>3 · Investimentos e modernização</strong><p class="small muted" style="margin-top:.3rem">formam uma agenda complementar, com potencial de ampliar a percepção sobre evolução e entrega.</p></div>
+        <div class="card" style="border-left:4px solid #2E9BB5;margin-top:14px"><strong>2 · Serviço e continuidade</strong><p class="small muted" style="margin-top:.3rem">mantêm presença relevante na experiência associada à marca.</p></div>
+        <div class="card" style="border-left:4px solid #F2C230;margin-top:14px"><strong>3 · Investimentos e modernização</strong><p class="small muted" style="margin-top:.3rem">formam uma agenda complementar, com potencial de ampliar a percepção sobre evolução e entrega.</p></div>
       </div>
     </div>
     <div class="banner paper rv" style="margin-top:1.6rem"><span class="ovl" style="color:var(--gold-ink)">Interpretação</span><br>No Ceará, a conversa combina temas institucionais e operacionais. A renovação da concessão apresenta a maior incidência, enquanto serviço e continuidade permanecem relevantes. Investimentos e modernização acrescentam uma agenda de evolução que pode contribuir para equilibrar a percepção sobre a marca.</div>
@@ -1013,12 +1048,16 @@ button{font-family:inherit}
     <h2 class="rv">A experiência começa antes <em>do atendimento</em></h2>
     <div class="rule rv"></div>
     <p class="lead rv">Da necessidade à resolução, busca, acesso aos canais e previsibilidade da resposta ajudam a definir como o consumidor percebe a marca.</p>
-    <div class="grid g5 stagger" style="margin-top:1.8rem;align-items:stretch">
-      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-users"/></svg></span><p class="ovl" style="color:var(--azul)">01 · Necessidade</p><p class="small muted" style="margin-top:.6rem;line-height:1.9">segunda via<br>falta de energia<br>telefone<br>troca de titularidade</p></div>
-      <div class="card"><span class="ic y" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-search"/></svg></span><p class="ovl" style="color:var(--azul)">02 · Busca</p><p class="small muted" style="margin-top:.6rem;line-height:1.9">Google<br>busca direta pela Enel<br>termos orientados a serviço</p></div>
-      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-phone"/></svg></span><p class="ovl" style="color:var(--azul)">03 · Entrada no ecossistema</p><p class="small muted" style="margin-top:.6rem;line-height:1.9">site<br>WhatsApp<br>Elena<br>telefone</p></div>
-      <div class="card"><span class="ic n" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-headset"/></svg></span><p class="ovl" style="color:var(--azul)">04 · Atendimento</p><p class="small muted" style="margin-top:.6rem;line-height:1.9">orientação clara<br>protocolo<br>previsão<br>atualizações</p></div>
-      <div class="card" style="border-color:#CBE9D8"><span class="ic g" style="margin-bottom:.8rem"><svg class="icon"><use href="#i-check"/></svg></span><p class="ovl" style="color:var(--azul)">05 · Desfecho</p><p class="small" style="margin-top:.6rem;color:var(--pos)"><strong>Resolução:</strong> solicitação concluída, informação encontrada, problema solucionado.</p><p class="small" style="margin-top:.5rem;color:var(--neg)"><strong>Fricção:</strong> nova tentativa, reclamação, exposição pública.</p></div>
+    <div class="steps stagger" aria-label="Fluxo em cinco etapas: necessidade, busca, entrada no ecossistema, atendimento e desfecho">
+      <div class="step"><span class="ic n" style="margin-bottom:.7rem"><svg class="icon"><use href="#i-users"/></svg></span><p class="ovl" style="color:var(--azul)">01 · Necessidade</p><p style="margin-top:.6rem;line-height:1.95">segunda via<br>falta de energia<br>telefone<br>troca de titularidade</p></div>
+      <div class="sarr" aria-hidden="true"><svg class="icon"><use href="#i-down"/></svg></div>
+      <div class="step t1"><span class="ic y" style="margin-bottom:.7rem"><svg class="icon"><use href="#i-search"/></svg></span><p class="ovl" style="color:var(--azul)">02 · Busca</p><p style="margin-top:.6rem;line-height:1.95">Google<br>busca direta pela Enel<br>termos orientados a serviço</p></div>
+      <div class="sarr" aria-hidden="true"><svg class="icon"><use href="#i-down"/></svg></div>
+      <div class="step t2"><span class="ic n" style="margin-bottom:.7rem"><svg class="icon"><use href="#i-phone"/></svg></span><p class="ovl" style="color:var(--azul)">03 · Entrada no ecossistema</p><p style="margin-top:.6rem;line-height:1.95">site<br>WhatsApp<br>Elena<br>telefone</p></div>
+      <div class="sarr" aria-hidden="true"><svg class="icon"><use href="#i-down"/></svg></div>
+      <div class="step t1"><span class="ic n" style="margin-bottom:.7rem"><svg class="icon"><use href="#i-headset"/></svg></span><p class="ovl" style="color:var(--azul)">04 · Atendimento</p><p style="margin-top:.6rem;line-height:1.95">orientação clara<br>protocolo<br>previsão<br>atualizações</p></div>
+      <div class="sarr" aria-hidden="true"><svg class="icon"><use href="#i-down"/></svg></div>
+      <div class="step t4"><span class="ic g" style="margin-bottom:.7rem"><svg class="icon"><use href="#i-check"/></svg></span><p class="ovl" style="color:var(--azul)">05 · Desfecho</p><p style="margin-top:.6rem;color:var(--pos)"><strong>Resolução:</strong> solicitação concluída, informação encontrada, problema solucionado.</p><p style="margin-top:.5rem;color:var(--neg)"><strong>Fricção:</strong> nova tentativa, reclamação, exposição pública.</p></div>
     </div>
     <div class="cols c2" style="margin-top:1.8rem;align-items:stretch">
       <div class="card rv" style="border-left:4px solid var(--azul)">
@@ -1085,7 +1124,7 @@ button{font-family:inherit}
     <p class="rv" style="color:rgba(255,255,255,.7);max-width:56ch;margin:1rem auto 0">Reputação, experiência e presença digital: leitura estratégica sobre a Enel Brasil, de 1º de janeiro a 10 de setembro de 2026.</p>
     <div class="sign rv">
       <span class="logo-leiaute"><img src="assets/leiaute-propaganda.png" alt="Leiaute Propaganda" onerror="this.outerHTML='&lt;span class=&quot;txt&quot;&gt;Leiaute&lt;/span&gt;'"></span>
-      <span class="yr">LEIAUTE PROPAGANDA · 2026 · v4</span>
+      <span class="yr">LEIAUTE PROPAGANDA · 2026 · v5</span>
     </div>
   </div>
 </footer>
